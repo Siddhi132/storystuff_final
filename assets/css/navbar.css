@@ -63,7 +63,7 @@ body{
 }
 
 .list:hover, .list1:hover{
-    text-decoration: underline 5px;
+    text-decoration: underline 5px  #FF2039;
 }
 .login{
     margin-right: 20px;
