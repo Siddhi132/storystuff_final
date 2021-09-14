@@ -1,4 +1,4 @@
-    $(document).ready(function(){
+$(document).ready(function(){
 
     // $('.carousel').carousel({
         
@@ -45,7 +45,7 @@
         });
 
         //dashboard
-        $('.user_icon,.user_icon_mv').click(function(){
+        $('.user_icon,.user_icon_mv,.profile_pic,.profile_pic_mv').click(function(){
             $('.main_box,.container-fuild,.container-fluid').addClass('active')
         });
     

@@ -1,8 +1,10 @@
-    <!-- latest -->
+   
 <?php
 require 'dbconnect.php';
  ?>
-    <div class="container-fuild mt-5 px-5">
+       <!-- latest -->
+
+       <div class="container-fuild mt-5 px-5">
         <section class="latest">
             <div class="latest_box">
                 <div class="latest_input">
@@ -12,26 +14,26 @@ require 'dbconnect.php';
                     <button class="view_more"> View More </button>
                 </div>
             </div>
-            <div class="latest_content  px-3">  
+            <div class="latest_content  px-3">
                 
                 <!-- row1 -->
                 <div class="row" >
-                    <div class="img_box pr-0 pr-lg-5">
-                        <img src="assets/img/tree.jpg" class="img_pic mt-3" />
+                    <div class="img_box pr-0  pr-md-5">
+                    <img src="assets/img/tree.jpg" class="img_pic mt-3" /> 
                         <h6 class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                     </div>
                     <div class="content_box mt-3">
                         <div class="content1">
                             <h6 class="mt-3 mr-3 mr-lg-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
-                            <img src="assets/img/tree.jpg" class="content1_img" />
+                            <span class="content1_img"><img src="assets/img/stair.jpg" class="content1_img" /> </span>
                         </div>
                         <div class="content1 mt-3">
                             <h6 class="mt-3 mr-3 mr-lg-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
-                            <img src="assets/img/tree.jpg" class="content1_img" />
+                            <span class="content1_img"><img src="assets/img/circle.jpg" class="content1_img" /> </span>
                         </div>
                         <div class="content1 mt-3">
                             <h6 class="mt-3 mr-3 mr-lg-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
-                            <img src="assets/img/tree.jpg" class="content1_img" />
+                            <span class="content1_img"><img src="assets/img/dog.jpg" class="content1_img" /> </span>
                         </div>
                     </div>
                 </div>
@@ -40,21 +42,21 @@ require 'dbconnect.php';
                 <div class="row mt-3" >
                     <div class="content_box mt-3">
                         <div class="content1">
-                             <img src="assets/img/tree.jpg" class="content1_img" />
+                        <span class="content1_img"><img src="assets/img/stair.jpg" class="content1_img" /> </span>
                             <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                         </div>
                         <div class="content1 mt-3">
-                             <img src="assets/img/tree.jpg" class="content1_img" />
+                        <span class="content1_img"><img src="assets/img/design.jpg" class="content1_img" /> </span>
                             <h6 class="mt-3  ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                         </div>
                         <div class="content1 mt-3">
-                             <img src="assets/img/tree.jpg" class="content1_img" />
+                        <span class="content1_img"> <img src="assets/img/tree.jpg" class="content1_img" /> </span>
                             <h6 class="mt-3  ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                         </div>
                     </div>
 
-                    <div class="img_box pl-0 pl-lg-5">
-                        <img src="assets/img/tree.jpg" class="img_pic mt-3" />
+                    <div class="img_box pl-0 pl-md-5">
+                    <img src="assets/img/contact-us-bg1.jpg" class="img_pic mt-3" />  
                         <h6 class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                     </div>
                 </div>
@@ -176,7 +178,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 ?>
 
-        <section class="latest">
+<section class="latest">
             <div class="latest_box">
                 <div class="latest_input">
                     <h1 > STORIES </h1>
@@ -189,42 +191,50 @@ while ($row = mysqli_fetch_assoc($result)) {
                     </div> 
                     <!-- row1 -->
                     <div class="row row1_story" >
-                        <div class="img_box pr-0 pr-lg-5">
-                            <img src="assets/img/tree.jpg" class="img_story_pic mt-sm-3 mt-4" />
+                        <div class="img_box pr-0 pr-md-5">
+                            <img src="assets/img/cactus.jpg" class="img_story_pic mt-sm-3 mt-4" />
                             <h6 class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde.</h6>
                         </div>
                         <div class="content_box mt-3">
                             <div class="content1">
-                                <img src="assets/img/tree.jpg" class="story1_img" />
+                            <span class="story1_img">
+                                <img src="assets/img/tree.jpg" class="story1_img" /> </span>
                                 <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                             </div>
                             <div class="content1 mt-3">
-                                <img src="assets/img/tree.jpg" class="story1_img" />
+                            <span class="story1_img">
+                                <img src="assets/img/stair.jpg" class="story1_img" /> </span>
                                 <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                             </div>
                             <div class="content1 mt-3">
-                                <img src="assets/img/tree.jpg" class="story1_img" />
+                            <span class="story1_img">  
+                                <img src="assets/img/dog.jpg" class="story1_img" /> </span>
                                 <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                             </div>
                         </div>
                     </div>
+
+
                     <!-- row2 -->
-                    <div class="row row1_story" >
-                        <div class="img_box pr-0 pr-lg-5">
-                            <img src="assets/img/tree.jpg" class="img_story_pic mt-sm-3 mt-4" />
+                    <div class="row row1_story mt-5" >
+                        <div class="img_box pr-0 pr-md-5">
+                            <img src="assets/img/man.jpg" class="img_story_pic mt-sm-3 mt-4" />
                             <h6 class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                         </div>
                         <div class="content_box mt-3">
                             <div class="content1">
-                                <img src="assets/img/tree.jpg" class="story1_img" />
+                            <span class="story1_img">
+                                <img src="assets/img/stair.jpg" class="story1_img" /> </span>
                                 <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                             </div>
                             <div class="content1 mt-3">
-                                <img src="assets/img/tree.jpg" class="story1_img" />
+                            <span class="story1_img">
+                                <img src="assets/img/contact-bg.jpg" class="story1_img" /> </span>
                                 <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                             </div>
                             <div class="content1 mt-3">
-                                <img src="assets/img/tree.jpg" class="story1_img" />
+                            <span class="story1_img">
+                                <img src="assets/img/dog.jpg" class="story1_img" /> </span>
                                 <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                             </div>
                         </div>
@@ -233,22 +243,25 @@ while ($row = mysqli_fetch_assoc($result)) {
                         <button class="view_more"> View More </button>
                     </div>
                 </div>
-
                 <div class="row1_flex">
+
                     <div class="popular mt-5 mt-lg-0  pl-3">
                         <h3> POPULAR STORIES </h3>
                     </div>
                     <div class="mt-5 pl-3">
                         <div class="content1">
-                            <img src="assets/img/tree.jpg" class="content1_img" />
+                            <span class="content1_img">
+                            <img src="assets/img/circle.jpg" class="content1_img" /> </span>
                             <h6 class="mt-3 ml-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                         </div>
                         <div class="content1 mt-3">
                             <img src="assets/img/tree.jpg" class="content1_img" />
                             <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                         </div>
+                        
                         <div class="content1 mt-3">
-                            <img src="assets/img/tree.jpg" class="content1_img" />
+                        <span class="content1_img">
+                            <img src="assets/img/design.jpg" class="content1_img" /> </span>
                             <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                         </div>
                     </div>
@@ -267,17 +280,17 @@ while ($row = mysqli_fetch_assoc($result)) {
                 </div>
             </div>
             <div class="enter_content  pl-3 ">
-                <div class="row  ">
-                    <div class="img_enter_box img_enter_box1  mr-5  ">
-                        <img src="assets/img/tree.jpg" class="img_enter_pic mt-sm-3 mt-4" />
+                <div class="row  main_enter">
+                    <div class="img_enter_box img_enter_box1  ">
+                        <img src="assets/img/tree.jpg" class="img_enter_pic mt-sm-3 mt-4" height="230"/>
                         <h6 class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                     </div>
-                    <div class="img_enter_box img_enter_box1 mr-5 ">
-                        <img src="assets/img/tree.jpg" class="img_enter_pic mt-sm-3 mt-4" />
+                    <div class="img_enter_box img_enter_box1  ">
+                        <img src="assets/img/man.jpg" class="img_enter_pic mt-sm-3 mt-4" height="230"/>
                         <h6 class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                     </div>
-                    <div class="img_enter_box img_enter_box2  ">
-                        <img src="assets/img/tree.jpg" class="img_enter_pic mt-sm-3 mt-4" />
+                    <div class="img_enter_box img_enter_box2  mr-0">
+                        <img src="assets/img/stair.jpg" class="img_enter_pic mt-sm-3 mt-4" height="230" />
                         <h6 class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                     </div>
                 </div>
@@ -285,15 +298,18 @@ while ($row = mysqli_fetch_assoc($result)) {
                     <div class="enter_content1   ">
                    
                         <div class="content1">
-                            <img src="assets/img/tree.jpg" class="content1_img" />
+                        <span class="enter_img">
+                            <img src="assets/img/stair.jpg" class="enter_img " /> </span>
                             <h6 class="mt-3 ml-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                         </div>
                         <div class="content1 mt-3">
-                            <img src="assets/img/tree.jpg" class="content1_img" />
+                        <span class="enter_img">
+                            <img src="assets/img/dog.jpg" class="enter_img" /> </span>
                             <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                         </div>
                         <div class="content1 mt-3">
-                            <img src="assets/img/tree.jpg" class="content1_img" />
+                        <span class="enter_img">
+                            <img src="assets/img/design.jpg" class="enter_img" /> </span>
                             <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                         </div>
                     
@@ -301,15 +317,18 @@ while ($row = mysqli_fetch_assoc($result)) {
                     <div class="enter_content1 enter_content_mv  ">
                    
                         <div class="content1">
-                            <img src="assets/img/tree.jpg" class="content1_img" />
+                        <span class="enter_img">
+                            <img src="assets/img/tree.jpg" class="enter_img" /> </span>
                             <h6 class="mt-3 ml-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                         </div>
                         <div class="content1 mt-3">
-                            <img src="assets/img/tree.jpg" class="content1_img" />
+                        <span class="enter_img">
+                            <img src="assets/img/stair.jpg" class="enter_img" /> </span>
                             <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                         </div>
                         <div class="content1 mt-3">
-                            <img src="assets/img/tree.jpg" class="content1_img" />
+                        <span class="enter_img">
+                            <img src="assets/img/contact-us-bg.jpg" class="enter_img" /> </span>
                             <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                         </div>
                     
@@ -333,52 +352,59 @@ while ($row = mysqli_fetch_assoc($result)) {
             <div class="memes_content    mt-3">
                 <div class="memes_small">
                     <div class="content1 con1">
-                        <img src="assets/img/tree.jpg" class="memes_small_img" />
-                        <h6 class="mt-3 ml-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
+                        <span class="memes_small_img">
+                            <img src="assets/img/design.jpg" class="memes_small_img" />
+                        </span>
+                        <h6 class="mt-3 ml-4 ml-md-0 ml-lg-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                     </div>
                     <div class="content1 con1 mt-3">
-                        <img src="assets/img/tree.jpg" class="memes_small_img" />
-                        <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
+                    <span class="memes_small_img">
+                        <img src="assets/img/man.jpg" class="memes_small_img" /> </span>
+                        <h6 class="mt-3 ml-4 ml-md-0 ml-lg-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                     </div>
                     <div class="content1 con1 mt-3">
-                        <img src="assets/img/tree.jpg" class="memes_small_img" />
-                        <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
+                         <span class="memes_small_img">
+                        <img src="assets/img/dog.jpg" class="memes_small_img" /> </span>
+                        <h6 class="mt-3 ml-4 ml-md-0 ml-lg-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                     </div>
                     <div class="content1 con1 mt-3">
-                        <img src="assets/img/tree.jpg" class="memes_small_img" />
-                        <h6 class="mt-3 ml-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
+                         <span class="memes_small_img">
+                        <img src="assets/img/tree.jpg" class="memes_small_img" /> </span>
+                        <h6 class="mt-3 ml-4 ml-md-0 ml-lg-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                     </div>
                     <div class="content1 con1 mt-3">
-                        <img src="assets/img/tree.jpg" class="memes_small_img" />
-                        <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
+                         <span class="memes_small_img">
+                        <img src="assets/img/contact-bg.jpg" class="memes_small_img" /> </span>
+                        <h6 class="mt-3 ml-4 ml-md-0 ml-lg-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                     </div>
                     <div class="content1 con1 mt-3">
-                        <img src="assets/img/tree.jpg" class="memes_small_img" />
-                        <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
+                         <span class="memes_small_img">
+                        <img src="assets/img/man.jpg" class="memes_small_img" /> </span>
+                        <h6 class="mt-3 ml-4 ml-md-0 ml-lg-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                     </div>
                 </div>
                 <div class="memes_large ">
                     <div class="img_meme_box  ml-0 ml-lg-5 pl-lg-3">
-                        <img src="assets/img/tree.jpg" class="img_story_pic " />
+                        <img src="assets/img/tree.jpg" class="img_meme_large_pic " /> 
                         <h6 class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                     </div>
                     <div class="img_meme_box ml-0 ml-lg-5 pl-lg-3">
-                        <img src="assets/img/tree.jpg" class="img_story_pic mt-sm-3 mt-4" />
+                    <img src="assets/img/man.jpg" class="img_meme_large_pic mt-sm-3 mt-4" /> 
                         <h6 class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                     </div>
                     <div class="img_meme_box ml-0 ml-lg-5 pl-lg-3">
-                        <img src="assets/img/tree.jpg" class="img_story_pic mt-sm-3 mt-4" />
+                     <img src="assets/img/stair.jpg" class="img_meme_large_pic mt-sm-3 mt-4" /> 
                         <h6 class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                     </div>
 
-                    <div class="button_enter_box  mt-5">
-                        <button class="view_more"> View More </button>
-                </div>
+                  
                   
                 </div>
                 
             </div>
-            
+            <div class="button_enter_box  mt-5 pt-2">
+                        <button class="view_more"> View More </button>
+                    </div>
         </section>
 
 
@@ -491,22 +517,22 @@ while ($row = mysqli_fetch_assoc($result)) {
             <div class="row_podcast_flex">
                 <div class="pod_inner_box">
                     <div class="content1">
-                        <img src="assets/img/tree.jpg" class="podcast_img" />
+                    <span class="podcast_img"><img src="assets/img/stair.jpg" class="podcast_img" /> </span>
                         <h6 class="mt-3 ml-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h6>
                     </div>
                     <div class="content1 ">
-                        <img src="assets/img/tree.jpg" class="podcast_img" />
+                       <span class="podcast_img">  <img src="assets/img/tree.jpg" class="podcast_img" /> </span>
                         <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h6>
                     </div>
                 </div>
                
                 <div class="pod_inner_box mt-3">
                     <div class="content1">
-                        <img src="assets/img/tree.jpg" class="podcast_img" />
+                       <span class="podcast_img">  <img src="assets/img/man.jpg" class="podcast_img" /> </span>
                         <h6 class="mt-3 ml-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h6>
                     </div>
                     <div class="content1 ">
-                        <img src="assets/img/tree.jpg" class="podcast_img" />
+                       <span class="podcast_img">  <img src="assets/img/dog.jpg" class="podcast_img" /> </span>
                         <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h6>
                     </div>
                 </div>
@@ -514,22 +540,22 @@ while ($row = mysqli_fetch_assoc($result)) {
             <div class="row_podcast_flex row1_podcast_flex ">
                 <div class="pod_inner_box">
                     <div class="content1">
-                        <img src="assets/img/tree.jpg" class="podcast_img" />
+                       <span class="podcast_img">  <img src="assets/img/design.jpg" class="podcast_img" /> </span>
                         <h6 class="mt-3 ml-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h6>
                     </div>
                     <div class="content1 ">
-                        <img src="assets/img/tree.jpg" class="podcast_img" />
+                       <span class="podcast_img">  <img src="assets/img/cactus.jpg" class="podcast_img" /> </span>
                         <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h6>
                     </div>
                 </div>
                
                 <div class="pod_inner_box mt-3">
                     <div class="content1">
-                        <img src="assets/img/tree.jpg" class="podcast_img" />
+                       <span class="podcast_img">  <img src="assets/img/circle.jpg" class="podcast_img" /> </span>
                         <h6 class="mt-3 ml-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h6>
                     </div>
                     <div class="content1 ">
-                        <img src="assets/img/tree.jpg" class="podcast_img" />
+                       <span class="podcast_img">  <img src="assets/img/contact-us-bg1.jpg" class="podcast_img" /> </span>
                         <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h6>
                     </div>
                 </div>
@@ -542,7 +568,7 @@ while ($row = mysqli_fetch_assoc($result)) {
         </div>
         <!-- <div class="podcast_slider hi-slide ">
             <ul>
-                <li> <img src="assets/img/tree.jpg" class="podcast_img" /> </li>
+                <li>  <img src="assets/img/tree.jpg" class="podcast_img" /> </li> 
                 <li> <img src="assets/img/tree.jpg" class="podcast_img" /> </li>
                 <li> <img src="assets/img/tree.jpg" class="podcast_img" /> </li>
                 <li> <img src="assets/img/tree.jpg" class="podcast_img" /> </li>

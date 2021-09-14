@@ -52,10 +52,18 @@ body{
     /* border: 1px solid black; */
 }
 
+.content a{
+    text-decoration: none;
+}
 .list,.list1{
     color:var( --black);
+
     text-decoration: none;
     cursor: pointer;
+}
+
+.list:hover, .list1:hover{
+    text-decoration: underline 5px;
 }
 .login{
     margin-right: 20px;
@@ -119,6 +127,16 @@ body{
      margin-top: 0px;
      font-size: 20px ;
      cursor: pointer;
+}
+.profile_pic{
+    margin-left: 30px;
+    margin-right: 40px;
+    margin-top: -10px;
+    font-size: 20px ;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
 }
 .sun{
     display: none;
@@ -316,6 +334,15 @@ body{
          margin-left: 20px; 
         margin-top: 10px;
         cursor: pointer;
+    }
+
+    .profile_pic_mv{
+        margin-left: 20px; 
+        margin-top: 0px;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
     }
     .search_box{
         display: none;

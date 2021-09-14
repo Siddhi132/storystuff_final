@@ -203,7 +203,7 @@
         <i class="fa fa-times cancel" aria-hidden="true"></i>
 
         <div class="user">
-            <img src="assets/img/tree.jpg" class="user_pic" />
+        <img src="assets/img/profile.jpg" class="user_pic" />
             <div class="user_name ">
                 <h6 class="name"> <?php
 

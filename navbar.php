@@ -68,12 +68,13 @@ $('#form')[0].reset(); // To reset form fields
 
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="assets/css/navbar.css">
-    <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/dashboard copy.css">
-    <link rel="stylesheet" href="assets/css/login copy.css">
-    <link rel="stylesheet" href="assets/css/home copy.css">
-    <link rel="stylesheet" href="assets/css/memes-internal copy.css">
-    <link rel="stylesheet" href="assets/css/stories-internal copy.css">
+     <link rel="stylesheet" href="assets/css/common.css">
+     <link rel="stylesheet" href="assets/css/dashboard copy.css">
+     <link rel="stylesheet" href="assets/css/login copy.css">
+     <link rel="stylesheet" href="assets/css/home copy.css">
+     <link rel="stylesheet" href="assets/css/memes-internal copy.css">
+     <link rel="stylesheet" href="assets/css/stories-internal copy.css">
+     <link rel="stylesheet" href="assets/css/contact-us.css">
     <!-- <link rel="stylesheet" href="assets/css/jquery-hislide.css"> -->
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -102,27 +103,13 @@ $('#form')[0].reset(); // To reset form fields
         </div>
         <div class="all_content ">
             <div class="content ">
-                <a href="#">
-                    <h6 class="list" id="story"> <b>STORIES </b></h6>
-                </a>
-                <a href="#">
-                    <h6 class="list1" id="entertainment"> <b> ENTERTAINMENT </b> </h6>
-                </a>
-                <a href="#">
-                    <h6 class="list1" id="meme"> <b> MEMES </b> </h6>
-                </a>
-                <a href="#">
-                    <h6 class="list1"> <b> PODCAST </b> </h6>
-                </a>
-                <a href="#">
-                    <h6 class="list1"> <b> GALLERY </b> </h6>
-                </a>
-                <a href="#">
-                    <h6 class="list1"> <b> ABOUT US </b> </h6>
-                </a>
-                <a href="#">
-                    <h6 class="list1"> <b> CONTACT US </b> </h6>
-                </a>
+                <a href="#" > <h6 class="list" id="story"> <b>STORIES </b></h6> </a>
+                <a href="#" > <h6 class="list1" id="entertainment"> <b> ENTERTAINMENT </b> </h6> </a>
+                <a href="#" >  <h6 class="list1" id="meme"> <b> MEMES </b> </h6> </a>
+                 <a href="#"> <h6 class="list1" id="podcast"> <b> PODCAST </b> </h6> </a>
+                 <a href="#"> <h6 class="list1" id="gallery"> <b> GALLERY </b> </h6> </a>
+                 <a href="#"> <h6 class="list1" id="about"> <b> ABOUT US </b> </h6> </a>
+                 <a href="#"> <h6 class="list1" id="contact"> <b> CONTACT US </b> </h6> </a>
             </div>
             <div class="login ">
                 <div class="search_box ">
@@ -131,10 +118,8 @@ $('#form')[0].reset(); // To reset form fields
                 </div>
                 <div class="">
                     <?php
-
-
-                        if (isset($_SESSION['email'])) {
-                            echo "<i class='fa fa-user user_icon d-none d-lg-block' aria-hidden='true'></i><span>".$_SESSION['email']."</span>  <br>
+                        if(isset($_SESSION['login'])){
+                            echo " <img src='assets/img/profile.jpg ' alt='' class='profile_pic d-none d-lg-block'><span>".$email."</span>  <br>
                             <a href='logout.php' >LOGOUT</a>";
                         }
                         else{
@@ -142,7 +127,7 @@ $('#form')[0].reset(); // To reset form fields
                         }
                     ?>
                     <!-- <h6 class="login_text">LOGIN</h6> -->
-                    <!-- <i class="fa fa-user user_icon d-none d-lg-block" aria-hidden="true"></i>  <br>
+                    <!-- <img src='assets/img/profile.jpg ' alt='' class='profile_pic d-none d-lg-block'> <br>
                  <h6 class="login_text">LOGOUT</h6>  -->
                 </div>
                 <i class="fa fa-moon-o moon icon" aria-hidden="true"></i>
@@ -154,6 +139,12 @@ $('#form')[0].reset(); // To reset form fields
         <div class="search_box1 ">
             <input class="search_input1" />
             <i class="fa fa-search search1" aria-hidden="true"></i>
+            <?php
+            if(isset($_SESSION['login'])){
+                            echo " <img src='assets/img/profile.jpg ' alt='' class='profile_pic d-none d-lg-block'><span>".$email."</span>  <br>
+                            <a href='logout.php' >LOGOUT</a>";
+                        }
+            ?>
             <!-- <i class="fa fa-user user_icon_mv d-lg-none" aria-hidden="true"></i> -->
         </div>
 
@@ -184,109 +175,243 @@ $('#form')[0].reset(); // To reset form fields
 
 
     <script>
-    $(document).ready(function() {
+    $(document).ready(function(){
+        // $(".list").hover(function() {
+        //         $(this).css("text-decoration","underline 5px");
+        //      }, function() {
+        //         $(this).css("text-decoration","none");
+        //     });
 
-        //Calling home page
-        $.ajax({
+        //     $("#entertainment").hover(function() {
+        //         $(this).css("text-decoration","underline 5px");
+        //      }, function() {
+        //         $(this).css("text-decoration","none");
+        //     });
+
+        //     $("#meme").hover(function() {
+        //         $(this).css("text-decoration","underline 5px");
+        //      }, function() {
+        //         $(this).css("text-decoration","none");
+        //     });
+
+        //     $("#podcast").hover(function() {
+        //         $(this).css("text-decoration","underline 5px");
+        //      }, function() {
+        //         $(this).css("text-decoration","none");
+        //     });
+
+        //     $("#gallery").hover(function() {
+        //         $(this).css("text-decoration","underline 5px");
+        //      }, function() {
+        //         $(this).css("text-decoration","none");
+        //     });
+
+        //     $("#about").hover(function() {
+        //         $(this).css("text-decoration","underline 5px");
+        //      }, function() {
+        //         $(this).css("text-decoration","none");
+        //     });
+
+        //     $("#contact").hover(function() {
+        //         $(this).css("text-decoration","underline 5px");
+        //      }, function() {
+        //         $(this).css("text-decoration","none");
+        //     });
+
+//Calling home page
+        $.ajax(
+            {
             url: "home.php",
-            type: "POST",
-
-            success: function(data) {
-                console.log(data);
-                $('#dynamic').html(data);
-            }
+                type: "POST",
+                
+                success: function (data) {
+                    console.log(data);
+                        $('#dynamic').html(data);
+                }
         });
 
-        $('#logo').click(function() {
-            $.ajax({
-                url: "home.php",
-                type: "POST",
+        $('#logo').click(function(){
+           
+         
 
-                success: function(data) {
+            $('.list,#entertainment,#meme,#podcast,#gallery,#about,#contact').css({
+                "text-decoration" : "none" ,
+                 "color" :"var(--black)" 
+            });
+
+           
+            $.ajax(
+            {
+            url: "home.php",
+                type: "POST",
+                
+                success: function (data) {
                     console.log(data);
-                    $('#dynamic').html(data);
+                        $('#dynamic').html(data);
                 }
             });
         })
-
+      
 
         //Callling stories page
-        $('.list').click(function() {
-            $.ajax({
-                url: "stories-internal.php",
-                type: "POST",
+        $('.list').click(function(){
+            $('.list').css({
+                "text-decoration" : "underline 5px #FF2039" ,
+                 "color" :" #FF2039" 
+            });
+           
+            $('#entertainment,#meme,#podcast,#gallery,#about,#contact').css({
+                "text-decoration" : "none" ,
+                 "color" :"var(--black)" 
+            });
+           
+          
+            // $(".list").hover(function() {
+            //     $(".list").css("text-decoration","none");
+            //  }, function() {
+            //     $(this).css("text-decoration","none");
+            // });
 
-                success: function(data) {
-                    $('#dynamic').html(data);
-                    console.log(data);
+            $.ajax(
+            {
+            url: "stories-internal.php",
+                type: "POST",
+                
+                success: function (data) {
+                        $('#dynamic').html(data);
+                        console.log(data);
                 }
             });
         })
 
         //Callling entertainment page
-        $('#entertainment').click(function() {
-            $.ajax({
-                url: "entertainment-internal.php",
-                type: "POST",
+            $('#entertainment').click(function(){
 
-                success: function(data) {
-                    $('#dynamic').html(data);
-                    console.log(data);
+            $('#entertainment').css({
+                "text-decoration" : "underline 5px #FF2039" ,
+                 "color" :" #FF2039" 
+            });
+
+            $('.list,#meme,#podcast,#gallery,#about,#contact').css({
+                "text-decoration" : "none" ,
+                 "color" :"var(--black)" 
+            });
+
+            
+           
+            // $('#meme').css("text-decoration","none");
+            // $('#podcast').css("text-decoration","none");
+            // $('#gallery').css("text-decoration","none");
+            // $('#about').css("text-decoration","none");
+            // $('#contact').css("text-decoration","none");
+            
+
+           
+              $.ajax(
+            {
+            url: "entertainment-internal.php",
+                type: "POST",
+                
+                success: function (data) {
+                        $('#dynamic').html(data);
+                        console.log(data);
                 }
             });
         })
         //Callling memes page
-        $('#meme').click(function() {
-            $.ajax({
-                url: "memes-internal.php",
-                type: "POST",
+        $('#meme').click(function(){
 
-                success: function(data) {
-                    $('#dynamic').html(data);
-                    console.log(data);
+            $('#meme').css({
+                "text-decoration" : "underline 5px #FF2039" ,
+                 "color" :" #FF2039" 
+            });
+         
+            $('.list,#entertainment,#podcast,#gallery,#about,#contact').css({
+                "text-decoration" : "none" ,
+                 "color" :"var(--black)" 
+            });
+           
+
+          
+
+              $.ajax(
+            {
+            url: "memes-internal.php",
+                type: "POST",
+                
+                success: function (data) {
+                        $('#dynamic').html(data);
+                        console.log(data);
+                }
+            });
+        })
+      
+
+       //Callling memes page
+       $('#contact').click(function(){
+        $('#contact').css({
+                "text-decoration" : "underline 5px #FF2039" ,
+                 "color" :" #FF2039" 
+            });
+           
+            $('.list,#entertainment,#meme,#podcast,#gallery,#about').css({
+                "text-decoration" : "none" ,
+                 "color" :"var(--black)" 
+            });
+
+       
+
+           
+
+              $.ajax(
+            {
+            url: "contact-us.php",
+                type: "POST",
+                
+                success: function (data) {
+                        $('#dynamic').html(data);
+                        console.log(data);
                 }
             });
         })
 
-
-
-        //dark mode
-        $('.moon').click(function() {
+//dark mode
+        $('.moon').click(function(){
             var element = document.body;
             //element.classList.toggle('dark');
 
             $('.sun,.moon,.black_logo,.white_logo').addClass('active');
-            $('body').addClass('dark');
+           $('body').addClass('dark');
 
             var check = "dark";
-
+            
             // $.ajax(
             //     {
             //     url: "memes-internal.php",
-
+                
             //     data: 'check1=' + check,
-
+                
             // });  
 
-            //     $.post("memes-internal.php",{check1: check }, function(){
+        //     $.post("memes-internal.php",{check1: check }, function(){
+                
+        //                 alert('success'); 
+        //     });
+        }) ;
 
-            //                 alert('success'); 
-            //     });
-        });
+        $('.sun').click(function(){
+        $('.sun,.moon,.black_logo,.white_logo').removeClass('active');
+        $('body').removeClass('dark');
 
-        $('.sun').click(function() {
-            $('.sun,.moon,.black_logo,.white_logo').removeClass('active');
-            $('body').removeClass('dark');
-
-            var check = "light";
-
+        var check = "light";
+            
             // $.ajax(
             //     {
             //     url: "memes-internal.php",
             //     type: "POST",
 
             //     data: { check1: check},
-
+               
             // });  
 
 
@@ -295,9 +420,9 @@ $('#form')[0].reset(); // To reset form fields
             // });
         });
     });
-    </script>
+    
+</script>
 
 
 </body>
-
 </html>

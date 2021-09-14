@@ -1,0 +1,283 @@
+
+.bg-img{
+    /* width: 100%;
+    height: 100vh; */
+    background-image: url('../img/contact-us-bg.jpg');
+     background-repeat: no-repeat; 
+    /* background-size: 100% 100%; */
+    background-size:cover;
+    background-position: center;
+    /* position: relative;
+    z-index: -1; */
+    margin-top: -202px;
+    padding-top: 200px;
+}
+
+@media all and (max-width:991px){
+    .bg-img{
+        margin-top: -250px;
+    }
+}
+
+/* @media all  and (max-width:575px) {
+    .bg-img{
+        height: 200vh;   
+    }
+} */
+
+.main_contact_div{
+    display: flex;
+    /* position: relative;
+    margin-top: -500px; */
+}
+
+.left_contact_div{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
+/* slightly transparent fallback */
+.contact_box{
+  /* background-color: rgba(255, 255, 255, .9); */
+   background: rgba(255, 255, 255, .5);
+   display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 30px;
+    
+   box-shadow: 5px 4px 7px  black;
+    margin-top: 100px;
+    height: auto;
+    margin-bottom: 50px;
+    width: 60%;
+}
+
+/* if backdrop support: very transparent and blurred */
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .contact_box{
+    /* background-color: rgba(255, 255, 255, .5); */
+    /* -webkit-backdrop-filter: blur(2em);
+    backdrop-filter: blur(2em); */
+    background: unset;
+     display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 30px;
+     backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+   box-shadow: 5px 4px 7px  black;
+    margin-top: 100px;
+    height: auto;
+    margin-bottom: 50px;
+    width: 60%;
+  }
+}
+
+.form-control{
+    z-index: 999;
+    position: absolute;
+}
+/* .contact_box{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 30px;
+     backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(20px);
+    -moz-backdrop-filter: blur(20px);
+   box-shadow: 5px 4px 7px  var(--black);
+    margin-top: 100px;
+    height: auto;
+    margin-bottom: 50px;
+    width: 60%;
+} */
+
+/* @media all and (min-width:1200px){
+    .contact_box{
+    }
+}
+
+@media all and (min-width:991px){
+    .contact_box{
+        width: 30%;
+    }
+}
+
+@media all and (min-width:769px){
+    .contact_box{
+        width: 75%;
+    }
+} */
+
+.text_box{
+    border-radius: 30px; 
+    border: #837777;
+     background-image: linear-gradient(60deg,#E4ECEC,#E4ECEC,#E4ECEC,#E4ECEC,#E4ECEC,#A6B8C4); 
+    /* opacity: 0.4; */
+    backdrop-filter: blur(20px); 
+    box-shadow: 0px 6px 15px #675D5D inset;
+    padding: 20px;
+    outline: none;
+    width: 94%;
+    margin-top: 30px;
+    height: 2%;
+}
+.text_box1{
+    border-radius: 30px; 
+    border: #837777;
+     background-image: linear-gradient(60deg,#E4ECEC,#E4ECEC,#E4ECEC,#E4ECEC,#E4ECEC,#A6B8C4); 
+    /* opacity: 0.4; */
+    backdrop-filter: blur(20px); 
+    box-shadow: 0px 6px 15px #675D5D inset;
+    padding: 20px;
+    outline: none;
+    width: 94%;
+    margin-top: 30px;
+    
+}
+
+.buttons_send_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button_send{
+    margin-top: 30px;
+    background-color: var(--black);
+    color: var(--white);
+   width: 75%;
+    height: 50px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    box-shadow: 2px 2px 8px 5px var(--black);
+    border:1px solid cornsilk;
+    margin-left: -20px;
+}
+
+.contact_line{
+    display: flex;
+    background-color: var(--black);
+    height: 2px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+
+/******************************************************************* right side div ************************************************************/
+.right_contact_div{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.mail_box{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 50px;
+    width: 50%;
+    height: auto;
+     margin-top: 60px; 
+  
+}
+
+.mail_inner_box{
+    display: flex;
+}
+
+.mail{
+    margin-left: 30px;
+}
+
+.icon_box{
+    display: flex;
+    justify-content: center;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 7px 50px 7px 50px;
+    width: 50%;
+    height: auto;
+    margin-top: 40px;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.particular_icon{
+    margin-left: 50px;
+}
+@media all and (max-width:1199px) {
+    .mail_box,.icon_box{
+        width: 70%;
+    }
+    .contact_box{
+        width: 70%;
+    }
+}
+
+@media all and (max-width:991px) {
+
+    .contact_box{
+        width: 75%;
+    }
+}
+
+@media all and (max-width:830px) {
+    .mail_box,.icon_box{
+        width: 73%;
+    }
+    .contact_box{
+        width: 80%;
+    }
+}
+
+
+@media all and (max-width:768px){
+    .main_contact_div{
+        flex-direction: column;
+    }
+    .left_contact_div,.right_contact_div{
+        width: 100%;
+    }
+
+    .contact_box{
+        width: 52%;
+    }
+    .mail_box,.icon_box{
+        /* width: 65%; */
+        width: 52%;
+    }
+
+    .icon_box{
+        margin-bottom: 100px;
+    }
+}
+
+@media all and (max-width:650px) {
+    .mail_box,.icon_box{
+        /* width: 73%; */
+        width: 55%;
+    }
+    .contact_box{
+        width: 55%;
+    }
+}
+
+@media all and (max-width:575px){
+    .mail_box,.icon_box{
+        width: 65%;
+    }
+
+    .contact_box{
+        width: 65%;
+    }
+}

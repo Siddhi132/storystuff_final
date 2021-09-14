@@ -140,11 +140,12 @@
 .story_img{
     display: flex;
     justify-content: center;
+    
 }
 
 .story_img img{
     width: 80%;
-    height: 50%;
+    height: 500px;
 }
 
 .story_text{
