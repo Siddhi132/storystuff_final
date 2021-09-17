@@ -65,6 +65,7 @@ $('#form')[0].reset(); // To reset form fields
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/formvalidation/0.6.2-dev/css/formValidation.min.css" integrity="sha512-B9GRVQaYJ7aMZO3WC2UvS9xds1D+gWQoNiXiZYRlqIVszL073pHXi0pxWxVycBk0fnacKIE3UHuWfSeETDCe7w==" crossorigin="anonymous" referrerpolicy="no-referrer" />   <!--form validation -->
 
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="assets/css/navbar.css">
@@ -167,7 +168,7 @@ $('#form')[0].reset(); // To reset form fields
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/formvalidation/0.6.2-dev/js/formValidation.min.js" integrity="sha512-DlXWqMPKer3hZZMFub5hMTfj9aMQTNDrf0P21WESBefJSwvJguz97HB007VuOEecCApSMf5SY7A7LkQwfGyVfg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
@@ -225,7 +226,7 @@ $('#form')[0].reset(); // To reset form fields
                 type: "POST",
                 
                 success: function (data) {
-                    console.log(data);
+                  
                         $('#dynamic').html(data);
                 }
         });
@@ -246,7 +247,7 @@ $('#form')[0].reset(); // To reset form fields
                 type: "POST",
                 
                 success: function (data) {
-                    console.log(data);
+                  
                         $('#dynamic').html(data);
                 }
             });
@@ -279,7 +280,7 @@ $('#form')[0].reset(); // To reset form fields
                 
                 success: function (data) {
                         $('#dynamic').html(data);
-                        console.log(data);
+                       
                 }
             });
         })
@@ -314,7 +315,7 @@ $('#form')[0].reset(); // To reset form fields
                 
                 success: function (data) {
                         $('#dynamic').html(data);
-                        console.log(data);
+                        
                 }
             });
         })
@@ -341,13 +342,13 @@ $('#form')[0].reset(); // To reset form fields
                 
                 success: function (data) {
                         $('#dynamic').html(data);
-                        console.log(data);
+                       
                 }
             });
         })
       
 
-       //Callling memes page
+       //Callling contactus page
        $('#contact').click(function(){
         $('#contact').css({
                 "text-decoration" : "underline 5px #FF2039" ,
@@ -370,7 +371,7 @@ $('#form')[0].reset(); // To reset form fields
                 
                 success: function (data) {
                         $('#dynamic').html(data);
-                        console.log(data);
+                        
                 }
             });
         })

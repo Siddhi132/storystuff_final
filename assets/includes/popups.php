@@ -240,14 +240,16 @@
                             class=" get1 col-10 " ALIGN="centre" required></textarea> <span
                             style="margin-top:10px; margin-left:4px"><i>Edit </i></span> </div>
 
-                    <div style="display:flex; ">
-                    <input class="  get col-10" name="image" type="file" name="image"
-                            id="image" placeholder="IMAGES" /> <span style="margin-top:10px; margin-left:4px"><i>Edit
+                            <div style="display:flex; "> 
+                    <div class="holder get col-10" id="holder_image">IMAGES</div>
+                    <input class="  get col-10" name="image" type="file" style="display:none"
+                            id="image" placeholder="IMAGES" onchange="sub(this)" /> <span style="margin-top:10px; margin-left:4px"><i>Edit
                             </i></span> </div>
 
                     <div style="display:flex; ">
-                    <input class=" get  col-10" type="video" name="videos" id="video"
-                            placeholder="VIDEOS" /> <span style="margin-top:10px; margin-left:4px"><i>Edit </i></span>
+                    <div class="holder get col-10" id="holder_video">VIDEOS</div>
+                    <input class=" get  col-10" type="file" name="videos" id="video" style="display:none"
+                            placeholder="VIDEOS"  onchange="video_fun(this)"/> <span style="margin-top:10px; margin-left:4px"><i>Edit </i></span>
                     </div>
                     <input class="send" type="submit" name="send" id="send"> SEND </button>
                 </form>
@@ -292,3 +294,60 @@
 </div>
 
 <!-- -----------------------------------------------------dashboard ends------------------------------------------ -->
+
+
+<!------------------------------------------------- javascript ------------------------------------------------------->
+<script>
+      function sub(obj) {
+            var file = obj.value;
+            var fileName = file.split("\\");
+           
+            document.getElementById("holder_image").innerHTML = fileName[fileName.length - 1];
+            // document.myForm.submit();
+            // event.preventDefault();
+          }
+
+          function video_fun(e) {
+            var file_video = e.value;
+            var fileName_video = file_video.split("\\");
+           
+            document.getElementById("holder_video").innerHTML = fileName_video[fileName_video.length - 1];
+            // document.myForm.submit();
+            // event.preventDefault();
+          }
+
+        //   $('#image').change(function(obj){
+        //       $('.holder').css("background","red");
+        //         var file = obj.value;
+        //         console.log(file);
+        //         var fileName = file.split("\\");
+        //         document.getElementById("holder").innerHTML = fileName[fileName.length - 1];
+        //         document.myForm.submit();
+        //         event.preventDefault();
+        //   })
+</script>
+<!-- <script>
+document.addEventListener('DOMContentLoaded', function(e) {
+    FormValidation.formValidation(
+        document.getElementById('holder_image'),
+        {
+            fields: {
+               
+                    validators: {
+                        notEmpty: {
+                            message: 'Please select an image'
+                        },
+                        file: {
+                            extension: 'jpeg,jpg,png',
+                            type: 'image/jpeg,image/png',
+                           // maxSize: 2097152,   // 2048 * 1024
+                            message: 'The selected file is not valid'
+                        },
+                    }
+                },
+            },
+        
+    );
+});
+
+</script> -->

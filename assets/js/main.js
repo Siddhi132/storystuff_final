@@ -49,6 +49,14 @@ $(document).ready(function(){
             $('.main_box,.container-fuild,.container-fluid').addClass('active')
         });
     
+        $('#holder_image').click(function() {
+            $('#image').click();
+          });
+
+          $('#holder_video').click(function() {
+            $('#video').click();
+          });
+
         $('.cancel').click(function(){
             $('.main_box,.container-fuild,.container-fluid').removeClass('active')
         });

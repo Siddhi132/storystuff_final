@@ -162,6 +162,13 @@
     outline: none;
 }
 
+.holder{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    height: auto;
+}
 .get.active{
     border: none;
 }
