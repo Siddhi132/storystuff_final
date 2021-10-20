@@ -45,6 +45,13 @@ if($exists==false) {
       $_SESSION['email']=$email;
       $login=true;
       echo "insert done";
+
+      $sql3="select `user_id` from `user` where email='".$_SESSION['email']."'";
+      $result4=mysqli_query($conn,$sql3);
+      $row2=mysqli_fetch_assoc($result4);
+      $user_id=$row2['user_id'];
+      $_SESSION['user_id']=$user_id;
+
       header("location: navbar.php");
   }
   else{

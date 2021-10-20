@@ -120,7 +120,7 @@ $('#form')[0].reset(); // To reset form fields
                 <div class="">
                     <?php
                         if(isset($_SESSION['login'])){
-                            echo " <img src='assets/img/profile.jpg ' alt='' class='profile_pic d-none d-lg-block'><span>".$email."</span>  <br>
+                            echo " <img src='assets/img/profile.jpg ' alt='' class='profile_pic d-none d-lg-block'><span>".$_SESSION['email']."</span>  <br>
                             <a href='logout.php' >LOGOUT</a>";
                         }
                         else{
@@ -140,12 +140,7 @@ $('#form')[0].reset(); // To reset form fields
         <div class="search_box1 ">
             <input class="search_input1" />
             <i class="fa fa-search search1" aria-hidden="true"></i>
-            <?php
-            if(isset($_SESSION['login'])){
-                            echo " <img src='assets/img/profile.jpg ' alt='' class='profile_pic d-none d-lg-block'><span>".$email."</span>  <br>
-                            <a href='logout.php' >LOGOUT</a>";
-                        }
-            ?>
+            
             <!-- <i class="fa fa-user user_icon_mv d-lg-none" aria-hidden="true"></i> -->
         </div>
 

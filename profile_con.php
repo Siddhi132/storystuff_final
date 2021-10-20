@@ -2,7 +2,7 @@
 require "dbconnect.php";
 session_start();
 $email = $_SESSION['email'];
-
+$insert=false;
 
 if (isset($_POST['send'])) {
     $role = $_POST['role'];
@@ -52,6 +52,7 @@ $t = time();
 
     if($result4){
         echo "insert";
+        $insert=true;
     }
     else{
         echo "not insert";
@@ -60,6 +61,7 @@ $t = time();
         <strong>Sorry!</strong> Your artical not submited.
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>';
+      $insert=false;
     }
     header("location: navbar.php");
 
