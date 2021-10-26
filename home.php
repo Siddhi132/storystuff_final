@@ -1,15 +1,9 @@
    
 <?php
 require 'dbconnect.php';
-require 'profile_con.php';
+// require 'profile_con.php';
  ?>
- <?php
-if ($insert==true){
-    echo "Insert done";
-}
 
-
- ?>
        <!-- latest -->
 
        <div class="container-fuild mt-5 px-5">

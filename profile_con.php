@@ -8,6 +8,7 @@ if (isset($_POST['send'])) {
     $role = $_POST['role'];
     $title = $_POST['title'];
     $content = $_POST['content'];
+    $content = str_replace("'","\'",$content);
     // $image = $_POST['image'];
     $video = $_POST['videos'];
     if(empty($_FILES) || !isset($_FILES['image'])){
@@ -41,14 +42,9 @@ echo $tempname;
 $t = time();
  $time = date("Y-m-d h:i:s",$t);
  
-  
-
 
     $sql2 = "INSERT INTO `artical` ( `category_id`, `image`, `description`, `user_id`, `date`) VALUES ( '$role', '$destfile', '$content', '$user_id','$time');";
-
     $result4=mysqli_query($conn, $sql2);
-
-
 
     if($result4){
         echo "insert";
