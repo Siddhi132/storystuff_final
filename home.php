@@ -1,5 +1,6 @@
    
 <?php
+error_reporting(0);
 require 'dbconnect.php';
 require 'profile_con.php';
  ?>
@@ -188,8 +189,8 @@ if ($insert==true){
                     </div> 
                     <!-- row1 -->
                     <!-- 1st  -->
-                    <div class="row row1_story" >
-                    <?php
+                    <div class="row row1_story border" >
+                        <?php
                             $sql = "SELECT * FROM `artical` where `category_id`='STORIES' ORDER BY `date` DESC LIMIT 1";
                             $result = mysqli_query($conn, $sql);
                             while ($row = mysqli_fetch_assoc($result)) {
@@ -200,16 +201,16 @@ if ($insert==true){
                             $user_id = $row['user_id'];
                             $date = $row['date'];
                         
-                            echo '<div class="img_box pr-0 pr-lg-5">
+                            echo '<div class="img_box pr-0 pr-md-5">
                             <img src="' . $image . '" class="img_story_pic mt-sm-3 mt-4" />
                             <h6 class="mt-3">' . $description . '</h6>
-                        </div>';
-}
+                            </div>';
+                            }
 
-?>
+                        ?>
                        <!-- 2nd 3rd 4th -->
-                        <div class="content_box mt-3">
-                        <?php
+                        <div class="content_box  border">
+                            <?php
                                      $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 1,3";
                                      $result = mysqli_query($conn, $sql);
                                      while ($row = mysqli_fetch_assoc($result)) {
@@ -220,21 +221,24 @@ if ($insert==true){
                                      $user_id = $row['user_id'];
                                      $date = $row['date'];
 
-                            echo '<div class="content1">
-                            <img src="' . $image . '" class="story1_img" />
-                            <h6 class="mt-3 ml-4">' . $description . '</h6>
-                        </div>';
-}
+                                    echo '<div class="content1 mt-3">
+                                    <span class="story1_img">
+                                        <img src="' . $image . '" class="story1_img" />
+                                    </span>
+                                    <h6 class="mt-3 ml-4">' . $description . '</h6>
+                                </div>';
+                                }
 
-?>
+                            ?>
                         </div>
-                    </div>
+
+                     <!-- </div>  -->
 
 
                     <!-- row2 -->
                      <!-- 1st   -->
-                    <div class="row row1_story mt-5" >
-                    <?php
+                    <div class="row row1_story mt-5  ml-1 border" >
+                        <?php
                             $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 4,1";
                             $result = mysqli_query($conn, $sql);
                             while ($row = mysqli_fetch_assoc($result)) {
@@ -245,15 +249,16 @@ if ($insert==true){
                             $user_id = $row['user_id'];
                             $date = $row['date'];
                         
-                            echo '<div class="img_box pr-0 pr-lg-5">
+                            echo '<div class="img_box pr-0 pr-md-5 border">
                             <img src="' . $image . '" class="img_story_pic mt-sm-3 mt-4" />
                             <h6 class="mt-3">' . $description . '</h6>
-                        </div>';
-}
-?>
- <!-- 2 3 4  -->
-                        <div class="content_box mt-3">
-                        <?php
+                            </div>';
+                            }
+                        ?>
+
+                        <!-- 2 3 4  -->
+                        <div class="content_box  border">
+                            <?php
                                    $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 5,3";
                                    $result = mysqli_query($conn, $sql);
                                    while ($row = mysqli_fetch_assoc($result)) {
@@ -262,21 +267,25 @@ if ($insert==true){
                                    $category_id = $row['category_id'];
                                    $description = $row['description'];
                                    $user_id = $row['user_id'];
-                                   $date = $row['date'];                           
-                      
-                          echo '<div class="content1">
-                          <img src="' . $image . '" class="story1_img" />
-                          <h6 class="mt-3 ml-4">' . $description . '</h6>
-                      </div>';
-                      }
-                      ?>
+                                   $date = $row['date'];
+
+                                  echo '<div class="content1 mt-3">
+                                  <span class="story1_img">
+                                      <img src="' . $image . '" class="story1_img" />
+                                  </span>
+                                  <h6 class="mt-3 ml-4">' . $description . '</h6>
+                              </div>';
+                              }
+                            ?>
                         </div>
                     </div>
                     <div class="button_story_box button_story_box_bottom mt-5">
                         <button class="view_more"> View More </button>
                     </div>
                 </div>
-                    </div>
+
+               
+            </div>
 
                 <!-- POPULAR STORY  -->
                 <div class="row1_flex">
@@ -297,9 +306,11 @@ if ($insert==true){
                                    $date = $row['date'];                           
                       
                           echo '<div class="content1 mt-3">
-                          <img src="' . $image . '" class="content1_img" />
+                          <span class="content1_img">
+                            <img src="' . $image . '" class="content1_img" />
+                          </span>
                           <h6 class="mt-3 ml-4 ">' . $description . '</h6>
-                      </div>';
+                            </div>';
                       }
                       ?>
                     </div>
@@ -307,6 +318,8 @@ if ($insert==true){
                         <button class="view_more"> View More </button>
                     </div>
                 </div>
+
+                
             </div>
         </section>
 
@@ -320,7 +333,7 @@ if ($insert==true){
             <div class="enter_content  pl-3 ">
                 <div class="row  main_enter">
                 <?php
-                                   $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 1,3";
+                                   $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 1,2";
                                    $result = mysqli_query($conn, $sql);
                                    while ($row = mysqli_fetch_assoc($result)) {
                                    $image = $row['image'];
@@ -330,12 +343,30 @@ if ($insert==true){
                                    $user_id = $row['user_id'];
                                    $date = $row['date'];                           
                       
-                          echo '<div class="img_enter_box img_enter_box1  ">
+                          echo '<div class="img_enter_box img_enter_box1   ">
                           <img src="' . $image . '" class="img_enter_pic mt-sm-3 mt-4" height="230" />
                           <h6 class="mt-3 ">' . $description . '</h6>
                       </div>';
                       }
-                      ?>             
+                      ?>  
+                      
+                      <?php
+                                   $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 1,1";
+                                   $result = mysqli_query($conn, $sql);
+                                   while ($row = mysqli_fetch_assoc($result)) {
+                                   $image = $row['image'];
+                                   $artical_id = $row['artical_id'];
+                                   $category_id = $row['category_id'];
+                                   $description = $row['description'];
+                                   $user_id = $row['user_id'];
+                                   $date = $row['date'];                           
+                      
+                          echo '<div class="img_enter_box img_enter_box1  mr-0">
+                          <img src="' . $image . '" class="img_enter_pic mt-sm-3 mt-4" height="230" />
+                          <h6 class="mt-3 ">' . $description . '</h6>
+                      </div>';
+                      }
+                      ?>  
                     <!-- <div class="img_enter_box img_enter_box1  ">
                         <img src="assets/img/tree.jpg" class="img_enter_pic mt-sm-3 mt-4" height="230"/>
                         <h6 class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
@@ -364,7 +395,7 @@ if ($insert==true){
                                    $user_id = $row['user_id'];
                                    $date = $row['date'];                           
                       
-                          echo '<div class="content1  ">  <span class="enter_img">
+                          echo '<div class="content1  mt-3">  <span class="enter_img">
                           <img src="' . $image . '" class="enter_img " /></span>
                           <h6 class="mt-3 ml-4">' . $description . '</h6>
                       </div>';
@@ -400,7 +431,7 @@ if ($insert==true){
                                    $user_id = $row['user_id'];
                                    $date = $row['date'];                           
                       
-                          echo '<div class="content1  ">  <span class="enter_img">
+                          echo '<div class="content1 mt-3 ">  <span class="enter_img">
                           <img src="' . $image . '" class="enter_img " /></span>
                           <h6 class="mt-3 ml-4">' . $description . '</h6>
                       </div>';
@@ -648,96 +679,129 @@ if ($insert==true){
         </div>
 
 
-        <div class="row mt-5 pt-5 pl-3 ">
+       <!-- <div class="row mt-5 pt-5 pl-3 ">
             <div class="row_podcast_flex">
                 <div class="pod_inner_box">
-                <?php
-                                   $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 0,2";
-                                   $result = mysqli_query($conn, $sql);
-                                   while ($row = mysqli_fetch_assoc($result)) {
-                                   $image = $row['image'];
-                                   $artical_id = $row['artical_id'];
-                                   $category_id = $row['category_id'];
-                                   $description = $row['description'];
-                                   $user_id = $row['user_id'];
-                                   $date = $row['date'];                           
+                     <?php
+                    //                $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 0,2";
+                    //                $result = mysqli_query($conn, $sql);
+                    //                while ($row = mysqli_fetch_assoc($result)) {
+                    //                $image = $row['image'];
+                    //                $artical_id = $row['artical_id'];
+                    //                $category_id = $row['category_id'];
+                    //                $description = $row['description'];
+                    //                $user_id = $row['user_id'];
+                    //                $date = $row['date'];
                       
-                          echo '<div class="content1">
-                          <span class="podcast_img"><img src="'.$image.'" class="podcast_img" /> </span>
-                              <h6 class="mt-3 ml-4 ">'.$description.'</h6>
-                          </div>';
-                      }
+                    //       echo '<div class="content1 border">
+                    //       <span class="podcast_img border"><img src="'.$image.'" class="podcast_img" /> </span>
+                    //           <h6 class="mt-3 ml-4 border">'.$description.'</h6>
+                    //       </div>';
+                    //   }
                       ?>  
-                    <!-- <div class="content1">
+                     <div class="content1">
                     <span class="podcast_img"><img src="assets/img/stair.jpg" class="podcast_img" /> </span>
                         <h6 class="mt-3 ml-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h6>
                     </div>
                     <div class="content1 ">
                        <span class="podcast_img">  <img src="assets/img/tree.jpg" class="podcast_img" /> </span>
                         <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h6>
-                    </div> -->
+                    </div> 
                 </div>
                
                 <div class="pod_inner_box mt-3">
                 <?php
-                                   $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 2,2";
-                                   $result = mysqli_query($conn, $sql);
-                                   while ($row = mysqli_fetch_assoc($result)) {
-                                   $image = $row['image'];
-                                   $artical_id = $row['artical_id'];
-                                   $category_id = $row['category_id'];
-                                   $description = $row['description'];
-                                   $user_id = $row['user_id'];
-                                   $date = $row['date'];                           
+                    //                $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 2,2";
+                    //                $result = mysqli_query($conn, $sql);
+                    //                while ($row = mysqli_fetch_assoc($result)) {
+                    //                $image = $row['image'];
+                    //                $artical_id = $row['artical_id'];
+                    //                $category_id = $row['category_id'];
+                    //                $description = $row['description'];
+                    //                $user_id = $row['user_id'];
+                    //                $date = $row['date'];                           
                       
-                          echo '<div class="content1">
-                          <span class="podcast_img"><img src="'.$image.'" class="podcast_img" /> </span>
-                              <h6 class="mt-3 ml-4 ">'.$description.'</h6>
-                          </div>';
-                      }
+                    //       echo '<div class="content1">
+                    //       <span class="podcast_img"><img src="'.$image.'" class="podcast_img" /> </span>
+                    //           <h6 class="mt-3 ml-4 ">'.$description.'</h6>
+                    //       </div>';
+                    //   }
                       ?>  
-                    <!-- <div class="content1">
+                     <div class="content1">
                        <span class="podcast_img">  <img src="assets/img/man.jpg" class="podcast_img" /> </span>
                         <h6 class="mt-3 ml-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h6>
                     </div>
                     <div class="content1 ">
                        <span class="podcast_img">  <img src="assets/img/dog.jpg" class="podcast_img" /> </span>
                         <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h6>
-                    </div> -->
+                    </div> 
                 </div>
             </div>
             <div class="row_podcast_flex row1_podcast_flex ">
                 <div class="pod_inner_box">
                 <?php
-                                   $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 4,2";
-                                   $result = mysqli_query($conn, $sql);
-                                   while ($row = mysqli_fetch_assoc($result)) {
-                                   $image = $row['image'];
-                                   $artical_id = $row['artical_id'];
-                                   $category_id = $row['category_id'];
-                                   $description = $row['description'];
-                                   $user_id = $row['user_id'];
-                                   $date = $row['date'];                           
+                    //                $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 4,2";
+                    //                $result = mysqli_query($conn, $sql);
+                    //                while ($row = mysqli_fetch_assoc($result)) {
+                    //                $image = $row['image'];
+                    //                $artical_id = $row['artical_id'];
+                    //                $category_id = $row['category_id'];
+                    //                $description = $row['description'];
+                    //                $user_id = $row['user_id'];
+                    //                $date = $row['date'];                           
                       
-                          echo '<div class="content1">
-                          <span class="podcast_img"><img src="'.$image.'" class="podcast_img" /> </span>
-                              <h6 class="mt-3 ml-4 ">'.$description.'</h6>
-                          </div>';
-                      }
+                    //       echo '<div class="content1">
+                    //       <span class="podcast_img"><img src="'.$image.'" class="podcast_img" /> </span>
+                    //           <h6 class="mt-3 ml-4 ">'.$description.'</h6>
+                    //       </div>';
+                    //   }
                       ?>  
-                    <!-- <div class="content1">
+                    <div class="content1">
                        <span class="podcast_img">  <img src="assets/img/design.jpg" class="podcast_img" /> </span>
                         <h6 class="mt-3 ml-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h6>
                     </div>
                     <div class="content1 ">
                        <span class="podcast_img">  <img src="assets/img/cactus.jpg" class="podcast_img" /> </span>
                         <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h6>
-                    </div> -->
+                    </div> 
                 </div>
                
                 <div class="pod_inner_box mt-3">
                 <?php
-                                   $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 6,2";
+                    //                $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 6,2";
+                    //                $result = mysqli_query($conn, $sql);
+                    //                while ($row = mysqli_fetch_assoc($result)) {
+                    //                $image = $row['image'];
+                    //                $artical_id = $row['artical_id'];
+                    //                $category_id = $row['category_id'];
+                    //                $description = $row['description'];
+                    //                $user_id = $row['user_id'];
+                    //                $date = $row['date'];                           
+                      
+                    //       echo '<div class="content1">
+                    //       <span class="podcast_img"><img src="'.$image.'" class="podcast_img" /> </span>
+                    //           <h6 class="mt-3 ml-4 ">'.$description.'</h6>
+                    //       </div>';
+                    //   }
+                      ?>  
+                    <div class="content1">
+                       <span class="podcast_img">  <img src="assets/img/circle.jpg" class="podcast_img" /> </span>
+                        <h6 class="mt-3 ml-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h6>
+                    </div>
+                    <div class="content1 ">
+                       <span class="podcast_img">  <img src="assets/img/contact-us-bg1.jpg" class="podcast_img" /> </span>
+                        <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h6>
+                    </div> 
+                </div>
+            </div>-->
+
+
+            <div class="row mt-md-5">
+                    <div class="enter_content1   ">
+                   
+
+                    <?php
+                                   $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 2,3";
                                    $result = mysqli_query($conn, $sql);
                                    while ($row = mysqli_fetch_assoc($result)) {
                                    $image = $row['image'];
@@ -747,22 +811,53 @@ if ($insert==true){
                                    $user_id = $row['user_id'];
                                    $date = $row['date'];                           
                       
-                          echo '<div class="content1">
-                          <span class="podcast_img"><img src="'.$image.'" class="podcast_img" /> </span>
-                              <h6 class="mt-3 ml-4 ">'.$description.'</h6>
-                          </div>';
+                          echo '<div class="content1  mt-3">  <span class="enter_img">
+                          <img src="' . $image . '" class="enter_img " /></span>
+                          <h6 class="mt-3 ml-4">' . $description . '</h6>
+                      </div>';
                       }
                       ?>  
-                    <!-- <div class="content1">
-                       <span class="podcast_img">  <img src="assets/img/circle.jpg" class="podcast_img" /> </span>
-                        <h6 class="mt-3 ml-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h6>
+                        <!-- <div class="content1">
+                        <span class="enter_img">
+                            <img src="assets/img/stair.jpg" class="enter_img " /> </span>
+                            <h6 class="mt-3 ml-4 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
+                        </div>
+                        <div class="content1 mt-3">
+                        <span class="enter_img">
+                            <img src="assets/img/dog.jpg" class="enter_img" /> </span>
+                            <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
+                        </div>
+                        <div class="content1 mt-3">
+                        <span class="enter_img">
+                            <img src="assets/img/design.jpg" class="enter_img" /> </span>
+                            <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
+                        </div> -->
+                    
                     </div>
-                    <div class="content1 ">
-                       <span class="podcast_img">  <img src="assets/img/contact-us-bg1.jpg" class="podcast_img" /> </span>
-                        <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h6>
-                    </div> -->
+                    <div class="enter_content1 enter_content_mv  ">
+                   
+                    <?php
+                                   $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 2,3";
+                                   $result = mysqli_query($conn, $sql);
+                                   while ($row = mysqli_fetch_assoc($result)) {
+                                   $image = $row['image'];
+                                   $artical_id = $row['artical_id'];
+                                   $category_id = $row['category_id'];
+                                   $description = $row['description'];
+                                   $user_id = $row['user_id'];
+                                   $date = $row['date'];                           
+                      
+                          echo '<div class="content1 mt-3 ">  <span class="enter_img">
+                          <img src="' . $image . '" class="enter_img " /></span>
+                          <h6 class="mt-3 ml-4">' . $description . '</h6>
+                      </div>';
+                      }
+                      ?>  
+                    
+                    </div>
                 </div>
-            </div>
+
+
             <div class="button_enter_box  mt-4 mb-4">
                         <button class="view_more"> View More </button>
                 </div>

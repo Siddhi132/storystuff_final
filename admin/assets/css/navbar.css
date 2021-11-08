@@ -1,0 +1,404 @@
+:root{
+    --black:black;
+    --white:white;
+}
+
+.dark{
+
+    --black:white;
+    --white:black;
+    --brown:red;
+}
+
+body{
+    background-color: var(--white);
+}
+
+@media only screen and (max-width:575px){
+    body{
+        width: 620px;
+    }
+}
+
+.container-fuild.active{
+    opacity: 0.2;
+
+}
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+.logo_img{
+    width:200px;
+    height: 150px;
+    position:relative;
+    cursor: pointer;
+}
+.all_content{
+
+    display: flex;
+    margin-top: 20px;
+    /* border: 2px solid crimson; */
+    color: var(--black);
+}
+.content{
+    display: flex;
+   justify-content:space-between;
+    width:60%;
+    /* margin-left: 350px; */
+    /* margin-right: 400px;  */
+    /* margin-left:-100px; */
+    /* border: 1px solid black; */
+}
+
+.content a{
+    text-decoration: none;
+}
+.list,.list1{
+    color:var( --black);
+
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.list:hover, .list1:hover{
+    text-decoration: underline 5px  #FF2039;
+}
+.login{
+    margin-right: 20px;
+    display: flex;
+    justify-content: flex-end;
+
+    width:32%;
+}
+.login_text{
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 2px;
+    margin-right: 30px;
+}
+.search{
+    /* margin-left: 1200px;
+    margin-top: -30px; */
+    /* margin-left: 30px; */
+    cursor: pointer;
+}
+.search_input{
+    display: none;
+}
+.search_input.active{
+    display:inline;
+    margin-left: -180px;
+    border: none;
+    border-bottom:1px solid var(--black);
+    outline:none;
+
+}
+.search_box1{
+    display: flex;
+
+    justify-content:flex-end;
+    /* border: 1px solid cadetblue; */
+    width: 97%;
+    padding-top: 3px;
+    padding-right: 10px;
+}
+.search1{
+    display: none;
+}
+.search_input1{
+    display: none;
+}
+
+
+/* dark mode */
+/* .icon{
+    margin-top: 5px;
+    z-index: 1;
+    cursor: pointer;
+    position:absolute;
+} */
+
+.user_icon{
+      /* position: absolute;   */
+     margin-left: 40px;
+     margin-right: 50px;
+     margin-top: 0px;
+     font-size: 20px ;
+     cursor: pointer;
+}
+.profile_pic{
+    margin-left: 30px;
+    margin-right: 40px;
+    margin-top: -10px;
+    font-size: 20px ;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+.sun{
+    display: none;
+}
+.sun.active{
+    margin-top: 4px;
+    display:inline-flex;
+    cursor: pointer;
+    position:absolute;
+}
+.moon{
+    margin-top: 5px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.moon.active{
+    display: none;
+}
+
+@media only screen and (max-width:991px) {
+    .moon{
+        margin-left: 50px;
+    }
+    .sun.active{
+        margin-left: 50px;
+    }
+}
+/* .sun{
+    display: none;
+} */
+
+/* .sun{
+    display: contents;
+    margin-top: 5px;
+    z-index: 2;
+    position: absolute;
+    cursor: pointer;
+} */
+
+@media only screen and (min-width:1686px) {
+    .content{
+        margin-left: 50px;
+    }
+}
+
+@media only screen and (max-width:1685px) {
+    .content{
+        /* width: 65%; */
+        margin-left: 50px;
+    }
+}
+@media only screen and (max-width:1468px) {
+    .content{
+        /* width: 65%; */
+        margin-left: 50px;
+    }
+    .login{
+        width: 32.5%;
+    }
+}
+@media only screen and (max-width:1200px) {
+    .content{
+        width: 62%;
+        overflow-x: auto;
+    }
+    /* .search_box{
+
+        margin-right: -15px;
+    } */
+    .login{
+        width: 29%;
+    }
+    .login_text{
+        margin-left: 20px;
+    }
+}
+@media only screen and (max-width:1131px) {
+    /* .search_box{
+        width: 5%;
+    } */
+    .content{
+        width: 70%;
+        overflow-x: auto;
+    }
+}
+@media only screen and (max-width:1115px) {
+    .content{
+        width: 64%;
+    }
+   
+    .login{
+        width: 27%;
+    }
+}
+@media only screen and (max-width:1075px) {
+    .content{
+        width: 66%;
+    }
+  
+    .login{
+        width: 24.5%;
+    }
+}
+/* @media only screen and (max-width:1321px) {
+    .content{
+        width: 65%;
+        margin-right: 200px;
+         margin-left: 250px;
+    }
+}
+@media only screen and (max-width:1200px) {
+    .content{
+        width: 65%;
+        margin-left: 220px;
+    }
+}
+@media only screen and (max-width:1168px) {
+    .content{
+        width: 85%;
+        margin-left: 160px;
+        margin-right: 130px;
+    }
+}
+@media only screen and (max-width:1069px) {
+    .content{
+        width: 100%;
+        margin-left: 150px;
+        margin-right: 110px;
+    }
+}*/
+
+/* @media only screen and (max-width:1200px) {
+     .content{
+        width: 100%;
+        margin-right: 100px;
+        /* margin-left: 180px;
+    }
+    .list{
+        margin-left:150px;
+    }
+}
+@media only screen and (max-width:991px) {
+    .content{
+       width: 120%;
+       margin-right: 80px;
+       /* margin-left: 180px;
+   }
+   .list{
+       margin-left:120px;
+   }
+} */
+
+@media only screen and (max-width:991px) {
+    .content{
+       /* width: 120%;
+       margin-right: 80px; */
+       overflow-x: auto;
+       /* margin-left: 180px;  */
+   }
+   .list{
+       margin-left:0px;
+   }
+   .list1{
+       margin-left: 40px;
+   }
+}
+
+/* mobile view */
+
+@media only screen and (max-width:991px){
+    .logo{
+        border: none;
+    }
+    .content{
+        width: 100%;
+        margin-left: 30px;
+        margin-right: -30px;
+    }
+    .login{
+        /* border: 2px solid tomato; */
+        justify-content: flex-start;
+        width: 10%;
+    }
+    .login_text{
+        margin-top: -50px;
+         margin-left: -20px;
+        /* border: 1px solid yellowgreen; */
+    }
+
+   
+
+    .user_icon_mv{
+        font-size: 20px;
+         margin-left: 20px; 
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .profile_pic_mv{
+        margin-left: 20px; 
+        margin-top: 0px;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+    }
+    .search_box{
+        display: none;
+    }
+    .search_input.active{
+        display:none;
+    }
+
+
+    .search1{
+        color: var(--black);
+         margin-top: 10px;
+        /* margin-left: 500px; */
+margin-left: 400px;
+        display: inline;
+    }
+    .search1.active{
+        display: inline;
+        margin-top:10px ;
+    }
+    .search_input1{
+         display: none;
+
+    }
+    .search_input1.active{
+        display:inline-flex;
+
+        /* margin-top: 10px;
+          margin-left: 200px;*/
+         margin-right: -380px;
+        /* border: 2px solid chocolate; */
+        border: none;
+         border-bottom:1px solid var(--black);
+         outline:none;
+    }
+}
+
+@media only screen and (max-width:952px) and (min-width:870px) {
+    /* .login{
+        width: 15%;
+    } */
+    .login_text{
+        margin-left: -25px;
+    }
+}
+
+@media only screen and (max-width:952px){
+    /* .search_box1{
+        width: 93.5%;
+    } */
+}
+@media only screen and (max-width:768px){
+    .login{
+        width:11% ;
+    }
+    /* .search_box1{
+        width: 87%;
+    } */
+}

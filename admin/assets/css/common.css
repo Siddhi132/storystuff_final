@@ -1,0 +1,11 @@
+:root{
+    --black:black;
+    --white:white;
+    --brown:brown;
+    --blue:#29648A;
+}
+
+.container-fluid.active{
+    opacity: 0.5;
+    
+}
