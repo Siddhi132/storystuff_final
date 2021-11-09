@@ -299,27 +299,36 @@
 
 .username,.mail{
     display: flex;
+    /* justify-content: center; */
+    align-items: center;
     width: 50%;
     /* height: 82px;  */
     background-color: #3C3B3D;
     color: white;
     border-radius: 49px;
-    padding: 20px;
+    padding: 0px 20px 0px 20px;
+    box-shadow: 10px 10px 40px 0px #000000 inset;
 }
 
 .name{
+    display: flex;
+    /* align-items: center; */
+     justify-content: center; 
+     padding-top: 13px; 
     font-weight: 450;
     font-size: 20px;
 }
 
 .title{
     display: flex;
+    align-items: center;
     width: 100%;
     background-color: #3C3B3D;
     color: white;
     border-radius: 49px;
-    padding: 20px;
+    padding: 0px 20px 0px 20px;
     margin-bottom: 20px;
+    box-shadow: 10px 10px 40px 0px #000000 inset;
 }
 
 .last_row{
@@ -334,6 +343,7 @@
     border-radius: 41px;
     background-color: #3C3B3D;
     color: white;
+    box-shadow: 10px 10px 40px 0px #000000 inset;
     /* margin-right: 200px; */
 }
 
@@ -376,6 +386,7 @@
     /* height: 75px; */
     padding: 10px;
     font-weight: 450;
+    box-shadow: 10px 10px 40px 0px #000000 inset;
 }
 
 .delete{
@@ -389,6 +400,7 @@
     border-radius: 41px;
     margin-right: 55px;
     font-weight:500;
+    box-shadow: 10px 10px 40px 0px #000000 inset;
 }
 
 @media screen and (max-width:1200px) {

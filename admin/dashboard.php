@@ -146,14 +146,14 @@
                             </div>
                             <button class="but"> PODCAST </button>
                         </div>
-                        <!-- <div class="button ">
+                        <div class="button ">
                             <div class="circle_box">
                                 <div class="circle">
                                     <p> 7 </p>
                                 </div>
                             </div>
                             <button class="but"> GALLERY </button>
-                        </div> -->
+                        </div>
                     </div>
                 </div> 
 
@@ -283,7 +283,7 @@
                         <div class="first_row">
                             <div class="username mr-3">
                                 <span class="name mr-3"> <p> SUMMARY </p> </span>
-                                <span class="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi ab voluptate rem porr   Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores maxime id nemo itaque molestiae obcaecati doloremque magni nihil accusantium corporis. Rem ex ad, alias eveniet nam incidunt nemo natus corporis. </span>
+                                <span class="">   Asperiores maxime id nemo itaque molestiae obcaecati doloremque magni nihil accusantium corporis. Rem ex ad, alias eveniet nam incidunt nemo natus corporis. </span>
                             </div>
                             <div class="mail h-75" >
                                 <span class="name mr-3"> <p> TAGS/KEYWORDS </p> </span>
