@@ -20,10 +20,29 @@ require 'dbconnect.php';
                 
                 <!-- row1 -->
                 <div class="row" >
-                    <div class="img_box pr-0  pr-md-5">
+                    <!-- <div class="img_box pr-0  pr-md-5">
                     <img src="assets/img/tree.jpg" class="img_pic mt-3" /> 
                         <h6 class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
-                    </div>
+                    </div> -->
+                    <?php
+                            $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 1,1";
+                            $result = mysqli_query($conn, $sql);
+                            while ($row = mysqli_fetch_assoc($result)) {
+                            $image = $row['image'];
+                            $artical_id = $row['artical_id'];
+                            $category_id = $row['category_id'];
+                            $description = $row['description'];
+                            $user_id = $row['user_id'];
+                            $date = $row['date'];
+                        
+                            echo '<div class="img_box pr-0  pr-md-5">
+                            <img src="'.$image.'" class="img_pic mt-3" /> 
+                                <h6 class="mt-3">'.$description.' </h6>
+                            </div>';
+}
+
+?>
+
                     <div class="content_box mt-3">
                         <div class="content1">
                             <h6 class="mt-3 mr-3 mr-lg-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
