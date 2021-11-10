@@ -249,7 +249,7 @@ $('#form')[0].reset(); // To reset form fields
         })
       
 
-        //Callling stories page
+        //Calling stories page
         $('.list').click(function(){
             $('.list').css({
                 "text-decoration" : "underline 5px #FF2039" ,

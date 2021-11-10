@@ -128,7 +128,7 @@
                                     <p> 7 </p>
                                 </div>
                             </div>
-                            <button class="but">ENTERTAINMENT </button>
+                            <button class="but" id="entertainment_but">ENTERTAINMENT </button>
                         </div>
                         <div class="button ">
                             <div class="circle_box ">
@@ -136,7 +136,7 @@
                                     <p> 7 </p>
                                 </div>
                             </div>
-                            <button class="but"> MEMES </button>
+                            <button class="but" id="memes_but"> MEMES </button>
                         </div>
                         <div class="button ">
                             <div class="circle_box">
@@ -144,7 +144,7 @@
                                     <p> 7 </p>
                                 </div>
                             </div>
-                            <button class="but"> PODCAST </button>
+                            <button class="but" id="podcast_but"> PODCAST </button>
                         </div>
                         <div class="button ">
                             <div class="circle_box">
@@ -152,7 +152,7 @@
                                     <p> 7 </p>
                                 </div>
                             </div>
-                            <button class="but"> GALLERY </button>
+                            <button class="but" id="gallery_but"> GALLERY </button>
                         </div>
                     </div>
                 </div> 
@@ -257,6 +257,227 @@
                     </div>
                 </div>
 
+                 <!-- all entertainment -->
+                 <div class="entertainment_box">
+                    <div class="s_title">
+                        <i class="fa fa-arrow-left arrow" aria-hidden="true"></i>
+                        <p class="s_text"> ENTERTAINMENT </p>
+                    </div>
+
+                    <div class="all_story ">
+                        <div class="par_story" >
+                            <div class="s_image_box">
+                                <img src="../assets/img/circle.jpg" class="s_image" alt="">
+                            </div>
+                            <div class="content_user">
+                                <div class="content_title ">
+                                    <p class="mr-md-5" > LOREM IPSUM DOLOR </p>
+                                    <p class="email"> loremipsumdolor@mail.com </p>
+                                </div>
+                                <div class="content_story ">
+                                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolor assumenda numquam est doloribus molestias dolore nam culpa quas ex modi porro fuga, explicabo deleniti consectetur quam labore laborum alias.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="par_story ">
+                            <div class="s_image_box">
+                                <img src="../assets/img/circle.jpg" class="s_image" alt="">
+                            </div>
+                            <div class="content_user">
+                                <div class="content_title">
+                                    <p class="mr-md-5" > LOREM IPSUM DOLOR </p>
+                                    <p class="email"> loremipsumdolor@mail.com </p>
+                                </div>
+                                <div class="content_story">
+                                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolor assumenda numquam est doloribus molestias dolore nam culpa quas ex modi porro fuga, explicabo deleniti consectetur quam labore laborum alias.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="par_story ">
+                            <div class="s_image_box">
+                                <img src="../assets/img/circle.jpg" class="s_image" alt="">
+                            </div>
+                            <div class="content_user">
+                                <div class="content_title">
+                                    <p class="mr-md-5" > LOREM IPSUM DOLOR </p>
+                                    <p class="email"> loremipsumdolor@mail.com </p>
+                                </div>
+                                <div class="content_story">
+                                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolor assumenda numquam est doloribus molestias dolore nam culpa quas ex modi porro fuga, explicabo deleniti consectetur quam labore laborum alias.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="par_story ">
+                            <div class="s_image_box">
+                                <img src="../assets/img/circle.jpg" class="s_image" alt="">
+                            </div>
+                            <div class="content_user">
+                                <div class="content_title">
+                                    <p class="mr-md-5" > LOREM IPSUM DOLOR </p>
+                                    <p class="email"> loremipsumdolor@mail.com </p>
+                                </div>
+                                <div class="content_story">
+                                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolor assumenda numquam est doloribus molestias dolore nam culpa quas ex modi porro fuga, explicabo deleniti consectetur quam labore laborum alias.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="par_story ">
+                            <div class="s_image_box">
+                                <img src="../assets/img/circle.jpg" class="s_image" alt="">
+                            </div>
+                            <div class="content_user">
+                                <div class="content_title">
+                                    <p class="mr-md-5" > LOREM IPSUM DOLOR </p>
+                                    <p class="email"> loremipsumdolor@mail.com </p>
+                                </div>
+                                <div class="content_story">
+                                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolor assumenda numquam est doloribus molestias dolore nam culpa quas ex modi porro fuga, explicabo deleniti consectetur quam labore laborum alias.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="par_story ">
+                            <div class="s_image_box">
+                                <img src="../assets/img/circle.jpg" class="s_image" alt="">
+                            </div>
+                            <div class="content_user">
+                                <div class="content_title">
+                                    <p class="mr-md-5" > LOREM IPSUM DOLOR </p>
+                                    <p class="email"> loremipsumdolor@mail.com </p>
+                                </div>
+                                <div class="content_story">
+                                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolor assumenda numquam est doloribus molestias dolore nam culpa quas ex modi porro fuga, explicabo deleniti consectetur quam labore laborum alias.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- all memes -->
+                <div class="memes_box">
+                    <div class="s_title">
+                        <i class="fa fa-arrow-left arrow" aria-hidden="true"></i>
+                        <p class="s_text"> MEMES </p>
+                    </div>
+
+                    <div class="all_story ">
+                        <div class="par_story" >
+                            <div class="s_image_box">
+                                <img src="../assets/img/circle.jpg" class="s_image" alt="">
+                            </div>
+                            <div class="content_user">
+                                <div class="content_title ">
+                                    <p class="mr-md-5" > LOREM IPSUM DOLOR </p>
+                                    <p class="email"> loremipsumdolor@mail.com </p>
+                                </div>
+                                <div class="content_story ">
+                                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolor assumenda numquam est doloribus molestias dolore nam culpa quas ex modi porro fuga, explicabo deleniti consectetur quam labore laborum alias.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="par_story ">
+                            <div class="s_image_box">
+                                <img src="../assets/img/circle.jpg" class="s_image" alt="">
+                            </div>
+                            <div class="content_user">
+                                <div class="content_title">
+                                    <p class="mr-md-5" > LOREM IPSUM DOLOR </p>
+                                    <p class="email"> loremipsumdolor@mail.com </p>
+                                </div>
+                                <div class="content_story">
+                                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolor assumenda numquam est doloribus molestias dolore nam culpa quas ex modi porro fuga, explicabo deleniti consectetur quam labore laborum alias.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- all podcast -->
+                <div class="podcast_box">
+                    <div class="s_title">
+                        <i class="fa fa-arrow-left arrow" aria-hidden="true"></i>
+                        <p class="s_text"> PODCAST </p>
+                    </div>
+
+                    <div class="all_story ">
+                        <div class="par_story" >
+                            <div class="s_image_box">
+                                <img src="../assets/img/circle.jpg" class="s_image" alt="">
+                            </div>
+                            <div class="content_user">
+                                <div class="content_title ">
+                                    <p class="mr-md-5" > LOREM IPSUM DOLOR </p>
+                                    <p class="email"> loremipsumdolor@mail.com </p>
+                                </div>
+                                <div class="content_story ">
+                                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolor assumenda numquam est doloribus molestias dolore nam culpa quas ex modi porro fuga, explicabo deleniti consectetur quam labore laborum alias.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="par_story ">
+                            <div class="s_image_box">
+                                <img src="../assets/img/circle.jpg" class="s_image" alt="">
+                            </div>
+                            <div class="content_user">
+                                <div class="content_title">
+                                    <p class="mr-md-5" > LOREM IPSUM DOLOR </p>
+                                    <p class="email"> loremipsumdolor@mail.com </p>
+                                </div>
+                                <div class="content_story">
+                                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolor assumenda numquam est doloribus molestias dolore nam culpa quas ex modi porro fuga, explicabo deleniti consectetur quam labore laborum alias.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- all gallery -->
+                <div class="gallery_box">
+                    <div class="s_title">
+                        <i class="fa fa-arrow-left arrow" aria-hidden="true"></i>
+                        <p class="s_text"> GALLERY </p>
+                    </div>
+
+                    <div class="all_story ">
+                        <div class="par_story" >
+                            <div class="s_image_box">
+                                <img src="../assets/img/circle.jpg" class="s_image" alt="">
+                            </div>
+                            <div class="content_user">
+                                <div class="content_title ">
+                                    <p class="mr-md-5" > LOREM IPSUM DOLOR </p>
+                                    <p class="email"> loremipsumdolor@mail.com </p>
+                                </div>
+                                <div class="content_story ">
+                                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolor assumenda numquam est doloribus molestias dolore nam culpa quas ex modi porro fuga, explicabo deleniti consectetur quam labore laborum alias.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="par_story ">
+                            <div class="s_image_box">
+                                <img src="../assets/img/circle.jpg" class="s_image" alt="">
+                            </div>
+                            <div class="content_user">
+                                <div class="content_title">
+                                    <p class="mr-md-5" > LOREM IPSUM DOLOR </p>
+                                    <p class="email"> loremipsumdolor@mail.com </p>
+                                </div>
+                                <div class="content_story">
+                                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolor assumenda numquam est doloribus molestias dolore nam culpa quas ex modi porro fuga, explicabo deleniti consectetur quam labore laborum alias.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
                 <!-- particular story -->
                 <div class="par_story_content">
                         <div class="first_row">
@@ -301,9 +522,6 @@
                                <span class="thumb_title"> THUMBNAIL </span>
                                <img src="../assets/img/circle.jpg" class="thumb_image">
                             </div>
-                           
-
-                           
                         </div>
 
                         <div class="final_buttons">
@@ -336,13 +554,34 @@
 
             //main page
             $("#story_but").click (function(){
-                $('.blind,.story_box,.main_box').addClass('active');
+                $('.blind,.story_box').addClass('active');
+                $('.entertainment_box, .memes_box, .podcast_box, .gallery_box').removeClass('active')
+            });
+
+            $("#entertainment_but").click (function(){
+                $('.blind,.entertainment_box').addClass('active');
+                $('.story_box,  .memes_box, .podcast_box, .gallery_box').removeClass('active')
                
+            });
+
+            $("#memes_but").click (function(){
+                $('.blind,.memes_box').addClass('active');
+                $('.story_box, .entertainment_box, .podcast_box, .gallery_box').removeClass('active')
+            });
+
+            $("#podcast_but").click (function(){
+                $('.blind,.podcast_box').addClass('active');
+                $('.story_box,.entertainment_box, .memes_box,  .gallery_box').removeClass('active')
+            });
+
+            $("#gallery_but").click (function(){
+                $('.blind,.gallery_box').addClass('active');
+                $('.story_box,.entertainment_box, .memes_box, .podcast_box').removeClass('active')
             });
 
             //all stories
             $(".arrow,.par_story").click(function(){
-                $('.blind,.story_box,.main_box').removeClass('active')
+                $('.blind,.story_box,.entertainment_box,.memes_box, .podcast_box, .gallery_box,.main_box').removeClass('active')
             });
 
             //when particular stories will be clicked
