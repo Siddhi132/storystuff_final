@@ -26,7 +26,7 @@ require 'dbconnect.php';
                         <h6 class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                     </div> -->
                     <?php
-                            $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 1,1";
+                            $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 1";
                             $result = mysqli_query($conn, $sql);
                             while ($row = mysqli_fetch_assoc($result)) {
                             $image = $row['image'];
@@ -45,7 +45,7 @@ require 'dbconnect.php';
 ?>
 
                     <div class="content_box mt-3">
-                        <div class="content1">
+                        <!-- <div class="content1">
                             <h6 class="mt-3 mr-3 mr-lg-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                             <span class="content1_img"><img src="assets/img/stair.jpg" class="content1_img" /> </span>
                         </div>
@@ -56,14 +56,32 @@ require 'dbconnect.php';
                         <div class="content1 mt-3">
                             <h6 class="mt-3 mr-3 mr-lg-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                             <span class="content1_img"><img src="assets/img/dog.jpg" class="content1_img" /> </span>
-                        </div>
+                        </div> -->
+                        <?php
+                            $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 2,3";
+                            $result = mysqli_query($conn, $sql);
+                            while ($row = mysqli_fetch_assoc($result)) {
+                            $image = $row['image'];
+                            $artical_id = $row['artical_id'];
+                            $category_id = $row['category_id'];
+                            $description = $row['description'];
+                            $user_id = $row['user_id'];
+                            $date = $row['date'];
+                        
+                            echo '<div class="content1">
+                            <h6 class="mt-3 mr-3 mr-lg-0"'.$description.' </h6>
+                            <span class="content1_img"><img src="'.$image.'" class="content1_img" /> </span>
+                        </div>';
+}
+
+?>
                     </div>
                 </div>
 
                 <!-- row2 -->
                 <div class="row mt-3" >
                     <div class="content_box mt-3">
-                        <div class="content1">
+                        <!-- <div class="content1">
                         <span class="content1_img"><img src="assets/img/stair.jpg" class="content1_img" /> </span>
                             <h6 class="mt-3 ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                         </div>
@@ -74,13 +92,51 @@ require 'dbconnect.php';
                         <div class="content1 mt-3">
                         <span class="content1_img"> <img src="assets/img/tree.jpg" class="content1_img" /> </span>
                             <h6 class="mt-3  ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
-                        </div>
-                    </div>
+                        </div> -->
+                        <?php
+                            $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 5,3";
+                            $result = mysqli_query($conn, $sql);
+                            while ($row = mysqli_fetch_assoc($result)) {
+                            $image = $row['image'];
+                            $artical_id = $row['artical_id'];
+                            $category_id = $row['category_id'];
+                            $description = $row['description'];
+                            $user_id = $row['user_id'];
+                            $date = $row['date'];
+                        
+                            echo '<div class="content1 mt-3">
+                            <span class="content1_img"> <img src="'.$image.'" class="content1_img" /> </span>
+                                <h6 class="mt-3  ml-4">'.$description.' </h6>
+                            </div>';
+}
 
+?>
+
+                    </div>
+<!-- 
                     <div class="img_box pl-0 pl-md-5">
                     <img src="assets/img/contact-us-bg1.jpg" class="img_pic mt-3" />  
                         <h6 class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
-                    </div>
+                    </div> -->
+
+                    <?php
+                            $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 10,1";
+                            $result = mysqli_query($conn, $sql);
+                            while ($row = mysqli_fetch_assoc($result)) {
+                            $image = $row['image'];
+                            $artical_id = $row['artical_id'];
+                            $category_id = $row['category_id'];
+                            $description = $row['description'];
+                            $user_id = $row['user_id'];
+                            $date = $row['date'];
+                        
+                            echo '<div class="img_box pl-0 pl-md-5">
+                            <img src="'.$image.'" class="img_pic mt-3" />  
+                                <h6 class="mt-3">'.$description.'</h6>
+                            </div>';
+}
+
+?>
                 </div>
             </div>
         </section>

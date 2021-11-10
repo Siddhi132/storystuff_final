@@ -53,6 +53,7 @@
         <div class="memes_grid mt-5  px-lg-5 px-md-3 br">
             <div class="memes_box ml-lg-5 ml-md-3  mt-4 mt-sm-0 br">
                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a>
+            </div>
                 <!-- <div class="lower border">
                     <div class="text">
                         <h5>Lorem ipsum</h5>
@@ -62,7 +63,6 @@
                         <ion-icon name="add-outline" class="icon_plus" ></ion-icon>
                     </div>
                 </div> -->
-            </div>
 
             <div class="memes_box ml-md-5    mt-md-0 ">
                 <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a>
