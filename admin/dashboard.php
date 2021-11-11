@@ -265,7 +265,7 @@
                     </div>
 
                     <div class="all_story ">
-                        <div class="par_story" >
+                        <div class="par_entertainment" >
                             <div class="s_image_box">
                                 <img src="../assets/img/circle.jpg" class="s_image" alt="">
                             </div>
@@ -280,67 +280,7 @@
                             </div>
                         </div>
 
-                        <div class="par_story ">
-                            <div class="s_image_box">
-                                <img src="../assets/img/circle.jpg" class="s_image" alt="">
-                            </div>
-                            <div class="content_user">
-                                <div class="content_title">
-                                    <p class="mr-md-5" > LOREM IPSUM DOLOR </p>
-                                    <p class="email"> loremipsumdolor@mail.com </p>
-                                </div>
-                                <div class="content_story">
-                                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolor assumenda numquam est doloribus molestias dolore nam culpa quas ex modi porro fuga, explicabo deleniti consectetur quam labore laborum alias.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="par_story ">
-                            <div class="s_image_box">
-                                <img src="../assets/img/circle.jpg" class="s_image" alt="">
-                            </div>
-                            <div class="content_user">
-                                <div class="content_title">
-                                    <p class="mr-md-5" > LOREM IPSUM DOLOR </p>
-                                    <p class="email"> loremipsumdolor@mail.com </p>
-                                </div>
-                                <div class="content_story">
-                                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolor assumenda numquam est doloribus molestias dolore nam culpa quas ex modi porro fuga, explicabo deleniti consectetur quam labore laborum alias.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="par_story ">
-                            <div class="s_image_box">
-                                <img src="../assets/img/circle.jpg" class="s_image" alt="">
-                            </div>
-                            <div class="content_user">
-                                <div class="content_title">
-                                    <p class="mr-md-5" > LOREM IPSUM DOLOR </p>
-                                    <p class="email"> loremipsumdolor@mail.com </p>
-                                </div>
-                                <div class="content_story">
-                                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolor assumenda numquam est doloribus molestias dolore nam culpa quas ex modi porro fuga, explicabo deleniti consectetur quam labore laborum alias.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="par_story ">
-                            <div class="s_image_box">
-                                <img src="../assets/img/circle.jpg" class="s_image" alt="">
-                            </div>
-                            <div class="content_user">
-                                <div class="content_title">
-                                    <p class="mr-md-5" > LOREM IPSUM DOLOR </p>
-                                    <p class="email"> loremipsumdolor@mail.com </p>
-                                </div>
-                                <div class="content_story">
-                                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolor assumenda numquam est doloribus molestias dolore nam culpa quas ex modi porro fuga, explicabo deleniti consectetur quam labore laborum alias.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="par_story ">
+                        <div class="par_entertainment ">
                             <div class="s_image_box">
                                 <img src="../assets/img/circle.jpg" class="s_image" alt="">
                             </div>
@@ -365,7 +305,7 @@
                     </div>
 
                     <div class="all_story ">
-                        <div class="par_story" >
+                        <div class="par_memes" >
                             <div class="s_image_box">
                                 <img src="../assets/img/circle.jpg" class="s_image" alt="">
                             </div>
@@ -380,7 +320,7 @@
                             </div>
                         </div>
 
-                        <div class="par_story ">
+                        <div class="par_memes ">
                             <div class="s_image_box">
                                 <img src="../assets/img/circle.jpg" class="s_image" alt="">
                             </div>
@@ -405,7 +345,7 @@
                     </div>
 
                     <div class="all_story ">
-                        <div class="par_story" >
+                        <div class="par_podcast" >
                             <div class="s_image_box">
                                 <img src="../assets/img/circle.jpg" class="s_image" alt="">
                             </div>
@@ -420,7 +360,7 @@
                             </div>
                         </div>
 
-                        <div class="par_story ">
+                        <div class="par_podcast ">
                             <div class="s_image_box">
                                 <img src="../assets/img/circle.jpg" class="s_image" alt="">
                             </div>
@@ -445,7 +385,7 @@
                     </div>
 
                     <div class="all_story ">
-                        <div class="par_story" >
+                        <div class="par_gallery" >
                             <div class="s_image_box">
                                 <img src="../assets/img/circle.jpg" class="s_image" alt="">
                             </div>
@@ -460,7 +400,7 @@
                             </div>
                         </div>
 
-                        <div class="par_story ">
+                        <div class="par_gallery ">
                             <div class="s_image_box">
                                 <img src="../assets/img/circle.jpg" class="s_image" alt="">
                             </div>
@@ -525,10 +465,232 @@
                         </div>
 
                         <div class="final_buttons">
-                              
-                                <button class="publish" id="decision_publish"> PUBLISH </button>
-                                <button class="publish" id="decision_review"> REVIEW </button>
-                                <button class="delete" id="decision_delete"> DELETE </button>
+                                <button class="publish" id="decision_story_mapping"> MAPPING </button>
+                                <button class="publish" id="decision_story_publish"> PUBLISH </button>
+                                <button class="publish" id="decision_story_review"> REVIEW </button>
+                                <button class="delete" id="decision_story_delete"> DELETE </button>
+                        </div>
+
+                       
+                </div>
+
+                 <!-- particular entertainment -->
+                 <div class="par_entertainment_content">
+                        <div class="first_row">
+                            <div class="username mr-3">
+                                <span class="name mr-3"> <p> USERNAME </p> </span>
+                                <span class=""> LOREM IPSUM DOLOR </span>
+                            </div>
+                            <div class="mail">
+                                <span class="name mr-3"> <p> MAIL </p> </span>
+                                <span class=""> loremipsumdolor@mail.com </span>
+                            </div>
+                        </div>
+
+                        <div class="title">
+                            <span class="name mr-3"><p> ENTERTAINMENT TITLE </p></span>
+                            <span class=""> Lorem ipsum dolor sit amet. </span>
+                        </div>
+
+                        <div class="title">
+                            <span class="name mr-3"><p> URL </p></span>
+                            <span class=""> http://localhost/storystuff_final/admin/dashboard.php </span>
+                        </div>
+
+                        <div class="first_row">
+                            <div class="username mr-3">
+                                <span class="name mr-3"> <p> SUMMARY </p> </span>
+                                <span class="">   Asperiores maxime id nemo itaque molestiae obcaecati doloremque magni nihil accusantium corporis. Rem ex ad, alias eveniet nam incidunt nemo natus corporis. </span>
+                            </div>
+                            <div class="mail h-75" >
+                                <span class="name mr-3"> <p> TAGS/KEYWORDS </p> </span>
+                                <span class=""> LOREM </span>
+                            </div>
+                        </div>
+
+                        <div class="title">
+                            <span class="name mr-3"><p> BODY </p></span>
+                            <span class="">  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi ab voluptate rem porro quaerat ullam reprehenderit excepturi assumenda unde. Earum temporibus porro ut delectus minima quam nemo officiis cupiditate consectetur? </span>
+                        </div>
+
+                        <div class="last_row">
+                            <div class="thumbnail">
+                               <span class="thumb_title"> THUMBNAIL </span>
+                               <img src="../assets/img/circle.jpg" class="thumb_image">
+                            </div>
+                        </div>
+
+                        <div class="final_buttons">
+                                <button class="publish" id="decision_entertainment_mapping"> MAPPING </button>
+                                <button class="publish" id="decision_entertainment_publish"> PUBLISH </button>
+                                <button class="publish" id="decision_entertainment_review"> REVIEW </button>
+                                <button class="delete" id="decision_entertainment_delete"> DELETE </button>
+                        </div>
+                    </div>
+
+                     <!-- particular memes -->
+                <div class="par_memes_content">
+                        <div class="first_row">
+                            <div class="username mr-3">
+                                <span class="name mr-3"> <p> USERNAME </p> </span>
+                                <span class=""> LOREM IPSUM DOLOR </span>
+                            </div>
+                            <div class="mail">
+                                <span class="name mr-3"> <p> MAIL </p> </span>
+                                <span class=""> loremipsumdolor@mail.com </span>
+                            </div>
+                        </div>
+
+                        <div class="title">
+                            <span class="name mr-3"><p> DOCUMENT TITLE </p></span>
+                            <span class=""> Lorem ipsum dolor sit amet. </span>
+                        </div>
+
+                        <div class="title">
+                            <span class="name mr-3"><p> URL </p></span>
+                            <span class=""> http://localhost/storystuff_final/admin/dashboard.php </span>
+                        </div>
+
+                        <div class="first_row">
+                            <div class="username mr-3">
+                                <span class="name mr-3"> <p> MAPPING </p> </span>
+                                <span class="">   Asperiores maxime id nemo itaque molestiae obcaecati doloremque magni nihil accusantium corporis. Rem ex ad, alias eveniet nam incidunt nemo natus corporis. </span>
+                            </div>
+                            <div class="mail h-75" >
+                                <span class="name mr-3"> <p> TAGS/KEYWORDS </p> </span>
+                                <span class=""> LOREM </span>
+                            </div>
+                        </div>
+
+                        <div class="title">
+                            <span class="name mr-3"><p> BODY </p></span>
+                            <span class="">  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi ab voluptate rem porro quaerat ullam reprehenderit excepturi assumenda unde. Earum temporibus porro ut delectus minima quam nemo officiis cupiditate consectetur? </span>
+                        </div>
+
+                        <div class="last_row">
+                            <div class="thumbnail">
+                               <span class="thumb_title"> IMAGE </span>
+                               <img src="../assets/img/circle.jpg" class="thumb_image">
+                            </div>
+                        </div>
+
+                        <div class="final_buttons">
+                                <button class="publish" id="decision_memes_mapping"> MAPPING </button>
+                                <button class="publish" id="decision_memes_publish"> PUBLISH </button>
+                                <button class="publish" id="decision_memes_review"> REVIEW </button>
+                                <button class="delete" id="decision_memes_delete"> DELETE </button>
+                        </div>
+
+                       
+                </div>
+
+                 <!-- particular podcast -->
+                 <div class="par_podcast_content">
+                        <div class="first_row">
+                            <div class="username mr-3">
+                                <span class="name mr-3"> <p> USERNAME </p> </span>
+                                <span class=""> LOREM IPSUM DOLOR </span>
+                            </div>
+                            <div class="mail">
+                                <span class="name mr-3"> <p> MAIL </p> </span>
+                                <span class=""> loremipsumdolor@mail.com </span>
+                            </div>
+                        </div>
+
+                        <div class="title">
+                            <span class="name mr-3"><p> PODCAST TITLE </p></span>
+                            <span class=""> Lorem ipsum dolor sit amet. </span>
+                        </div>
+
+                        <div class="title">
+                            <span class="name mr-3"><p> HEADING </p></span>
+                            <span class=""> http://localhost/storystuff_final/admin/dashboard.php </span>
+                        </div>
+
+                        <div class="first_row">
+                            <div class="username mr-3">
+                                <span class="name mr-3"> <p> MAPPING </p> </span>
+                                <span class="">   Asperiores maxime id nemo itaque molestiae obcaecati doloremque magni nihil accusantium corporis. Rem ex ad, alias eveniet nam incidunt nemo natus corporis. </span>
+                            </div>
+                            <div class="mail h-75" >
+                                <span class="name mr-3"> <p> TAGS/KEYWORDS </p> </span>
+                                <span class=""> LOREM </span>
+                            </div>
+                        </div>
+
+                        <div class="title">
+                            <span class="name mr-3"><p> SCRIPT EDITING </p></span>
+                            <span class="">  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi ab voluptate rem porro quaerat ullam reprehenderit excepturi assumenda unde. Earum temporibus porro ut delectus minima quam nemo officiis cupiditate consectetur? </span>
+                        </div>
+
+                        <div class="last_row">
+                            <div class="thumbnail">
+                               <span class="thumb_title"> IMAGE </span>
+                               <img src="../assets/img/circle.jpg" class="thumb_image">
+                            </div>
+                        </div>
+
+                        <div class="final_buttons">
+                                <button class="publish" id="decision_podcast_mapping"> MAPPING </button>
+                                <button class="publish" id="decision_podcast_publish"> PUBLISH </button>
+                                <button class="publish" id="decision_podcast_review"> REVIEW </button>
+                                <button class="delete" id="decision_podcast_delete"> DELETE </button>
+                        </div>
+
+                       
+                </div>
+
+                 <!-- particular gallery -->
+                 <div class="par_gallery_content">
+                        <div class="first_row">
+                            <div class="username mr-3">
+                                <span class="name mr-3"> <p> USERNAME </p> </span>
+                                <span class=""> LOREM IPSUM DOLOR </span>
+                            </div>
+                            <div class="mail">
+                                <span class="name mr-3"> <p> MAIL </p> </span>
+                                <span class=""> loremipsumdolor@mail.com </span>
+                            </div>
+                        </div>
+
+                        <div class="title">
+                            <span class="name mr-3"><p> GALLERY TITLE </p></span>
+                            <span class=""> Lorem ipsum dolor sit amet. </span>
+                        </div>
+
+                        <div class="title">
+                            <span class="name mr-3"><p> HEADING </p></span>
+                            <span class=""> http://localhost/storystuff_final/admin/dashboard.php </span>
+                        </div>
+
+                        <div class="first_row">
+                            <div class="username mr-3">
+                                <span class="name mr-3"> <p> MAPPING </p> </span>
+                                <span class="">   Asperiores maxime id nemo itaque molestiae obcaecati doloremque magni nihil accusantium corporis. Rem ex ad, alias eveniet nam incidunt nemo natus corporis. </span>
+                            </div>
+                            <div class="mail h-75" >
+                                <span class="name mr-3"> <p> TAGS/KEYWORDS </p> </span>
+                                <span class=""> LOREM </span>
+                            </div>
+                        </div>
+
+                        <div class="title">
+                            <span class="name mr-3 border"><p> SCRIPT EDITING </p></span>
+                            <span class="">  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi ab voluptate rem porro quaerat ullam reprehenderit excepturi assumenda unde. Earum temporibus porro ut delectus minima quam nemo officiis cupiditate consectetur? </span>
+                        </div>
+
+                        <div class="last_row">
+                            <div class="thumbnail">
+                               <span class="thumb_title"> IMAGE </span>
+                               <img src="../assets/img/circle.jpg" class="thumb_image">
+                            </div>
+                        </div>
+
+                        <div class="final_buttons">
+                                <button class="publish" id="decision_gallery_mapping"> MAPPING </button>
+                                <button class="publish" id="decision_gallery_publish"> PUBLISH </button>
+                                <button class="publish" id="decision_gallery_review"> REVIEW </button>
+                                <button class="delete" id="decision_gallery_delete"> DELETE </button>
                         </div>
 
                        
@@ -542,7 +704,8 @@
     <!-- js -->
      <!-- Plugins JS -->
      <script src="../assets/js/plugins.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+     <script src="../assets/js/jqueryscrolldetector.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
     </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
@@ -580,7 +743,7 @@
             });
 
             //all stories
-            $(".arrow,.par_story").click(function(){
+            $(".arrow,.par_story, .par_entertainment, .par_memes, .par_podcast, .par_gallery").click(function(){
                 $('.blind,.story_box,.entertainment_box,.memes_box, .podcast_box, .gallery_box,.main_box').removeClass('active')
             });
 
@@ -601,16 +764,148 @@
                         "color":"#0F83AA"
                     });
                 });
+
+                $("#entertainment_but, #memes_but, #podcast_but, #gallery_but").click(function(){
+                    $('.par_story_content,.main_box').removeClass('active');
+                    $("#story_but").css({
+                        "background-color":"white",
+                        "color":"#0F83AA"
+                    });
+                });
             
             });
 
-            $(".publish,.delete").click(function(){
-                $('.blind,.story_box,.main_box,.par_story_content').removeClass('active');
+            //when particular entertainment will be clicked
+            $(".par_entertainment").click(function(){
+                $('.par_entertainment_content,.main_box').addClass('active');
 
-                $("#story_but").css({
+                $("#entertainment_but").css({
+                    "background-color":"#0F83AA",
+                    "color":"white"
+                });
+
+                $("#entertainment_but").click(function(){
+                    $('.blind,.entertainment_box,.main_box').addClass('active');
+                    $('.par_entertainment_content').removeClass('active');
+                    $("#entertainment_but").css({
+                        "background-color":"white",
+                        "color":"#0F83AA"
+                    });
+                });
+
+                $("#story_but, #memes_but, #podcast_but, #gallery_but").click(function(){
+                    $('.par_entertainment_content,.main_box').removeClass('active');
+                    $("#entertainment_but").css({
+                        "background-color":"white",
+                        "color":"#0F83AA"
+                    });
+                });
+            
+            });
+
+             //when particular memes will be clicked
+            $(".par_memes").click(function(){
+                $('.par_memes_content,.main_box').addClass('active');
+
+                $("#memes_but").css({
+                    "background-color":"#0F83AA",
+                    "color":"white"
+                });
+
+                $("#memes_but").click(function(){
+                    $('.blind,.memes_box,.main_box').addClass('active');
+                    $('.par_memes_content').removeClass('active');
+                    $("#memes_but").css({
+                        "background-color":"white",
+                        "color":"#0F83AA"
+                    });
+                });
+
+                $("#story_but, #entertainment_but, #podcast_but, #gallery_but").click(function(){
+                    $('.par_memes_content,.main_box').removeClass('active');
+                    $("#memes_but").css({
+                        "background-color":"white",
+                        "color":"#0F83AA"
+                    });
+                });
+            
+            });
+
+            //when particular podcast will be clicked
+            $(".par_podcast").click(function(){
+                $('.par_podcast_content,.main_box').addClass('active');
+
+                $("#podcast_but").css({
+                    "background-color":"#0F83AA",
+                    "color":"white"
+                });
+
+                $("#podcast_but").click(function(){
+                    $('.blind,.podcast_box,.main_box').addClass('active');
+                    $('.par_podcast_content').removeClass('active');
+                    $("#podcast_but").css({
+                        "background-color":"white",
+                        "color":"#0F83AA"
+                    });
+                });
+
+                $("#story_but, #entertainment_but, #memes_but, #gallery_but").click(function(){
+                    $('.par_podcast_content,.main_box').removeClass('active');
+                    $("#podcast_but").css({
+                        "background-color":"white",
+                        "color":"#0F83AA"
+                    });
+                });
+            
+            });
+
+
+            //when particular gallery will be clicked
+            $(".par_gallery").click(function(){
+                $('.par_gallery_content,.main_box').addClass('active');
+
+                $("#gallery_but").css({
+                    "background-color":"#0F83AA",
+                    "color":"white"
+                });
+
+                $("#gallery_but").click(function(){
+                    $('.blind,.gallery_box,.main_box').addClass('active');
+                    $('.par_gallery_content').removeClass('active');
+                    $("#gallery_but").css({
+                        "background-color":"white",
+                        "color":"#0F83AA"
+                    });
+                });
+
+                $("#story_but, #entertainment_but, #memes_but, #podcast_but").click(function(){
+                    $('.par_gallery_content,.main_box').removeClass('active');
+                    $("#gallery_but").css({
+                        "background-color":"white",
+                        "color":"#0F83AA"
+                    });
+                });
+            
+            });
+
+            // $(".publish,.delete").click(function(){
+            //     $('.blind,.story_box,.main_box,.par_story_content').removeClass('active');
+
+            //     $("#story_but").css({
+            //             "background-color":"white",
+            //             "color":"#0F83AA"
+            //     });
+            // });
+
+            $("#decision_story_mapping, #decision_story_publish, #decision_story_review, #decision_story_delete,#decision_entertainment_mapping, #decision_entertainment_publish, #decision_entertainment_review, #decision_entertainment_delete,#decision_memes_mapping, #decision_memes_publish, #decision_memes_review, #decision_memes_delete,#decision_podcast_mapping, #decision_podcast_publish, #decision_podcast_review, #decision_podcast_delete, #decision_gallery_mapping, #decision_gallery_publish, #decision_gallery_review, #decision_gallery_delete").click(function(){
+                $('.blind,.story_box,  .entertainment_box, .memes_box, .podcast_box, .gallery_box, .main_box,.par_story_content, .par_entertainment_content, .par_memes_content, .par_podcast_content, .par_gallery_content').removeClass('active');
+
+                $("#story_but, #entertainment_but, #memes_but,#podcast_but, #gallery_but").css({
                         "background-color":"white",
                         "color":"#0F83AA"
                 });
+
+                $(window).scrollTop(0);
             });
         });
     </script>
