@@ -252,9 +252,7 @@
 }
 
 @media screen and (max-width:700px) {
-    .par_story{
-        /* padding-right: 20px; */
-    }
+  
     .email{
         font-size: 18px;
     }
@@ -522,5 +520,92 @@
     .par_story_content.active, .par_entertainment_content.active, .par_memes_content.active, .par_podcast_content.active, .par_gallery_content.active{
         margin-left: 52px;
         margin-right: 52px;
+    }
+}
+
+/* published popup */
+
+.main_box.opa{
+    opacity: 70%;
+}
+
+.pop_div{
+    display: none;
+}
+
+.pop_div.active,.pop_div.active,.pop_div.active,.pop_div.active,.pop_div.active{
+    display: flex;
+    justify-content: center;
+}
+
+.pop_div_s,.pop_div_e,.pop_div_m,.pop_div_p,.pop_div_g{
+    display: none;
+}
+
+.pop_div_s.active,.pop_div_e.active,.pop_div_m.active,.pop_div_p.active,.pop_div_g.active{
+    display: flex;
+    justify-content: center;
+}
+
+/* .pop_div_condi{
+    display: none;
+}
+
+.pop_div_condi.active{
+    display: flex;
+    justify-content: center;
+} */
+.popup{
+    display: flex;
+    flex-direction: column;
+    width: 477px;
+    height: 280px;
+    background-color: var(--black);
+    color: white;
+     margin-top: -750px; 
+     z-index: 1;
+}
+
+.times_div{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.tick{
+    display: flex;
+    justify-content: center;
+    color: #25C65B;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hour{
+   
+        display: flex;
+        justify-content: center;
+        color: var(--white);
+        font-size: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.outline{
+   
+    display: flex;
+    justify-content: center;
+    color: #FF2039;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pop_content{
+    display: flex;
+    padding: 30px;
+}
+
+@media screen and (max-width:700px) {
+    .popup{
+        margin-top: -900px;
     }
 }

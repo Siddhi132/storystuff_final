@@ -466,7 +466,7 @@
 
                         <div class="final_buttons">
                                 <button class="publish" id="decision_story_mapping"> MAPPING </button>
-                                <button class="publish" id="decision_story_publish"> PUBLISH </button>
+                                <a href="#pop"> <button class="publish" id="decision_story_publish"> PUBLISH </button> </a>
                                 <button class="publish" id="decision_story_review"> REVIEW </button>
                                 <button class="delete" id="decision_story_delete"> DELETE </button>
                         </div>
@@ -522,7 +522,7 @@
 
                         <div class="final_buttons">
                                 <button class="publish" id="decision_entertainment_mapping"> MAPPING </button>
-                                <button class="publish" id="decision_entertainment_publish"> PUBLISH </button>
+                                <a href="#pop"> <button class="publish" id="decision_entertainment_publish"> PUBLISH </button> </a>
                                 <button class="publish" id="decision_entertainment_review"> REVIEW </button>
                                 <button class="delete" id="decision_entertainment_delete"> DELETE </button>
                         </div>
@@ -576,7 +576,7 @@
 
                         <div class="final_buttons">
                                 <button class="publish" id="decision_memes_mapping"> MAPPING </button>
-                                <button class="publish" id="decision_memes_publish"> PUBLISH </button>
+                                <a href="#pop"><button class="publish" id="decision_memes_publish"> PUBLISH </button></a>
                                 <button class="publish" id="decision_memes_review"> REVIEW </button>
                                 <button class="delete" id="decision_memes_delete"> DELETE </button>
                         </div>
@@ -632,7 +632,7 @@
 
                         <div class="final_buttons">
                                 <button class="publish" id="decision_podcast_mapping"> MAPPING </button>
-                                <button class="publish" id="decision_podcast_publish"> PUBLISH </button>
+                                <a href="#pop"><button class="publish" id="decision_podcast_publish"> PUBLISH </button></a>
                                 <button class="publish" id="decision_podcast_review"> REVIEW </button>
                                 <button class="delete" id="decision_podcast_delete"> DELETE </button>
                         </div>
@@ -675,7 +675,7 @@
                         </div>
 
                         <div class="title">
-                            <span class="name mr-3 border"><p> SCRIPT EDITING </p></span>
+                            <span class="name mr-3"><p> SCRIPT EDITING </p></span>
                             <span class="">  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi ab voluptate rem porro quaerat ullam reprehenderit excepturi assumenda unde. Earum temporibus porro ut delectus minima quam nemo officiis cupiditate consectetur? </span>
                         </div>
 
@@ -688,15 +688,79 @@
 
                         <div class="final_buttons">
                                 <button class="publish" id="decision_gallery_mapping"> MAPPING </button>
-                                <button class="publish" id="decision_gallery_publish"> PUBLISH </button>
+                                <a href="#pop"><button class="publish" id="decision_gallery_publish"> PUBLISH </button></a>
                                 <button class="publish" id="decision_gallery_review"> REVIEW </button>
                                 <button class="delete" id="decision_gallery_delete"> DELETE </button>
                         </div>
 
                        
                 </div>
+
+               
+            </div>
+
+            
+        </div>
+
+        <!-- published -->
+        <!-- <div class="pop_div_s">
+            <div class="popup" id="pop">
+                <span class="times_div"> <i class="fa fa-times mr-3 mt-3" id="back_main_s" aria-hidden="true"></i>  </span>
+                <div class="tick"> <ion-icon name="checkmark-outline" class=" mr-2"style="font-size:30px"></ion-icon> PUBLISHED!</div>
+                <div class="pop_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum suscipit consequuntur dolorem, tempore magni facilis voluptatem, obcaecati repellendus corporis quae amet voluptas numquam rerum hic, non ipsam nostrum possimus neque?</div>
             </div>
         </div>
+
+        <div class="pop_div_e">
+            <div class="popup" id="pop">
+                <span class="times_div"> <i class="fa fa-times mr-3 mt-3" id="back_main_e" aria-hidden="true"></i>  </span>
+                <div class="tick"> <ion-icon name="checkmark-outline" class=" mr-2"style="font-size:30px"></ion-icon> PUBLISHED!</div>
+                <div class="pop_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum suscipit consequuntur dolorem, tempore magni facilis voluptatem, obcaecati repellendus corporis quae amet voluptas numquam rerum hic, non ipsam nostrum possimus neque?</div>
+            </div>
+        </div>
+
+        <div class="pop_div_m">
+            <div class="popup" id="pop">
+                <span class="times_div"> <i class="fa fa-times mr-3 mt-3" id="back_main_m" aria-hidden="true"></i>  </span>
+                <div class="tick"> <ion-icon name="checkmark-outline" class=" mr-2"style="font-size:30px"></ion-icon> PUBLISHED!</div>
+                <div class="pop_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum suscipit consequuntur dolorem, tempore magni facilis voluptatem, obcaecati repellendus corporis quae amet voluptas numquam rerum hic, non ipsam nostrum possimus neque?</div>
+            </div>
+        </div>
+
+        <div class="pop_div_p">
+            <div class="popup" id="pop">
+                <span class="times_div"> <i class="fa fa-times mr-3 mt-3" id="back_main_p" aria-hidden="true"></i>  </span>
+                <div class="tick"> <ion-icon name="checkmark-outline" class=" mr-2"style="font-size:30px"></ion-icon> PUBLISHED!</div>
+                <div class="pop_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum suscipit consequuntur dolorem, tempore magni facilis voluptatem, obcaecati repellendus corporis quae amet voluptas numquam rerum hic, non ipsam nostrum possimus neque?</div>
+            </div>
+        </div>
+
+        <div class="pop_div_g">
+            <div class="popup" id="pop">
+                <span class="times_div"> <i class="fa fa-times mr-3 mt-3" id="back_main_g" aria-hidden="true"></i>  </span>
+                <div class="tick"> <ion-icon name="checkmark-outline" class=" mr-2"style="font-size:30px"></ion-icon> PUBLISHED!</div>
+                <div class="pop_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum suscipit consequuntur dolorem, tempore magni facilis voluptatem, obcaecati repellendus corporis quae amet voluptas numquam rerum hic, non ipsam nostrum possimus neque?</div>
+            </div>
+        </div> -->
+
+        <!-- publishing -->
+        <div class="pop_div_s pop_div_e pop_div_m pop_div_p pop_div_g">
+            <div class="popup" id="pop">
+                <span class="times_div"> <i class="fa fa-times mr-3 mt-3" id="back" aria-hidden="true"></i>  </span>
+                <div class="hour"> <i class="fa fa-hourglass-o  mr-2" style="font-size:30px" aria-hidden="true"></i> PUBLISHING </div>
+                <div class="pop_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum suscipit consequuntur dolorem, tempore magni facilis voluptatem, obcaecati repellendus corporis quae amet voluptas numquam rerum hic, non ipsam nostrum possimus neque?</div>
+            </div>
+        </div>
+
+        <!-- couldn't publish -->
+        <!-- <div class="pop_div_s pop_div_e pop_div_m pop_div_p pop_div_g">
+            <div class="popup" id="pop">
+                <span class="times_div"> <i class="fa fa-times mr-3 mt-3 " id="back" aria-hidden="true"></i>  </span>
+                <div class="outline"> <ion-icon name="close-outline" class=" mr-2" style="font-size:30px"></ion-icon> COULDN'T PUBLISH </div>
+                <div class="pop_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum suscipit consequuntur dolorem, tempore magni facilis voluptatem, obcaecati repellendus corporis quae amet voluptas numquam rerum hic, non ipsam nostrum possimus neque?</div>
+            </div>
+        </div> -->
+        
     </section>
 
 
@@ -712,6 +776,8 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
 
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script>
         $(document).ready(function(){
 
@@ -771,8 +837,11 @@
                         "background-color":"white",
                         "color":"#0F83AA"
                     });
+
+                    $('.pop_div_s,.pop_div_e,.pop_div_m,.pop_div_p,.pop_div_g').removeClass('active');
+                $('.main_box').removeClass('opa');
                 });
-            
+                $(window).scrollTop(0);
             });
 
             //when particular entertainment will be clicked
@@ -799,6 +868,9 @@
                         "background-color":"white",
                         "color":"#0F83AA"
                     });
+
+                    $('.pop_div_s,.pop_div_e,.pop_div_m,.pop_div_p,.pop_div_g').removeClass('active');
+                $('.main_box').removeClass('opa');
                 });
             
             });
@@ -827,6 +899,9 @@
                         "background-color":"white",
                         "color":"#0F83AA"
                     });
+
+                    $('.pop_div_s,.pop_div_e,.pop_div_m,.pop_div_p,.pop_div_g').removeClass('active');
+                $('.main_box').removeClass('opa');
                 });
             
             });
@@ -855,6 +930,9 @@
                         "background-color":"white",
                         "color":"#0F83AA"
                     });
+
+                    $('.pop_div_s,.pop_div_e,.pop_div_m,.pop_div_p,.pop_div_g').removeClass('active');
+                    $('.main_box').removeClass('opa');
                 });
             
             });
@@ -884,6 +962,9 @@
                         "background-color":"white",
                         "color":"#0F83AA"
                     });
+
+                    $('.pop_div_s,.pop_div_e,.pop_div_m,.pop_div_p,.pop_div_g').removeClass('active');
+                    $('.main_box').removeClass('opa');
                 });
             
             });
@@ -897,16 +978,119 @@
             //     });
             // });
 
-            $("#decision_story_mapping, #decision_story_publish, #decision_story_review, #decision_story_delete,#decision_entertainment_mapping, #decision_entertainment_publish, #decision_entertainment_review, #decision_entertainment_delete,#decision_memes_mapping, #decision_memes_publish, #decision_memes_review, #decision_memes_delete,#decision_podcast_mapping, #decision_podcast_publish, #decision_podcast_review, #decision_podcast_delete, #decision_gallery_mapping, #decision_gallery_publish, #decision_gallery_review, #decision_gallery_delete").click(function(){
-                $('.blind,.story_box,  .entertainment_box, .memes_box, .podcast_box, .gallery_box, .main_box,.par_story_content, .par_entertainment_content, .par_memes_content, .par_podcast_content, .par_gallery_content').removeClass('active');
+            // $("#decision_story_mapping, #decision_story_review, #decision_story_delete,#decision_entertainment_mapping,  #decision_entertainment_review, #decision_entertainment_delete,#decision_memes_mapping, #decision_memes_publish, #decision_memes_review, #decision_memes_delete,#decision_podcast_mapping, #decision_podcast_publish, #decision_podcast_review, #decision_podcast_delete, #decision_gallery_mapping, #decision_gallery_publish, #decision_gallery_review, #decision_gallery_delete").click(function(){
+            //     $('.blind,.story_box,  .entertainment_box, .memes_box, .podcast_box, .gallery_box, .main_box,.par_story_content, .par_entertainment_content, .par_memes_content, .par_podcast_content, .par_gallery_content').removeClass('active');
 
-                $("#story_but, #entertainment_but, #memes_but,#podcast_but, #gallery_but").css({
-                        "background-color":"white",
-                        "color":"#0F83AA"
-                });
+            //     $("#story_but, #entertainment_but, #memes_but,#podcast_but, #gallery_but").css({
+            //             "background-color":"white",
+            //             "color":"#0F83AA"
+            //     });
 
-                $(window).scrollTop(0);
+            //     $(window).scrollTop(0);
+            // });
+
+            $("#decision_story_publish").click(function(){
+                $('.pop_div_s').addClass('active');
+                $('.main_box').addClass('opa');
+
+                // $(window).scrollTop(500);
             });
+            $("#decision_entertainment_publish").click(function(){
+                $('.pop_div_e').addClass('active');
+                $('.main_box').addClass('opa');
+
+                // $(window).scrollTop(500);
+            });
+            $("#decision_memes_publish").click(function(){
+                $('.pop_div_m').addClass('active');
+                $('.main_box').addClass('opa');
+
+                // $(window).scrollTop(500);
+            });
+            $("#decision_podcast_publish").click(function(){
+                $('.pop_div_p').addClass('active');
+                $('.main_box').addClass('opa');
+
+                // $(window).scrollTop(500);
+            });
+            $("#decision_gallery_publish").click(function(){
+                $('.pop_div_g').addClass('active');
+                $('.main_box').addClass('opa');
+
+                // $(window).scrollTop(500);
+            });
+
+            $("#back").click(function(){
+                $('.pop_div_s,.pop_div_e,.pop_div_m,.pop_div_p,.pop_div_g').removeClass('active');
+                $('.main_box').removeClass('opa');
+            });
+
+            $("#back_main_s").click(function(){
+                $('.pop_div_s').removeClass('active');
+                $('.main_box').removeClass('opa');
+                $('.blind,.story_box,.main_box').addClass('active');
+                $('.par_story_content').removeClass('active');
+                $("#story_but").css({
+                    "background-color":"white",
+                    "color":"#0F83AA"
+                });
+                
+                $(window).scrollTop(300);
+            });
+
+            $("#back_main_e").click(function(){
+                $('.pop_div_e').removeClass('active');
+                $('.main_box').removeClass('opa');
+                $('.blind,.entertainment_box,.main_box').addClass('active');
+                $('.par_entertainment_content').removeClass('active');
+                $("#entertainment_but").css({
+                    "background-color":"white",
+                    "color":"#0F83AA"
+                });
+                
+                $(window).scrollTop(300);
+            });
+
+            $("#back_main_m").click(function(){
+                $('.pop_div_m').removeClass('active');
+                $('.main_box').removeClass('opa');
+                $('.blind,.memes_box,.main_box').addClass('active');
+                $('.par_memes_content').removeClass('active');
+                $("#memes_but").css({
+                    "background-color":"white",
+                    "color":"#0F83AA"
+                });
+                
+                $(window).scrollTop(300);
+            });
+
+            $("#back_main_p").click(function(){
+                $('.pop_div_p').removeClass('active');
+                $('.main_box').removeClass('opa');
+                $('.blind,.podcast_box,.main_box').addClass('active');
+                $('.par_podcast_content').removeClass('active');
+                $("#podcast_but").css({
+                    "background-color":"white",
+                    "color":"#0F83AA"
+                });
+                
+                $(window).scrollTop(300);
+            });
+
+            $("#back_main_g").click(function(){
+                $('.pop_div_g').removeClass('active');
+                $('.main_box').removeClass('opa');
+                $('.blind,.gallery_box,.main_box').addClass('active');
+                $('.par_gallery_content').removeClass('active');
+                $("#gallery_but").css({
+                    "background-color":"white",
+                    "color":"#0F83AA"
+                });
+                
+                $(window).scrollTop(300);
+            });
+
+            
         });
     </script>
 </body>    
