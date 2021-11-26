@@ -191,7 +191,7 @@ session_start();
                                     $result3 = mysqli_query($conn, $sql4);
                                     while ($row = mysqli_fetch_assoc($result3)) {
                                         $user_email=$row['email'];
-                                        echo '<div class="par_story" >
+                                        echo '<div class="par_story" id='.$artical_id.'>
                                 <div class="s_image_box">
                                     <img src="../'.$image.'" class="s_image" alt="">
                                 </div>
@@ -323,7 +323,7 @@ session_start();
                                     $result3 = mysqli_query($conn, $sql4);
                                     while ($row = mysqli_fetch_assoc($result3)) {
                                         $user_email=$row['email'];
-                                        echo '<div class="par_story" >
+                                        echo '<div class="par_story" id='.$artical_id.'>
                                 <div class="s_image_box">
                                     <img src="../'.$image.'" class="s_image" alt="">
                                 </div>
@@ -395,7 +395,7 @@ session_start();
                                     $result3 = mysqli_query($conn, $sql4);
                                     while ($row = mysqli_fetch_assoc($result3)) {
                                         $user_email=$row['email'];
-                                        echo '<div class="par_story" >
+                                        echo '<div class="par_story" id='.$artical_id.'>
                                 <div class="s_image_box">
                                     <img src="../'.$image.'" class="s_image" alt="">
                                 </div>
@@ -529,57 +529,6 @@ session_start();
 
                 <!-- particular story -->
                 <div class="par_story_content">
-                        <div class="first_row">
-                            <div class="username mr-3">
-                                <span class="name mr-3"> <p> USERNAME </p> </span>
-                                <span class=""> LOREM IPSUM DOLOR </span>
-                            </div>
-                            <div class="mail">
-                                <span class="name mr-3"> <p> MAIL </p> </span>
-                                <span class=""> loremipsumdolor@mail.com </span>
-                            </div>
-                        </div>
-
-                        <div class="title">
-                            <span class="name mr-3"><p> STORY TITLE </p></span>
-                            <span class=""> Lorem ipsum dolor sit amet. </span>
-                        </div>
-
-                        <div class="title">
-                            <span class="name mr-3"><p> URL </p></span>
-                            <span class=""> http://localhost/storystuff_final/admin/dashboard.php </span>
-                        </div>
-
-                        <div class="first_row">
-                            <div class="username mr-3">
-                                <span class="name mr-3"> <p> SUMMARY </p> </span>
-                                <span class="">   Asperiores maxime id nemo itaque molestiae obcaecati doloremque magni nihil accusantium corporis. Rem ex ad, alias eveniet nam incidunt nemo natus corporis. </span>
-                            </div>
-                            <div class="mail h-75" >
-                                <span class="name mr-3"> <p> TAGS/KEYWORDS </p> </span>
-                                <span class=""> LOREM </span>
-                            </div>
-                        </div>
-
-                        <div class="title">
-                            <span class="name mr-3"><p> BODY </p></span>
-                            <span class="">  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi ab voluptate rem porro quaerat ullam reprehenderit excepturi assumenda unde. Earum temporibus porro ut delectus minima quam nemo officiis cupiditate consectetur? </span>
-                        </div>
-
-                        <div class="last_row">
-                            <div class="thumbnail">
-                               <span class="thumb_title"> THUMBNAIL </span>
-                               <img src="../assets/img/circle.jpg" class="thumb_image">
-                            </div>
-                        </div>
-
-                        <div class="final_buttons">
-                                <button class="publish" id="decision_story_mapping"> MAPPING </button>
-                                <a href="#pop"> <button class="publish" id="decision_story_publish"> PUBLISH </button> </a>
-                                <button class="publish" id="decision_story_review"> REVIEW </button>
-                                <button class="delete" id="decision_story_delete"> DELETE </button>
-                        </div>
-
                        
                 </div>
 
@@ -921,9 +870,23 @@ session_start();
             $(".arrow,.par_story, .par_entertainment, .par_memes, .par_podcast, .par_gallery").click(function(){
                 $('.blind,.story_box,.entertainment_box,.memes_box, .podcast_box, .gallery_box,.main_box').removeClass('active')
             });
-
+            
             //when particular stories will be clicked
             $(".par_story").click(function(){
+                function loadData(id)
+                {
+                    $.ajax({
+                    type: "post",
+                    url: "par_story_content.php",
+                    data: {'artical_id':id},
+                    success: function (data) {
+                        $(".par_story_content").html(data);
+                    }   
+                    });
+                }
+                var id = $(this).attr('id');
+                loadData(id);
+                
                 $('.par_story_content,.main_box').addClass('active')
                 
                 $("#story_but").css({
