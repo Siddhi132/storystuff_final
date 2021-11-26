@@ -97,7 +97,7 @@
     </div>
     <!-- <div class="login_box">
 </div> -->
-    <div class="login_title ">
+    <div class="login_title">
         <div class="cancel_login ">
             <i class="fa fa-times" aria-hidden="true"></i>
         </div>

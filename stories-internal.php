@@ -43,7 +43,7 @@ require 'login_con.php';
                         
                             echo '<div class="text1 text2  text1_mv">
                             <h6>'.$description.'</h6>
-                        </div>';
+                            </div>';
 }
 
 ?>
@@ -70,24 +70,8 @@ require 'login_con.php';
                     <i class="fa fa-share-alt fa-lg mt-1" aria-hidden="true"></i>
                 </div>
             </div>
-            <div class="story mt-5">
-                <div class="story_img">
-                    <img src="assets/img/tree.jpg" class="" />
-                </div>
-                <div class="story_text mt-5">
-                    <h6>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex dicta odio reprehenderit unde praesentium debitis accusamus dolorum dolor consectetur voluptatem, deserunt corrupti repellat magnam temporibus quidem saepe aut perspiciatis tenetur.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex dicta odio reprehenderit unde praesentium debitis accusamus dolorum dolor consectetur voluptatem, deserunt corrupti repellat magnam temporibus quidem saepe aut perspiciatis tenetur.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex dicta odio reprehenderit unde praesentium debitis accusamus dolorum dolor consectetur voluptatem, deserunt corrupti repellat magnam temporibus quidem saepe aut perspiciatis tenetur.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex dicta odio reprehenderit unde praesentium debitis accusamus dolorum dolor consectetur voluptatem, deserunt corrupti repellat magnam temporibus quidem saepe aut perspiciatis tenetur.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex dicta odio reprehenderit unde praesentium debitis accusamus dolorum dolor consectetur voluptatem, deserunt corrupti repellat magnam temporibus quidem saepe aut perspiciatis tenetur.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex dicta odio reprehenderit unde praesentium debitis accusamus dolorum dolor consectetur voluptatem, deserunt corrupti repellat magnam temporibus quidem saepe aut perspiciatis tenetur.
-                    </h6>
-                </div>
-
-                <!-- <div class="story_img">
-                    <img src="assets/img/tree.jpg" class="" />
-                </div> -->
+            <div class="story mt-5"  id="story-img">
+                
             </div>
         </section>
 
@@ -108,13 +92,16 @@ require 'login_con.php';
                             $image = $row['image'];
                             $artical_id = $row['artical_id'];
                             $category_id = $row['category_id'];
-                            $description = $row['description'];
+                            $ription = $row['description'];
                             $user_id = $row['user_id'];
                             $date = $row['date'];
+<<<<<<< HEAD
                         
                             echo '<img src="'.$image.'" class="all_story_img" onclick="move()"/>';
+=======
+                            echo '<button style="background:transparent;border:0px;z-index:1;" class="artical_id" id='.$artical_id.'><img src="'.$image.'" class="all_story_img" id="artical-img"/></button>';
+>>>>>>> b68ea76643d68c93dc67dd920937e1426253126e
 }
-
 ?>
 
                     <!-- <img src="assets/img/tree.jpg" class="all_story_img" />
@@ -123,12 +110,31 @@ require 'login_con.php';
             </div>
         </section>
     </div>
-
-
+    <script>
+        $(document).ready(function () {
+            function loadData(id)
+            {
+                $.ajax(
+                    {
+                    type: "POST",
+                    url: "stories-internal-logic.php",
+                    data: {'artical-id':id},
+                    success: function (data) {
+                        $("#story-img").html(data);
+                    }
+                });
+            }
+            $(".artical_id").click(function () { 
+                var element = $(this).attr("id");
+                loadData(element);
+                // alert(element);
+            });
+            loadData(8);
+        });
+    </script>
     <script src="assets/js/plugins.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
 
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
