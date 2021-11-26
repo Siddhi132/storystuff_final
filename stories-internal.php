@@ -76,12 +76,7 @@ require 'login_con.php';
                             $ription = $row['description'];
                             $user_id = $row['user_id'];
                             $date = $row['date'];
-<<<<<<< HEAD
-                        
-                            echo '<img src="'.$image.'" class="all_story_img" onclick="move()"/>';
-=======
                             echo '<button style="background:transparent;border:0px;z-index:1;" class="artical_id" id='.$artical_id.'><img src="'.$image.'" class="all_story_img" id="artical-img"/></button>';
->>>>>>> b68ea76643d68c93dc67dd920937e1426253126e
 }
 ?>
 
