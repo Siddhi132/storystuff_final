@@ -1,10 +1,16 @@
 <?php
- //include_once "dark.php";
-// $a =isset($_POST['check1'])?$_POST['check1']:'not yet';
-// echo $a ;
+require 'dbconnect.php';
+require 'login_con.php';
 
+  session_start();
+//  print_r($_SESSION['user_id']);
+// exit;
+  
 
-   
+// if (isset($_SESSION['login'])) {
+//     echo "hello";
+// }
+// exit;
 ?>
 
     <?php $page = 'index';
@@ -51,9 +57,26 @@
 
         <!------------------------------------------------------row 1 ----------------------------------------------->
         <div class="memes_grid mt-5  px-lg-5 px-md-3 br">
-            <div class="memes_box ml-lg-5 ml-md-3  mt-4 mt-sm-0 br">
+        <?php
+                            $sql = "SELECT * FROM `artical` ORDER BY `date` DESC limit 1,4";
+                            $result = mysqli_query($conn, $sql);
+                            while ($row = mysqli_fetch_assoc($result)) {
+                            $image = $row['image'];
+                            $artical_id = $row['artical_id'];
+                            $category_id = $row['category_id'];
+                            $description = $row['description'];
+                            $user_id = $row['user_id'];
+                            $date = $row['date'];
+                        
+                            echo '<div class="memes_box ml-lg-5 ml-md-3  mt-4 mt-sm-0 br">
+                            <a href="#"> <img src="'.$image.'" class="memes_img" alt=""> </a>
+                         </div>';
+}
+
+?>
+            <!-- <div class="memes_box ml-lg-5 ml-md-3  mt-4 mt-sm-0 br">
                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a>
-            </div>
+            </div> -->
                 <!-- <div class="lower border">
                     <div class="text">
                         <h5>Lorem ipsum</h5>
@@ -63,9 +86,9 @@
                         <ion-icon name="add-outline" class="icon_plus" ></ion-icon>
                     </div>
                 </div> -->
-
+<!-- 
             <div class="memes_box ml-md-5    mt-md-0 ">
-                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a>
+                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a> -->
 
                  <!-- <div class="lower border">
                     <div class="text">
@@ -76,10 +99,10 @@
                         <ion-icon name="add-outline" class="icon_plus" ></ion-icon>
                     </div>
                 </div> -->
-            </div>
+            <!-- </div>
 
             <div class="memes_box ml-md-5  mt-md-0 ">
-                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a>
+                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a> -->
 
                  <!-- <div class="lower border">
                     <div class="text">
@@ -90,10 +113,10 @@
                         <ion-icon name="add-outline" class="icon_plus" ></ion-icon>
                     </div>
                 </div> -->
-            </div>
+            <!-- </div>
 
             <div class="memes_box ml-md-5  mt-md-0 ">
-                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a>
+                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a> -->
 
                  <!-- <div class="lower border">
                     <div class="text">
@@ -104,7 +127,7 @@
                         <ion-icon name="add-outline" class="icon_plus" ></ion-icon>
                     </div>
                 </div> -->
-            </div>
+            <!-- </div> -->
         </div>
 
         <!------------------------------------------ PARTICULAR MEME POPUP--------------------------------------- -->
@@ -164,8 +187,9 @@
         </div>
         <!------------------------------------------------------row 2 ----------------------------------------------->
         <div class="memes_grid1 mv_grid">
-            <div class="memes_box memes_box1 ml-lg-5 ml-md-3 mt-0  mt-sm-0 ">
-                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a>
+        
+            <!-- <div class="memes_box memes_box1 ml-lg-5 ml-md-3 mt-0  mt-sm-0 ">
+                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a> -->
 
                  <!-- <div class="lower border">
                     <div class="text">
@@ -176,10 +200,10 @@
                         <ion-icon name="add-outline" class="icon_plus" ></ion-icon>
                     </div>
                 </div> -->
-            </div>
+            <!-- </div>
 
             <div class="memes_box memes_box1 ml-md-5   mt-md-0 ">
-                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a>
+                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a> -->
 
                  <!-- <div class="lower border">
                     <div class="text">
@@ -190,10 +214,10 @@
                         <ion-icon name="add-outline" class="icon_plus" ></ion-icon>
                     </div>
                 </div> -->
-            </div>
+            <!-- </div>
 
             <div class="memes_box memes_box1 ml-md-5  mt-md-0 ">
-                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a>
+                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a> -->
 
                  <!-- <div class="lower border">
                     <div class="text">
@@ -204,13 +228,14 @@
                         <ion-icon name="add-outline" class="icon_plus" ></ion-icon>
                     </div>
                 </div> -->
-            </div>
+            <!-- </div> -->
         </div>
 
         <!------------------------------------------------------row 3 ----------------------------------------------->
         <div class="memes_grid  px-lg-5 px-md-3">
-            <div class="memes_box ml-lg-5 ml-md-3   mt-0 ">
-                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a>
+        
+            <!-- <div class="memes_box ml-lg-5 ml-md-3   mt-0 ">
+                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a> -->
 
                  <!-- <div class="lower border">
                     <div class="text">
@@ -221,10 +246,10 @@
                         <ion-icon name="add-outline" class="icon_plus" ></ion-icon>
                     </div>
                 </div> -->
-            </div>
+            <!-- </div>
 
             <div class="memes_box ml-md-5   mt-md-0 ">
-                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a>
+                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a> -->
 
                  <!-- <div class="lower border">
                     <div class="text">
@@ -235,10 +260,10 @@
                         <ion-icon name="add-outline" class="icon_plus" ></ion-icon>
                     </div>
                 </div> -->
-            </div>
+            <!-- </div>
 
             <div class="memes_box ml-md-5  mt-md-0 ">
-                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a>
+                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a> -->
 
                  <!-- <div class="lower border">
                     <div class="text">
@@ -249,10 +274,10 @@
                         <ion-icon name="add-outline" class="icon_plus" ></ion-icon>
                     </div>
                 </div> -->
-            </div>
-
+            <!-- </div> -->
+<!-- 
             <div class="memes_box ml-md-5  mt-md-0 ">
-                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a>
+                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a> -->
 
                  <!-- <div class="lower border">
                     <div class="text">
@@ -263,13 +288,14 @@
                         <ion-icon name="add-outline" class="icon_plus" ></ion-icon>
                     </div>
                 </div> -->
-            </div>
+            <!-- </div> -->
         </div>
 
         <!------------------------------------------------------row 4 ----------------------------------------------->
      <div class="memes_grid1 ">
-            <div class="memes_box memes_box1 ml-lg-5 ml-md-3   mt-0 ">
-                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a>
+     
+            <!-- <div class="memes_box memes_box1 ml-lg-5 ml-md-3   mt-0 ">
+                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a> -->
 
                  <!-- <div class="lower border">
                     <div class="text">
@@ -280,10 +306,10 @@
                         <ion-icon name="add-outline" class="icon_plus" ></ion-icon>
                     </div>
                 </div> -->
-            </div>
+            <!-- </div>
 
             <div class="memes_box memes_box1 ml-md-5   mt-md-0 ">
-                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a>
+                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a> -->
 
                  <!-- <div class="lower border">
                     <div class="text">
@@ -294,10 +320,10 @@
                         <ion-icon name="add-outline" class="icon_plus" ></ion-icon>
                     </div>
                 </div> -->
-            </div>
+            <!-- </div>
 
             <div class="memes_box memes_box1 ml-md-5  mt-md-0 ">
-                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a>
+                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a> -->
 
                  <!-- <div class="lower border">
                     <div class="text">
@@ -308,13 +334,13 @@
                         <ion-icon name="add-outline" class="icon_plus" ></ion-icon>
                     </div>
                 </div> -->
-            </div>
+            <!-- </div> -->
         </div>
 
         <!------------------------------------------------------row 5 ----------------------------------------------->
         <div class="memes_grid  px-lg-5 px-md-3 ">
-            <div class="memes_box ml-lg-5 ml-md-3   mt-0">
-                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a>
+            <!-- <div class="memes_box ml-lg-5 ml-md-3   mt-0">
+                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a> -->
 
                  <!-- <div class="lower border">
                     <div class="text">
@@ -325,10 +351,10 @@
                         <ion-icon name="add-outline" class="icon_plus" ></ion-icon>
                     </div>
                 </div> -->
-            </div>
+            <!-- </div> -->
 
-            <div class="memes_box ml-md-5   mt-md-0 ">
-                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a>
+            <!-- <div class="memes_box ml-md-5   mt-md-0 ">
+                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a> -->
 
                  <!-- <div class="lower border">
                     <div class="text">
@@ -339,10 +365,10 @@
                         <ion-icon name="add-outline" class="icon_plus" ></ion-icon>
                     </div>
                 </div> -->
-            </div>
+            <!-- </div>
 
             <div class="memes_box ml-md-5  mt-md-0 ">
-                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a>
+                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a> -->
 
                  <!-- <div class="lower border">
                     <div class="text">
@@ -353,10 +379,10 @@
                         <ion-icon name="add-outline" class="icon_plus" ></ion-icon>
                     </div>
                 </div> -->
-            </div>
+            <!-- </div>
 
             <div class="memes_box ml-md-5  mt-md-0 ">
-                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a>
+                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a> -->
 
                  <!-- <div class="lower border">
                     <div class="text">
@@ -367,7 +393,7 @@
                         <ion-icon name="add-outline" class="icon_plus" ></ion-icon>
                     </div>
                 </div> -->
-            </div>
+            <!-- </div> -->
         </div>
     </div>
 </section>
