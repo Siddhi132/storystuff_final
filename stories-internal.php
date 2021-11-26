@@ -52,27 +52,8 @@ require 'login_con.php';
         </section>
 
         <!-- stories -->
-        <section id="stories" class="all px-5 px-sm-0">
-            <div class="latest_story mt-5">
-                <h6 > <b> STORIES <b> </h6>
-            </div>
-            <div class="latest_story mt-1 ">
-                <h2 > HEADLINE </h2>
-            </div>
-            <div class="row3 pb-4">
-                <div class="publish">
-                    <h6 class="publish_text">PUBLISHED BY</h6>
-                    <h6>DATE</h6>
-                </div>
-                <div class="symbol">
-                    <img src="assets/img/logo/label.png" class="black_logo" />
-                    <img src="assets/img/logo/white.png" class="white_logo" />
-                    <i class="fa fa-share-alt fa-lg mt-1" aria-hidden="true"></i>
-                </div>
-            </div>
-            <div class="story mt-5"  id="story-img">
-                
-            </div>
+        <section id="stories" class="all px-5 px-sm-0 my-story">
+            
         </section>
 
         <!-- more stories -->
@@ -115,14 +96,13 @@ require 'login_con.php';
                     url: "stories-internal-logic.php",
                     data: {'artical-id':id},
                     success: function (data) {
-                        $("#story-img").html(data);
+                        $('.my-story').html(data);
                     }
                 });
             }
             $(".artical_id").click(function () { 
                 var element = $(this).attr("id");
                 loadData(element);
-                // alert(element);
             });
             loadData(8);
         });
