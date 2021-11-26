@@ -1,10 +1,10 @@
 <?php                   
 require "dbconnect.php";
-    $output='<div class="latest_story mt-5"><h6 > <b> STORIES <b> </h6></div><div class="latest_story mt-1 "><h2 > HEADLINE </h2></div><div class="row3 pb-4"><div class="publish"><h6 class="publish_text">PUBLISHED BY<br/>';
+    $output='<div class="latest_story mt-5"><h6 > <b> ENTERTAINMENT <b> </h6></div><div class="latest_story mt-1 "><h2 > HEADLINE </h2></div><div class="row3 pb-4"><div class="publish"><h6 class="publish_text">PUBLISHED BY<br/>';
     if(!$_POST['artical-id'])
     {
 
-        $sql = "SELECT * FROM artical where category_id='STORIES' ORDER BY date DESC";
+        $sql = "SELECT * FROM artical where category_id='ENTERTAINMENT' ORDER BY date DESC";
         $result = mysqli_query($conn, $sql);
         $row = mysqli_fetch_assoc($result);
         $image = $row['image'];
@@ -14,7 +14,7 @@ require "dbconnect.php";
     }
     else
     {
-        $sql = "SELECT * FROM artical where category_id='STORIES' AND artical_id=".$_POST['artical-id'];
+        $sql = "SELECT * FROM artical where category_id='ENTERTAINMENT' AND artical_id=".$_POST['artical-id'];
         $result = mysqli_query($conn, $sql);
         $row = mysqli_fetch_assoc($result);
         $image = $row['image'];
