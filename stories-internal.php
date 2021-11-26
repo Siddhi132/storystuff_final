@@ -112,7 +112,7 @@ require 'login_con.php';
                             $user_id = $row['user_id'];
                             $date = $row['date'];
                         
-                            echo '<img src="'.$image.'" class="all_story_img" />';
+                            echo '<img src="'.$image.'" class="all_story_img" onclick="move()"/>';
 }
 
 ?>
@@ -132,3 +132,8 @@ require 'login_con.php';
 
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
+<script>
+    function move(){
+        
+    }
+</script>

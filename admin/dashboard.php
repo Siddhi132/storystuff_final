@@ -374,6 +374,210 @@
                 });
             });
         });
+
+
+
+        $.ajax(
+            {
+            url: "home.php",
+                type: "POST",
+                
+                success: function (data) {
+                  
+                        $('#dynamic').html(data);
+                }
+        });
+
+        $('#logo').click(function(){
+           
+         
+
+            $('.list,#entertainment,#meme,#podcast,#gallery,#about,#contact').css({
+                "text-decoration" : "none" ,
+                 "color" :"var(--black)" 
+            });
+
+           
+            $.ajax(
+            {
+            url: "home.php",
+                type: "POST",
+                
+                success: function (data) {
+                  
+                        $('#dynamic').html(data);
+                }
+            });
+        })
+      
+
+        //Callling stories page
+        $('.list').click(function(){
+            $('.list').css({
+                "text-decoration" : "underline 5px #FF2039" ,
+                 "color" :" #FF2039" 
+            });
+           
+            $('#entertainment,#meme,#podcast,#gallery,#about,#contact').css({
+                "text-decoration" : "none" ,
+                 "color" :"var(--black)" 
+            });
+           
+          
+            // $(".list").hover(function() {
+            //     $(".list").css("text-decoration","none");
+            //  }, function() {
+            //     $(this).css("text-decoration","none");
+            // });
+
+            $.ajax(
+            {
+            url: "../stories-internal.php",
+                type: "POST",
+                
+                success: function (data) {
+                        $('#dynamic').html(data);
+                       
+                }
+            });
+        })
+
+        //Callling entertainment page
+            $('#entertainment').click(function(){
+
+            $('#entertainment').css({
+                "text-decoration" : "underline 5px #FF2039" ,
+                 "color" :" #FF2039" 
+            });
+
+            $('.list,#meme,#podcast,#gallery,#about,#contact').css({
+                "text-decoration" : "none" ,
+                 "color" :"var(--black)" 
+            });
+
+            
+           
+            // $('#meme').css("text-decoration","none");
+            // $('#podcast').css("text-decoration","none");
+            // $('#gallery').css("text-decoration","none");
+            // $('#about').css("text-decoration","none");
+            // $('#contact').css("text-decoration","none");
+            
+
+           
+              $.ajax(
+            {
+            url: "entertainment-internal.php",
+                type: "POST",
+                
+                success: function (data) {
+                        $('#dynamic').html(data);
+                        
+                }
+            });
+        })
+        //Callling memes page
+        $('#meme').click(function(){
+
+            $('#meme').css({
+                "text-decoration" : "underline 5px #FF2039" ,
+                 "color" :" #FF2039" 
+            });
+         
+            $('.list,#entertainment,#podcast,#gallery,#about,#contact').css({
+                "text-decoration" : "none" ,
+                 "color" :"var(--black)" 
+            });
+           
+
+          
+
+              $.ajax(
+            {
+            url: "memes-internal.php",
+                type: "POST",
+                
+                success: function (data) {
+                        $('#dynamic').html(data);
+                       
+                }
+            });
+        })
+      
+
+       //Callling contactus page
+       $('#contact').click(function(){
+        $('#contact').css({
+                "text-decoration" : "underline 5px #FF2039" ,
+                 "color" :" #FF2039" 
+            });
+           
+            $('.list,#entertainment,#meme,#podcast,#gallery,#about').css({
+                "text-decoration" : "none" ,
+                 "color" :"var(--black)" 
+            });
+
+       
+
+           
+
+              $.ajax(
+            {
+            url: "contact-us.php",
+                type: "POST",
+                
+                success: function (data) {
+                        $('#dynamic').html(data);
+                        
+                }
+            });
+        })
+
+//dark mode
+        $('.moon').click(function(){
+            var element = document.body;
+            //element.classList.toggle('dark');
+
+            $('.sun,.moon,.black_logo,.white_logo').addClass('active');
+           $('body').addClass('dark');
+
+            var check = "dark";
+            
+            // $.ajax(
+            //     {
+            //     url: "memes-internal.php",
+                
+            //     data: 'check1=' + check,
+                
+            // });  
+
+        //     $.post("memes-internal.php",{check1: check }, function(){
+                
+        //                 alert('success'); 
+        //     });
+        }) ;
+
+        $('.sun').click(function(){
+        $('.sun,.moon,.black_logo,.white_logo').removeClass('active');
+        $('body').removeClass('dark');
+
+        var check = "light";
+            
+            // $.ajax(
+            //     {
+            //     url: "memes-internal.php",
+            //     type: "POST",
+
+            //     data: { check1: check},
+               
+            // });  
+
+
+            // $.post("memes-internal.php",{check: check }, function(){
+            //             alert('light '); 
+            // });
+        });
+    });
     </script>
 </body>    
 </html>
