@@ -146,10 +146,10 @@
 
 
 /* all records */
-.story_box{
+.story_box, .entertainment_box, .memes_box, .podcast_box, .gallery_box{
     display: none;
 }
-.story_box.active{
+.story_box.active, .entertainment_box.active, .memes_box.active, .podcast_box.active, .gallery_box.active{
     display: flex;
     flex-direction: column;
     /* display: none; */
@@ -185,7 +185,7 @@
 
 }
 
-.par_story{
+.par_story, .par_entertainment, .par_memes, .par_podcast, .par_gallery{
     display: flex;
     /* width: 1375px; */
     /* height: 208px; */
@@ -252,9 +252,7 @@
 }
 
 @media screen and (max-width:700px) {
-    .par_story{
-        /* padding-right: 20px; */
-    }
+  
     .email{
         font-size: 18px;
     }
@@ -271,17 +269,17 @@
         width: 100%;
         height: 250px;
     }
-    .par_story{
+    .par_story, .par_entertainment, .par_memes, .par_podcast, .par_gallery{
         flex-direction: column;
     }
 }
 
 
 /* particular story */
-.par_story_content{
+.par_story_content, .par_entertainment_content, .par_memes_content, .par_podcast_content, .par_gallery_content{
     display: none;
 }
-.par_story_content.active{
+.par_story_content.active, .par_entertainment_content.active, .par_memes_content.active, .par_podcast_content.active, .par_gallery_content.active{
     /* padding-left: 100px;
     padding-right: 100px; */
     display: flex;
@@ -372,7 +370,7 @@
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
-    margin-top: -250px;
+    margin-top: -300px;
 }
 
 .publish{
@@ -400,26 +398,26 @@
     border-radius: 41px;
     margin-right: 55px;
     font-weight:500;
-    box-shadow: 10px 10px 40px 0px #000000 inset;
+    
 }
 
 @media screen and (max-width:1200px) {
     /* .main_box{
         height: 1250px;
     } */
-    .par_story_content.active{
+    .par_story_content.active, .par_entertainment_content.active, .par_memes_content.active, .par_podcast_content.active, .par_gallery_content.active{
         margin-left: 100px;
         margin-right: 100px;
     }
 }
 @media screen and (max-width:1050px) {
-    .par_story_content.active{
+    .par_story_content.active, .par_entertainment_content.active, .par_memes_content.active, .par_podcast_content.active, .par_gallery_content.active{
         margin-left: 96px;
         margin-right: 96px;
     }
 }
 @media screen and (max-width:991px) {
-    .par_story_content.active{
+    .par_story_content.active, .par_entertainment_content.active, .par_memes_content.active, .par_podcast_content.active, .par_gallery_content.active{
         margin-left: 95px;
         margin-right: 95px;
     }
@@ -435,7 +433,7 @@
     }
 }
 @media screen and (max-width:900px) {
-    .par_story_content.active{
+    .par_story_content.active, .par_entertainment_content.active, .par_memes_content.active, .par_podcast_content.active, .par_gallery_content.active{
         margin-left: 88px;
         margin-right: 88px;
     }
@@ -445,7 +443,7 @@
 }
 
 @media screen and (max-width:845px) {
-    .par_story_content.active{
+    .par_story_content.active, .par_entertainment_content.active, .par_memes_content.active, .par_podcast_content.active, .par_gallery_content.active{
         margin-left: 78px;
         margin-right: 78px;
     }
@@ -459,7 +457,7 @@
 @media screen and (max-width:768px) {
    
     
-    .par_story_content.active{
+    .par_story_content.active, .par_entertainment_content.active, .par_memes_content.active, .par_podcast_content.active, .par_gallery_content.active{
         margin-left: 72px;
         margin-right: 72px;
     }
@@ -481,7 +479,7 @@
         height: 230px;
     }
     .final_buttons{
-        margin-top: -175px;
+        margin-top: -220px;
     }
     .publish{
         width: 220px;
@@ -519,8 +517,95 @@
     .main_box{
         width: 580px;
     }
-    .par_story_content.active{
+    .par_story_content.active, .par_entertainment_content.active, .par_memes_content.active, .par_podcast_content.active, .par_gallery_content.active{
         margin-left: 52px;
         margin-right: 52px;
+    }
+}
+
+/* published popup */
+
+.main_box.opa{
+    opacity: 70%;
+}
+
+.pop_div{
+    display: none;
+}
+
+.pop_div.active,.pop_div.active,.pop_div.active,.pop_div.active,.pop_div.active{
+    display: flex;
+    justify-content: center;
+}
+
+.pop_div_s,.pop_div_e,.pop_div_m,.pop_div_p,.pop_div_g{
+    display: none;
+}
+
+.pop_div_s.active,.pop_div_e.active,.pop_div_m.active,.pop_div_p.active,.pop_div_g.active{
+    display: flex;
+    justify-content: center;
+}
+
+/* .pop_div_condi{
+    display: none;
+}
+
+.pop_div_condi.active{
+    display: flex;
+    justify-content: center;
+} */
+.popup{
+    display: flex;
+    flex-direction: column;
+    width: 477px;
+    height: 280px;
+    background-color: var(--black);
+    color: white;
+     margin-top: -750px; 
+     z-index: 1;
+}
+
+.times_div{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.tick{
+    display: flex;
+    justify-content: center;
+    color: #25C65B;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hour{
+   
+        display: flex;
+        justify-content: center;
+        color: var(--white);
+        font-size: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.outline{
+   
+    display: flex;
+    justify-content: center;
+    color: #FF2039;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pop_content{
+    display: flex;
+    padding: 30px;
+}
+
+@media screen and (max-width:700px) {
+    .popup{
+        margin-top: -900px;
     }
 }
