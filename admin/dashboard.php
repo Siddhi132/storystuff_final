@@ -1002,6 +1002,7 @@ session_start();
                             $(`#${id}`).fadeOut();
                             $('.blind,.story_box').addClass('active');
                             $('.entertainment_box, .memes_box, .podcast_box, .gallery_box').removeClass('active');
+                            count_articles();
                             $(window).scrollTop(300);
                         }
                     });
@@ -1024,6 +1025,7 @@ session_start();
                             $(`#${id}`).fadeOut();
                             $('.blind,.entertainment_box').addClass('active');
                             $('.story_box, .memes_box, .podcast_box, .gallery_box').removeClass('active');
+                            count_articles();
                             $(window).scrollTop(300);
                         }
                     });
@@ -1050,6 +1052,7 @@ session_start();
                             $(`#${id}`).fadeOut();
                             $('.blind,.memes_box').addClass('active');
                             $('.story_box, .entertainment_box, .podcast_box, .gallery_box').removeClass('active');
+                            count_articles();
                             $(window).scrollTop(300);
                         }
                     });
@@ -1073,6 +1076,7 @@ session_start();
                     success: function (response) {
                         // alert(id);
                         $(`#${id}`).fadeOut();
+                        count_articles();
                         setTimeout(() => {
                             $('.pop_div_s').removeClass('active');
                             $('.par_story_content').removeClass('active');
@@ -1086,8 +1090,8 @@ session_start();
                     }
                 });
             }
-
-            $.ajax({
+            function count_articles(){ 
+                $.ajax({
                     type: "POST",
                     url: "count_articles.php",
                     data: "",
@@ -1099,7 +1103,10 @@ session_start();
                         $('#podcast_count').html(data.podcast);
                         $('#gallery_count').html(data.gallery);
                     }
-                });
+                });  
+             }
+
+             count_articles();
 
            $(document).on("click","#decision_story_publish",function(){
                 $('.pop_div_s').addClass('active');
