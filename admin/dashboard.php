@@ -129,7 +129,7 @@ session_start();
                         <div class="button ">
                             <div class="circle_box">
                                 <div class="circle">
-                                    <p> 7 </p>
+                                    <p id="story_count"> 7 </p>
                                 </div>
                             </div>
                             <button class="but" id="story_but"> STORIES </button>
@@ -137,7 +137,7 @@ session_start();
                         <div class="button ">
                             <div class="circle_box  enter_circle">
                                 <div class="circle">
-                                    <p> 7 </p>
+                                    <p id="entertainment_count"> 7 </p>
                                 </div>
                             </div>
                             <button class="but" id="entertainment_but">ENTERTAINMENT </button>
@@ -145,7 +145,7 @@ session_start();
                         <div class="button ">
                             <div class="circle_box ">
                                 <div class="circle">
-                                    <p> 7 </p>
+                                    <p id="meme_count"> 7 </p>
                                 </div>
                             </div>
                             <button class="but" id="memes_but"> MEMES </button>
@@ -153,7 +153,7 @@ session_start();
                         <div class="button ">
                             <div class="circle_box">
                                 <div class="circle">
-                                    <p> 7 </p>
+                                    <p id="podcast_count"> 7 </p>
                                 </div>
                             </div>
                             <button class="but" id="podcast_but"> PODCAST </button>
@@ -161,7 +161,7 @@ session_start();
                         <div class="button ">
                             <div class="circle_box">
                                 <div class="circle">
-                                    <p> 7 </p>
+                                    <p id="gallery_count"> 7 </p>
                                 </div>
                             </div>
                             <button class="but" id="gallery_but"> GALLERY </button>
@@ -1030,6 +1030,12 @@ session_start();
                 }
             $(document).on("click",".delete1",function () { 
                 var id = $(this).attr('id');
+                $('.blind,.entertainment_box,.main_box').addClass('active');
+                $('.par_entertainment_content').removeClass('active');
+                $("#entertainment_but").css({
+                    "background-color":"white",
+                    "color":"#0F83AA"
+                });
                 deletes1(id);
              });
 
@@ -1080,6 +1086,21 @@ session_start();
                     }
                 });
             }
+
+            $.ajax({
+                    type: "POST",
+                    url: "count_articles.php",
+                    data: "",
+                    dataType: "JSON",
+                    success: function (data) {
+                        $('#story_count').html(data.stories);
+                        $('#entertainment_count').html(data.entertainment);
+                        $('#meme_count').html(data.memes);
+                        $('#podcast_count').html(data.podcast);
+                        $('#gallery_count').html(data.gallery);
+                    }
+                });
+
            $(document).on("click","#decision_story_publish",function(){
                 $('.pop_div_s').addClass('active');
                 $('.main_box').addClass('opa');
