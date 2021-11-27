@@ -1015,12 +1015,12 @@ session_start();
             
 
 
-            $("#decision_story_publish").click(function(){
-                $('.pop_div_s').addClass('active');
-                $('.main_box').addClass('opa');
+            // $("#decision_story_publish").click(function(){
+            //     $('.pop_div_s').addClass('active');
+            //     $('.main_box').addClass('opa');
 
-                // $(window).scrollTop(500);
-            });
+            //     // $(window).scrollTop(500);
+            // });
             $("#decision_entertainment_publish").click(function(){
                 $('.pop_div_e').addClass('active');
                 $('.main_box').addClass('opa');
