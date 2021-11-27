@@ -69,7 +69,7 @@ require 'login_con.php';
                             $date = $row['date'];
                         
                             echo '<div class="memes_box ml-lg-5 ml-md-3  mt-4 mt-sm-0 br">
-                            <a href="#"> <img src="'.$image.'" class="memes_img" alt=""> </a>
+                            <a href="#" class="memes_carousel" id='.$artical_id.'> <img src="'.$image.'" class="memes_img" alt=""> </a>
                          </div>';
 
                         //  echo '<img src="'.$image.'" class="all_story_img" />';
@@ -133,8 +133,8 @@ require 'login_con.php';
         </div>
 
         <!------------------------------------------ PARTICULAR MEME POPUP--------------------------------------- -->
-        <div class="meme_particular " >
-            <span class="close"> <ion-icon name="close-outline"> </ion-icon></span>
+        <div class="meme_particular">
+        <span class="close"> <ion-icon name="close-outline"> </ion-icon></span>
             <div class="user_info">
                 <img src="assets/img/tree.jpg" class="user_meme_pic" />
                 <div class="user_meme_name "> 
@@ -146,7 +146,7 @@ require 'login_con.php';
 
             <div class="meme_info ">
                 <div class="meme_slider owl-carousel" id="owl-demo">
-                    <img src="assets/img/memes/meme1.jpg" class="memes_slider_img" alt="">
+                    <img src="assets/img/memes/meme1.jpg" id="img_change" class="memes_slider_img" alt="">
                     <img src="assets/img/memes/meme1.jpg" class="memes_slider_img" alt="">
                     <img src="assets/img/memes/meme1.jpg" class="memes_slider_img" alt="">
                     <img src="assets/img/memes/meme1.jpg" class="memes_slider_img" alt="">
@@ -183,9 +183,6 @@ require 'login_con.php';
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque praesentium a soluta labore minus accusamus illum perferendis sit accusantium! Adipisci in ipsa doloribus nulla ex dolorum vel consectetur quo nisi.
                 </div>
             </div>
-
-
-
         </div>
         <!------------------------------------------------------row 2 ----------------------------------------------->
         <div class="memes_grid1 mv_grid">
@@ -417,8 +414,6 @@ require 'login_con.php';
             items: 1,
         });
 
-        
-
      $(".next").click(function(){
             owl.trigger('next.owl.carousel');
         })
@@ -426,7 +421,25 @@ require 'login_con.php';
     $(".prev").click(function(){
         owl.trigger('prev.owl.carousel');
     })
-
+    function loadData(id) {  
+        $.ajax({
+            type: "POST",
+            url: "memes-internal-logic.php",
+            data: {'artical_id':id},
+            dataTypr : "JSON",
+            success: function (data) {
+                var temp = JSON.parse(data);
+                $('.memes_slider_img').attr('src',temp.image);
+                $('.name_meme').html(temp.email );   
+                $('.id_meme').html(temp.userId);
+                $('.meme_text').html(temp.description);  
+            }
+        });
+    }
+    $(".memes_carousel").click(function () {
+        var id=$(this).attr("id");
+        loadData(id);
+    });
     $(document).keydown(function(event){
             var keycode = (event.keyCode ? event.keyCode : event.which);
             if(keycode == "39"){

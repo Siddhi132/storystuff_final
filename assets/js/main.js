@@ -81,7 +81,7 @@ $(document).ready(function(){
             $('.meme_particular,.memes_grid').addClass('active')
         });
 
-        $('.close').click(function(){
+        $(".close").click(function(){
             $('.meme_particular,.memes_grid').removeClass('active')
         });
         // $('.cancel_login').click(function(){
