@@ -387,7 +387,7 @@
     box-shadow: 10px 10px 40px 0px #000000 inset;
 }
 
-.delete{
+.delete .delete1{
     display: flex;
     justify-content: center;
     background-color: #FF1B40;
@@ -428,7 +428,7 @@
     .publish{
         width: 290px;
     }
-    .delete{
+    .delete .delete1{
         width: 170px;
     }
 }
@@ -450,7 +450,7 @@
     .publish{
         width: 250px;
     }
-    .delete{
+    .delete .delete1{
         margin-right: 40px;
     }
 }
@@ -484,7 +484,7 @@
     .publish{
         width: 220px;
     }
-    .delete{
+    .delete .delete1{
         margin-right: 20px;
     }
 }
@@ -507,7 +507,7 @@
     .publish{
         width: 320px;
     }
-    .delete{
+    .delete .delete1{
         width: 200px;
         margin-right: 0px;
     }
