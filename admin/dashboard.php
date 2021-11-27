@@ -1011,45 +1011,6 @@ session_start();
                 deletes(id);
              });
 
-             function deletes1(id) {  
-                    $.ajax({
-                        type: "POST",
-                        url: "delete_ent.php",
-                        data: {'artical_id':id},
-                        success: function (data) {
-                            // alert(data);
-                            $('.par_entertainment_content').removeClass('active');
-                            $(`#${id}`).fadeOut();
-                            $('.blind,.entertainment_box').addClass('active');
-                            $('.story_box, .memes_box, .podcast_box, .gallery_box').removeClass('active');
-                            $(window).scrollTop(300);
-                        }
-                    });
-                }
-            $(document).on("click",".delete1",function () { 
-                var id = $(this).attr('id');
-                deletes1(id);
-             });
-
-             function deletes2(id) {  
-                    $.ajax({
-                        type: "POST",
-                        url: "delete_meme.php",
-                        data: {'artical_id':id},
-                        success: function (data) {
-                            // alert(data);
-                            $('.par_memes_content').removeClass('active');
-                            $(`#${id}`).fadeOut();
-                            $('.blind,.memes_box').addClass('active');
-                            $('.story_box, .entertainment_box, .podcast_box, .gallery_box').removeClass('active');
-                            $(window).scrollTop(300);
-                        }
-                    });
-                }
-            $(document).on("click",".delete2",function () { 
-                var id = $(this).attr('id');
-                deletes2(id);
-             });
              
             
 
