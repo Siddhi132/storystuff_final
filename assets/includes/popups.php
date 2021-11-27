@@ -251,7 +251,7 @@
                     <input class=" get  col-10" type="file" name="videos" id="video" style="display:none"
                             placeholder="VIDEOS"  onchange="video_fun(this)"/> <span style="margin-top:10px; margin-left:4px"><i>Edit </i></span>
                     </div>
-                    <input class="send" type="submit" name="send" id="send"> SEND </button>
+                    <input class="send" type="submit" name="send" id="send" value="SEND"> </button>
                 </form>
             </div>
 

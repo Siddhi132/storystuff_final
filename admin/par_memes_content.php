@@ -4,13 +4,12 @@ if(!$conn){
 echo "Database connection not success!!";}
 ?>
 <?php
-    $sql = "SELECT * FROM artical where category_id='STORIES' AND artical_id=".$_POST['artical_id'];
+    $sql = "SELECT * FROM artical where category_id='MEMES' AND artical_id=".$_POST['artical_id'];
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
     $userId = $row['user_id'];
     $description = $row['description'];
     $img = $row['image'];
-    $artical_id=$row['artical_id'];
     $sql = "SELECT * FROM user where user_id=".$userId;
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
@@ -29,8 +28,8 @@ echo "Database connection not success!!";}
 </div>
 
 <div class="title">
-    <span class="name mr-3"><p> STORY TITLE </p></span>
-    <span class=""> STORIES </span>
+    <span class="name mr-3"><p> Document TITLE </p></span>
+    <span class=""> MEMES </span>
     </div>
 
     <div class="title">
@@ -40,7 +39,7 @@ echo "Database connection not success!!";}
 
         <div class="first_row">
             <div class="username mr-3">
-                <span class="name mr-3"> <p> SUMMARY </p> </span>
+                <span class="name mr-3"> <p> Mapping </p> </span>
                 <span class="">';
         $output .= $description.'</div>
         <div class="mail h-75" >
@@ -66,24 +65,8 @@ echo "Database connection not success!!";}
                 <button class="publish" id="decision_story_mapping"> MAPPING </button>
                 <a href="#pop"> <button class="publish" id="decision_story_publish"> PUBLISH </button> </a>
                 <button class="publish" id="decision_story_review"> REVIEW </button>
-                <button class="delete" id="decision_story_delete" onclick="delete_artical();"> DELETE </button>
+                <button class="delete" id="decision_story_delete"> DELETE </button>
         </div>';
         // echo print_r($row);
         echo $output;
 ?>
-<script>
-    // function delete_artical(){
-    //     
-    //      $sql="UPDATE `artical` SET `delete_status` = 1 WHERE `artical`.`artical_id` = $artical_id;";
-    //      $result = mysqli_query($conn, $sql);
-    //     //  header('Location: ' . $_SERVER['HTTP_REFERER']);
-            // $('.blind,.story_box,.main_box').addClass('active');
-            //         $('.par_story_content').removeClass('active');
-            //         $("#story_but").css({
-            //             "background-color":"white",
-            //             "color":"#0F83AA"
-            //         });
-        
-    //     
-    // }
-</script>

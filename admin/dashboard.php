@@ -178,7 +178,7 @@ session_start();
 
                     <div class="all_story ">
                         <?php
-                                $sql6 = "SELECT * FROM `artical` where `category_id`='STORIES' ORDER BY `date` DESC";
+                                $sql6 = "SELECT * FROM `artical` where `category_id`='STORIES' and delete_status=0 ORDER BY `date` DESC";
                                 $result = mysqli_query($conn, $sql6);
                                 while ($row = mysqli_fetch_assoc($result)) {
                                     $image = $row['image'];
@@ -310,7 +310,7 @@ session_start();
 
                     <div class="all_story ">
                     <?php
-                                $sql6 = "SELECT * FROM `artical` where `category_id`='ENTERTAINMENT' ORDER BY `date` DESC";
+                                $sql6 = "SELECT * FROM `artical` where `category_id`='ENTERTAINMENT' and delete_status=0 ORDER BY `date` DESC";
                                 $result = mysqli_query($conn, $sql6);
                                 while ($row = mysqli_fetch_assoc($result)) {
                                     $image = $row['image'];
@@ -323,7 +323,7 @@ session_start();
                                     $result3 = mysqli_query($conn, $sql4);
                                     while ($row = mysqli_fetch_assoc($result3)) {
                                         $user_email=$row['email'];
-                                        echo '<div class="par_story" id='.$artical_id.'>
+                                        echo '<div class="par_entertainment" id='.$artical_id.'>
                                 <div class="s_image_box">
                                     <img src="../'.$image.'" class="s_image" alt="">
                                 </div>
@@ -382,7 +382,7 @@ session_start();
 
                     <div class="all_story ">
                     <?php
-                                $sql6 = "SELECT * FROM `artical` where `category_id`='MEMES' ORDER BY `date` DESC";
+                                $sql6 = "SELECT * FROM `artical` where `category_id`='MEMES' and delete_status=0 ORDER BY `date` DESC";
                                 $result = mysqli_query($conn, $sql6);
                                 while ($row = mysqli_fetch_assoc($result)) {
                                     $image = $row['image'];
@@ -395,7 +395,7 @@ session_start();
                                     $result3 = mysqli_query($conn, $sql4);
                                     while ($row = mysqli_fetch_assoc($result3)) {
                                         $user_email=$row['email'];
-                                        echo '<div class="par_story" id='.$artical_id.'>
+                                        echo '<div class="par_memes" id='.$artical_id.'>
                                 <div class="s_image_box">
                                     <img src="../'.$image.'" class="s_image" alt="">
                                 </div>
@@ -534,112 +534,12 @@ session_start();
 
                  <!-- particular entertainment -->
                  <div class="par_entertainment_content">
-                        <div class="first_row">
-                            <div class="username mr-3">
-                                <span class="name mr-3"> <p> USERNAME </p> </span>
-                                <span class=""> LOREM IPSUM DOLOR </span>
-                            </div>
-                            <div class="mail">
-                                <span class="name mr-3"> <p> MAIL </p> </span>
-                                <span class=""> loremipsumdolor@mail.com </span>
-                            </div>
-                        </div>
-
-                        <div class="title">
-                            <span class="name mr-3"><p> ENTERTAINMENT TITLE </p></span>
-                            <span class=""> Lorem ipsum dolor sit amet. </span>
-                        </div>
-
-                        <div class="title">
-                            <span class="name mr-3"><p> URL </p></span>
-                            <span class=""> http://localhost/storystuff_final/admin/dashboard.php </span>
-                        </div>
-
-                        <div class="first_row">
-                            <div class="username mr-3">
-                                <span class="name mr-3"> <p> SUMMARY </p> </span>
-                                <span class="">   Asperiores maxime id nemo itaque molestiae obcaecati doloremque magni nihil accusantium corporis. Rem ex ad, alias eveniet nam incidunt nemo natus corporis. </span>
-                            </div>
-                            <div class="mail h-75" >
-                                <span class="name mr-3"> <p> TAGS/KEYWORDS </p> </span>
-                                <span class=""> LOREM </span>
-                            </div>
-                        </div>
-
-                        <div class="title">
-                            <span class="name mr-3"><p> BODY </p></span>
-                            <span class="">  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi ab voluptate rem porro quaerat ullam reprehenderit excepturi assumenda unde. Earum temporibus porro ut delectus minima quam nemo officiis cupiditate consectetur? </span>
-                        </div>
-
-                        <div class="last_row">
-                            <div class="thumbnail">
-                               <span class="thumb_title"> THUMBNAIL </span>
-                               <img src="../assets/img/circle.jpg" class="thumb_image">
-                            </div>
-                        </div>
-
-                        <div class="final_buttons">
-                                <button class="publish" id="decision_entertainment_mapping"> MAPPING </button>
-                                <a href="#pop"> <button class="publish" id="decision_entertainment_publish"> PUBLISH </button> </a>
-                                <button class="publish" id="decision_entertainment_review"> REVIEW </button>
-                                <button class="delete" id="decision_entertainment_delete"> DELETE </button>
-                        </div>
+                        
                     </div>
 
                      <!-- particular memes -->
                 <div class="par_memes_content">
-                        <div class="first_row">
-                            <div class="username mr-3">
-                                <span class="name mr-3"> <p> USERNAME </p> </span>
-                                <span class=""> LOREM IPSUM DOLOR </span>
-                            </div>
-                            <div class="mail">
-                                <span class="name mr-3"> <p> MAIL </p> </span>
-                                <span class=""> loremipsumdolor@mail.com </span>
-                            </div>
-                        </div>
-
-                        <div class="title">
-                            <span class="name mr-3"><p> DOCUMENT TITLE </p></span>
-                            <span class=""> Lorem ipsum dolor sit amet. </span>
-                        </div>
-
-                        <div class="title">
-                            <span class="name mr-3"><p> URL </p></span>
-                            <span class=""> http://localhost/storystuff_final/admin/dashboard.php </span>
-                        </div>
-
-                        <div class="first_row">
-                            <div class="username mr-3">
-                                <span class="name mr-3"> <p> MAPPING </p> </span>
-                                <span class="">   Asperiores maxime id nemo itaque molestiae obcaecati doloremque magni nihil accusantium corporis. Rem ex ad, alias eveniet nam incidunt nemo natus corporis. </span>
-                            </div>
-                            <div class="mail h-75" >
-                                <span class="name mr-3"> <p> TAGS/KEYWORDS </p> </span>
-                                <span class=""> LOREM </span>
-                            </div>
-                        </div>
-
-                        <div class="title">
-                            <span class="name mr-3"><p> BODY </p></span>
-                            <span class="">  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi ab voluptate rem porro quaerat ullam reprehenderit excepturi assumenda unde. Earum temporibus porro ut delectus minima quam nemo officiis cupiditate consectetur? </span>
-                        </div>
-
-                        <div class="last_row">
-                            <div class="thumbnail">
-                               <span class="thumb_title"> IMAGE </span>
-                               <img src="../assets/img/circle.jpg" class="thumb_image">
-                            </div>
-                        </div>
-
-                        <div class="final_buttons">
-                                <button class="publish" id="decision_memes_mapping"> MAPPING </button>
-                                <a href="#pop"><button class="publish" id="decision_memes_publish"> PUBLISH </button></a>
-                                <button class="publish" id="decision_memes_review"> REVIEW </button>
-                                <button class="delete" id="decision_memes_delete"> DELETE </button>
-                        </div>
-
-                       
+                        
                 </div>
 
                  <!-- particular podcast -->
@@ -918,6 +818,21 @@ session_start();
 
             //when particular entertainment will be clicked
             $(".par_entertainment").click(function(){
+
+                function loadData(id)
+                {
+                    $.ajax({
+                    type: "post",
+                    url: "par_entertainment_content.php",
+                    data: {'artical_id':id},
+                    success: function (data) {
+                        $(".par_entertainment_content").html(data);
+                    }   
+                    });
+                }
+                var id = $(this).attr('id');
+                loadData(id);
+
                 $('.par_entertainment_content,.main_box').addClass('active');
 
                 $("#entertainment_but").css({
@@ -949,6 +864,20 @@ session_start();
 
              //when particular memes will be clicked
             $(".par_memes").click(function(){
+
+                function loadData(id)
+                {
+                    $.ajax({
+                    type: "post",
+                    url: "par_memes_content.php",
+                    data: {'artical_id':id},
+                    success: function (data) {
+                        $(".par_memes_content").html(data);
+                    }   
+                    });
+                }
+                var id = $(this).attr('id');
+                loadData(id);
                 $('.par_memes_content,.main_box').addClass('active');
 
                 $("#memes_but").css({
