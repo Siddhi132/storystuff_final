@@ -991,6 +991,25 @@ session_start();
 
             //     $(window).scrollTop(0);
             // });
+            function deletes(id) {  
+                    $.ajax({
+                        type: "POST",
+                        url: "delete_story.php",
+                        data: {'artical_id':id},
+                        success: function (data) {
+                            // alert(data);
+                            $('.par_story_content').removeClass('active');
+                            $(`#${id}`).fadeOut();
+                            $('.blind,.story_box').addClass('active');
+                            $('.entertainment_box, .memes_box, .podcast_box, .gallery_box').removeClass('active');
+                            $(window).scrollTop(300);
+                        }
+                    });
+                }
+            $(document).on("click",".delete",function () { 
+                var id = $(this).attr('id');
+                deletes(id);
+             });
 
             $("#decision_story_publish").click(function(){
                 $('.pop_div_s').addClass('active');
