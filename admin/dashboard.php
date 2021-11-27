@@ -1061,31 +1061,27 @@ session_start();
                 var id = $(this).attr('id');
                 deletes2(id);
              });
-             
-
-             
-            
-
-
             
           function publish(id) { 
                 $.ajax({
                     type: "POST",
                     url: "publish_artical.php",
                     data: {"artical_id":id},
-                    success: function (response) {
+                    success: function (data) {
                         // alert(id);
+                        // alert(data);
                         $(`#${id}`).fadeOut();
                         count_articles();
                         setTimeout(() => {
                             $('.pop_div_s').removeClass('active');
-                            $('.par_story_content').removeClass('active');
+                            $(`.par_${data}_content`).removeClass('active');
                         }, 1000);              
                         setTimeout(() => {
-                            $('.blind,.story_box').addClass('active');
+                            $(`.blind,.${data}_box`).addClass('active');
                             $('.published').addClass('active');
                         }, 1000);
-                        $('.entertainment_box, .memes_box, .podcast_box, .gallery_box').removeClass('active');
+                        // $().removeClass('active');
+                        // alert('"" ,.entertainment_box ,.memes_box ,.podcast_box ,.gallery_box ,.story_box'.replace(`,.${data}_box`,''));
                         $(window).scrollTop(300);
                     }
                 });
@@ -1102,22 +1098,35 @@ session_start();
                 $(window).scrollTop(300);
                 // $(window).scrollTop(500);
             });
-            $("#decision_entertainment_publish").click(function(){
-                $('.pop_div_e').addClass('active');
+            $(document).on("click","#decision_entertainment_publish",function(){
+                $('.pop_div_s').addClass('active');
                 $('.main_box').addClass('opa');
+<<<<<<< HEAD
                
+=======
+                var id = $(this).attr("name");
+                publish(id);
+                $(window).scrollTop(300);
+>>>>>>> 7b26870b240dee36242043634f38fd517c792672
 
                 // $(window).scrollTop(500);
             });
-            $("#decision_memes_publish").click(function(){
-                $('.pop_div_m').addClass('active');
+            $(document).on("click","#decision_meme_publish",function(){
+                $('.pop_div_s').addClass('active');
                 $('.main_box').addClass('opa');
-
+                var id = $(this).attr("name");
+                publish(id);
+                $(window).scrollTop(300);
+                
                 // $(window).scrollTop(500);
             });
             $("#decision_podcast_publish").click(function(){
-                $('.pop_div_p').addClass('active');
+                $('.pop_div_s').addClass('active');
                 $('.main_box').addClass('opa');
+                alert();
+                var id = $(this).attr("name");
+                publish(id);
+                $(window).scrollTop(300);
 
                 // $(window).scrollTop(500);
             });
@@ -1136,7 +1145,7 @@ session_start();
             $("#back_main_s").click(function(){
                 $('.pop_div_s').removeClass('active');
                 $('.main_box').removeClass('opa');
-                $('.blind,.story_box,.main_box').addClass('active');
+                $('.blind,.main_box').addClass('active');
                 $('.par_story_content').removeClass('active');
                 $("#story_but").css({
                     "background-color":"white",
