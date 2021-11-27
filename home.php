@@ -8,6 +8,7 @@ require 'dbconnect.php';
        <!-- latest -->
 
        <div class="container-fuild mt-5 px-5">
+
         <section class="latest">
             <div class="latest_box">
                 <div class="latest_input">

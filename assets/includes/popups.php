@@ -129,7 +129,7 @@
         </div>
 
         <div class="google">
-            <a class="oauth-container" href="https://accounts.google.com/" style="text-transform:none;color:black;">
+            <a class="oauth-container" href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin" style="text-transform:none;color:black;">
                 CONTINUE WITH GOOGLE </a>
         </div>
 

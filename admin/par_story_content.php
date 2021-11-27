@@ -72,21 +72,21 @@ echo "Database connection not success!!";}
         echo $output;
 ?>
 <script>
-    function delete_artical(){
-        <?php
-         $sql="UPDATE `artical` SET `delete_status` = 1 WHERE `artical`.`artical_id` = $artical_id;";
-         $result = mysqli_query($conn, $sql);
-         ?>
-    //     //  header('Location: ' . $_SERVER['HTTP_REFERER']);
-    $("#decision_story_delete").click(function(){
-                    $('.blind,.story_box,.main_box').addClass('active');
-                    $('.par_story_content').removeClass('active');
-                    $("#story_but").css({
-                        "background-color":"white",
-                        "color":"#0F83AA"
-                    });
-                });
+    // function delete_artical(){
+    //     <?php
+    //      $sql="UPDATE `artical` SET `delete_status` = 1 WHERE `artical`.`artical_id` = $artical_id;";
+    //      $result = mysqli_query($conn, $sql);
+    //      ?>
+    // //     //  header('Location: ' . $_SERVER['HTTP_REFERER']);
+    // $("#decision_story_delete").click(function(){
+    //                 $('.blind,.story_box,.main_box').addClass('active');
+    //                 $('.par_story_content').removeClass('active');
+    //                 $("#story_but").css({
+    //                     "background-color":"white",
+    //                     "color":"#0F83AA"
+    //                 });
+    //             });
         
-    //     
-    }
+    // //     
+    // }
 </script>
