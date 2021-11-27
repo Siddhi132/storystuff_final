@@ -66,24 +66,27 @@ echo "Database connection not success!!";}
                 <button class="publish" id="decision_story_mapping"> MAPPING </button>
                 <a href="#pop"> <button class="publish" id="decision_story_publish"> PUBLISH </button> </a>
                 <button class="publish" id="decision_story_review"> REVIEW </button>
-                <button class="delete" id="decision_story_delete" onclick="delete_artical();"> DELETE </button>
+                <button class="delete" id="decision_story_delete" onclick="()=>delete_artical();"> DELETE </button>
         </div>';
         // echo print_r($row);
         echo $output;
 ?>
 <script>
-    // function delete_artical(){
-    //     
-    //      $sql="UPDATE `artical` SET `delete_status` = 1 WHERE `artical`.`artical_id` = $artical_id;";
-    //      $result = mysqli_query($conn, $sql);
+    function delete_artical(){
+        <?php
+         $sql="UPDATE `artical` SET `delete_status` = 1 WHERE `artical`.`artical_id` = $artical_id;";
+         $result = mysqli_query($conn, $sql);
+         ?>
     //     //  header('Location: ' . $_SERVER['HTTP_REFERER']);
-            // $('.blind,.story_box,.main_box').addClass('active');
-            //         $('.par_story_content').removeClass('active');
-            //         $("#story_but").css({
-            //             "background-color":"white",
-            //             "color":"#0F83AA"
-            //         });
+    $("#decision_story_delete").click(function(){
+                    $('.blind,.story_box,.main_box').addClass('active');
+                    $('.par_story_content').removeClass('active');
+                    $("#story_but").css({
+                        "background-color":"white",
+                        "color":"#0F83AA"
+                    });
+                });
         
     //     
-    // }
+    }
 </script>

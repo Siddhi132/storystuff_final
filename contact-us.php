@@ -58,8 +58,8 @@
                 </div>
 
                 <div class="icon_box">
-                    <a href="" style="text-decoration:none; color:var(--white)"><span>  <i class="fa fa-instagram" aria-hidden="true"></i>  </span> </a>
-                    <a href="" style="text-decoration:none; color:var(--white)"><span class="particular_icon">  <i class="fa fa-facebook-official" aria-hidden="true"></i>  </span> </a>
+                    <a href="https://www.instagram.com/siddhi__2418" target="_blank" style="text-decoration:none; color:var(--white)"><span>  <i class="fa fa-instagram" aria-hidden="true"></i>  </span> </a>
+                    <a href="https://www.facebook.com/" target="_blank" style="text-decoration:none; color:var(--white)"><span class="particular_icon">  <i class="fa fa-facebook-official" aria-hidden="true"></i>  </span> </a>
                     <!-- <a href="" style="text-decoration:none; color:var(--white)"><span class="particular_icon">  <i class="fa fa-whatsapp" aria-hidden="true"></i>   </span> --> </a>
                     <a href="" style="text-decoration:none; color:var(--white)"><span class="particular_icon">  <i class="fa fa-twitter" aria-hidden="true"></i>  </span> </a>
                 </div>
