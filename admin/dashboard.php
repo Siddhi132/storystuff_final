@@ -1010,7 +1010,16 @@ session_start();
                 var id = $(this).attr('id');
                 deletes(id);
              });
-            function publish(id) { 
+            
+           
+
+
+             
+            
+
+
+            
+          function publish(id) { 
                 $.ajax({
                     type: "POST",
                     url: "publish_artical.php",
@@ -1031,7 +1040,7 @@ session_start();
                     }
                 });
             }
-            $(document).on("click","#decision_story_publish",function(){
+           $(document).on("click","#decision_story_publish",function(){
                 $('.pop_div_s').addClass('active');
                 $('.main_box').addClass('opa');
                 var id = $(this).attr("name");

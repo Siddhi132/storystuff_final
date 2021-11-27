@@ -10,6 +10,8 @@ echo "Database connection not success!!";}
     $userId = $row['user_id'];
     $description = $row['description'];
     $img = $row['image'];
+    $artical_id=$row['artical_id'];
+
     $sql = "SELECT * FROM user where user_id=".$userId;
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
@@ -65,7 +67,7 @@ echo "Database connection not success!!";}
                 <button class="publish" id="decision_story_mapping"> MAPPING </button>
                 <a href="#pop"> <button class="publish" id="decision_story_publish"> PUBLISH </button> </a>
                 <button class="publish" id="decision_story_review"> REVIEW </button>
-                <button class="delete" id="decision_story_delete"> DELETE </button>
+                <button class="delete2" id="'.$artical_id.'"> DELETE </button>
         </div>';
         // echo print_r($row);
         echo $output;
