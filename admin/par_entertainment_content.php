@@ -64,8 +64,8 @@ echo "Database connection not success!!";}
 
         <div class="final_buttons">
                 <button class="publish" id="decision_story_mapping"> MAPPING </button>
-                <a href="#pop"> <button class="publish" id="decision_story_publish"> PUBLISH </button> </a>
-                <button class="publish" id="decision_story_review"> REVIEW </button>
+                <a href="#pop"> <button class="publish" id="decision_entertainment_publish" name="'.$artical_id.'"> PUBLISH </button> </a>
+                <button class="publish" id="decision_story_review" > REVIEW </button>
                 <button class="delete1" id="'.$artical_id.'"> DELETE </button>
         </div>';
         // echo print_r($row);
