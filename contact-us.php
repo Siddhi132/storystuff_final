@@ -40,7 +40,7 @@
                     <div class="mail_inner_box ">
                         <span> <i class="fa fa-envelope" aria-hidden="true"></i> </span>
                         <div class="mail">
-                            mail@contactus.com
+                            <a href="mailto:siddhidoshi2418@gmail.com">siddhidoshi2418@gmail.com</a>
                         </div>
                     </div> <br><br>
                     <div class="mail_inner_box ">
