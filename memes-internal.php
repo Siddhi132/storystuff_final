@@ -58,7 +58,7 @@ require 'login_con.php';
         <!------------------------------------------------------row 1 ----------------------------------------------->
         <div class="memes_grid mt-5  px-lg-5 px-md-3 br">
         <?php
-                            $sql = "SELECT * FROM `artical` ORDER BY `date` DESC limit 1,4";
+                            $sql = "SELECT * FROM `artical` ORDER BY `date` DESC  ";
                             $result = mysqli_query($conn, $sql);
                             while ($row = mysqli_fetch_assoc($result)) {
                             $image = $row['image'];
@@ -71,6 +71,8 @@ require 'login_con.php';
                             echo '<div class="memes_box ml-lg-5 ml-md-3  mt-4 mt-sm-0 br">
                             <a href="#"> <img src="'.$image.'" class="memes_img" alt=""> </a>
                          </div>';
+
+                        //  echo '<img src="'.$image.'" class="all_story_img" />';
 }
 
 ?>
