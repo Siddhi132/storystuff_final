@@ -669,14 +669,14 @@ session_start();
             </div>
         </div>
         <!-- 
-        <div class="pop_div_e published">
+        <div class="pop_div_e">
             <div class="popup" id="pop">
                 <span class="times_div"> <i class="fa fa-times mr-3 mt-3" id="back_main_e" aria-hidden="true"></i>  </span>
                 <div class="tick"> <ion-icon name="checkmark-outline" class=" mr-2"style="font-size:30px"></ion-icon> PUBLISHED!</div>
                 <div class="pop_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum suscipit consequuntur dolorem, tempore magni facilis voluptatem, obcaecati repellendus corporis quae amet voluptas numquam rerum hic, non ipsam nostrum possimus neque?</div>
             </div>
         </div>
-        
+
         <div class="pop_div_m">
             <div class="popup" id="pop">
                 <span class="times_div"> <i class="fa fa-times mr-3 mt-3" id="back_main_m" aria-hidden="true"></i>  </span>
@@ -1086,7 +1086,21 @@ session_start();
                     }
                 });
             }
-            
+            function count_articles(){ 
+                $.ajax({
+                    type: "POST",
+                    url: "count_articles.php",
+                    data: "",
+                    dataType: "JSON",
+                    success: function (data) {
+                        $('#story_count').html(data.stories);
+                        $('#entertainment_count').html(data.entertainment);
+                        $('#meme_count').html(data.memes);
+                        $('#podcast_count').html(data.podcast);
+                        $('#gallery_count').html(data.gallery);
+                    }
+                });  
+             }
 
              count_articles();
 
@@ -1101,13 +1115,9 @@ session_start();
             $(document).on("click","#decision_entertainment_publish",function(){
                 $('.pop_div_s').addClass('active');
                 $('.main_box').addClass('opa');
-<<<<<<< HEAD
-               
-=======
                 var id = $(this).attr("name");
                 publish(id);
                 $(window).scrollTop(300);
->>>>>>> 7b26870b240dee36242043634f38fd517c792672
 
                 // $(window).scrollTop(500);
             });
