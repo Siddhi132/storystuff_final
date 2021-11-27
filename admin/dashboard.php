@@ -661,14 +661,14 @@ session_start();
         </div>
 
         <!-- published -->
-        <!-- <div class="pop_div_s">
+        <div class="pop_div_s published">
             <div class="popup" id="pop">
                 <span class="times_div"> <i class="fa fa-times mr-3 mt-3" id="back_main_s" aria-hidden="true"></i>  </span>
                 <div class="tick"> <ion-icon name="checkmark-outline" class=" mr-2"style="font-size:30px"></ion-icon> PUBLISHED!</div>
-                <div class="pop_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum suscipit consequuntur dolorem, tempore magni facilis voluptatem, obcaecati repellendus corporis quae amet voluptas numquam rerum hic, non ipsam nostrum possimus neque?</div>
+                <div class="pop_content">Your Artical is published Successfully !!</div>
             </div>
         </div>
-
+        <!-- 
         <div class="pop_div_e">
             <div class="popup" id="pop">
                 <span class="times_div"> <i class="fa fa-times mr-3 mt-3" id="back_main_e" aria-hidden="true"></i>  </span>
@@ -706,7 +706,7 @@ session_start();
             <div class="popup" id="pop">
                 <span class="times_div"> <i class="fa fa-times mr-3 mt-3" id="back" aria-hidden="true"></i>  </span>
                 <div class="hour"> <i class="fa fa-hourglass-o  mr-2" style="font-size:30px" aria-hidden="true"></i> PUBLISHING </div>
-                <div class="pop_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum suscipit consequuntur dolorem, tempore magni facilis voluptatem, obcaecati repellendus corporis quae amet voluptas numquam rerum hic, non ipsam nostrum possimus neque?</div>
+                <div class="pop_content">Your artical is uploading please wait !!</div>
             </div>
         </div>
 
@@ -1010,11 +1010,33 @@ session_start();
                 var id = $(this).attr('id');
                 deletes(id);
              });
-
-            $("#decision_story_publish").click(function(){
+            function publish(id) { 
+                $.ajax({
+                    type: "POST",
+                    url: "publish_artical.php",
+                    data: {"artical_id":id},
+                    success: function (response) {
+                        // alert(id);
+                        $(`#${id}`).fadeOut();
+                        setTimeout(() => {
+                            $('.pop_div_s').removeClass('active');
+                            $('.par_story_content').removeClass('active');
+                        }, 1000);              
+                        setTimeout(() => {
+                            $('.blind,.story_box').addClass('active');
+                            $('.published').addClass('active');
+                        }, 1000);
+                        $('.entertainment_box, .memes_box, .podcast_box, .gallery_box').removeClass('active');
+                        $(window).scrollTop(300);
+                    }
+                });
+            }
+            $(document).on("click","#decision_story_publish",function(){
                 $('.pop_div_s').addClass('active');
                 $('.main_box').addClass('opa');
-
+                var id = $(this).attr("name");
+                publish(id);
+                $(window).scrollTop(300);
                 // $(window).scrollTop(500);
             });
             $("#decision_entertainment_publish").click(function(){
