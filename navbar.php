@@ -196,6 +196,39 @@ session_start();
             });
         });
 
+        function savePost(articalId) { 
+            
+            $.ajax({
+                type: "POST",
+                url: "save_post.php",
+                data: {'artical_id':articalId},
+                success: function (data) {
+                    if(data==1)
+                    {
+                        alert("Save Success");
+                    }
+                    else
+                    {
+                        alert("Already Saved");
+                    }
+                }
+            });
+
+        }
+
+        $(document).on("click",".save",function () { 
+            <?php
+                if(isset($_SESSION['email']))
+                {
+                    echo 'savePost($(this).attr("id"))';
+                }
+                else
+                {
+                    echo "$('.login').addClass('active')";
+                }
+            ?>
+        })
+
         //Callling entertainment page
         $('#entertainment').click(function()
         {

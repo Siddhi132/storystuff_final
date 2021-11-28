@@ -27,7 +27,7 @@ require "dbconnect.php";
     $row = mysqli_fetch_assoc($result);
     $userEmail = $row['email'];
     $output .=$userEmail.'</h6>DATE<h6>';
-    $output .=$date.'</h6></div><div class="symbol"><img src="assets/img/logo/label.png" class="black_logo" /><img src="assets/img/logo/white.png" class="white_logo" /><a class="fa fa-share-alt fa-lg mt-1" aria-hidden="true"></a></div></div>';
+    $output .=$date.'</h6></div><div class="symbol"><img src="assets/img/logo/label.png" class="black_logo save" id="'.$_POST['artical-id'].'"/><img src="assets/img/logo/white.png" class="white_logo" /><a class="fa fa-share-alt fa-lg mt-1" aria-hidden="true"></a></div></div>';
     $output .=' <div class="story mt-5"  ><div class="story_img"><img src="'.$image.'" class="" /></div><div class="story_text mt-5">
     <h6>';
     $output .=$description;

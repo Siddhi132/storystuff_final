@@ -90,7 +90,7 @@
 
 <!-- <div class="inner_main"> -->
 
-<div class=" main">
+<div class="main login">
 
 
     <div class="outer_login_box">
