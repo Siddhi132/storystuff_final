@@ -224,7 +224,7 @@ session_start();
                 }
                 else
                 {
-                    echo "$('.login').addClass('active')";
+                    echo "$('.login').addClass('active');$(window).scrollTop(0);";
                 }
             ?>
         })
