@@ -261,33 +261,33 @@
         <h4 class="saved"> Saved Post </h4>
         <div class="img_grid">
             <div class="row rows">
-                <div class=" grid_box"></div>
-                <div class=" grid_box"></div>
-                <div class=" grid_box"></div>
+                <div class=" grid_box"><img src="assets/img/circle.jpg"  class=" grid_box" alt=""></div>
+                <div class=" grid_box"><img src="assets/img/cactus.jpg"  class=" grid_box" alt=""></div>
+                <div class=" grid_box"><img src="assets/img/contact-us-bg.jpg"  class=" grid_box" alt=""></div>
                 <!-- </div> -->
 
                 <!-- <div class="row rows"> -->
-                <div class=" grid_box"></div>
-                <div class=" grid_box"></div>
-                <div class=" grid_box"></div>
+                <div class=" grid_box"><img src="assets/img/circle.jpg"  class=" grid_box" alt=""></div>
+                <div class=" grid_box"><img src="assets/img/cactus.jpg"  class=" grid_box" alt=""></div>
+                <div class=" grid_box"><img src="assets/img/contact-us-bg.jpg"  class=" grid_box" alt=""></div>
                 <!-- </div> -->
 
                 <!-- <div class="row rows"> -->
-                <div class=" grid_box"></div>
-                <div class=" grid_box"></div>
-                <div class=" grid_box"></div>
+                <div class=" grid_box"><img src="assets/img/circle.jpg"  class=" grid_box" alt=""></div>
+                <div class=" grid_box"><img src="assets/img/cactus.jpg"  class=" grid_box" alt=""></div>
+                <div class=" grid_box"><img src="assets/img/contact-us-bg.jpg"  class=" grid_box" alt=""></div>
                 <!-- </div> -->
 
                 <!-- <div class="row rows"> -->
-                <div class=" grid_box"></div>
-                <div class=" grid_box"></div>
-                <div class=" grid_box"></div>
+                <div class=" grid_box"><img src="assets/img/circle.jpg"  class=" grid_box" alt=""></div>
+                <div class=" grid_box"><img src="assets/img/cactus.jpg"  class=" grid_box" alt=""></div>
+                <div class=" grid_box"><img src="assets/img/contact-us-bg.jpg"  class=" grid_box" alt=""></div>
                 <!-- </div> -->
 
                 <!-- <div class="row rows"> -->
-                <div class=" grid_box"></div>
-                <div class=" grid_box"></div>
-                <div class=" grid_box"></div>
+                <div class=" grid_box"><img src="assets/img/circle.jpg"  class=" grid_box" alt=""></div>
+                <div class=" grid_box"><img src="assets/img/cactus.jpg"  class=" grid_box" alt=""></div>
+                <div class=" grid_box"><img src="assets/img/contact-us-bg.jpg"  class=" grid_box" alt=""></div>
             </div>
         </div>
     </div>

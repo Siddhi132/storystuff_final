@@ -781,11 +781,11 @@
     <script>
         $(document).ready(function(){
 
-            //main page
-            $("#story_but").click (function(){
-                $('.blind,.story_box').addClass('active');
-                $('.entertainment_box, .memes_box, .podcast_box, .gallery_box').removeClass('active')
-            });
+                //main page
+                $("#story_but").click (function(){
+                    $('.blind,.story_box').addClass('active');
+                    $('.entertainment_box, .memes_box, .podcast_box, .gallery_box').removeClass('active')
+                });
 
             $("#entertainment_but").click (function(){
                 $('.blind,.entertainment_box').addClass('active');
