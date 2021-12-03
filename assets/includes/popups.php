@@ -90,14 +90,14 @@
 
 <!-- <div class="inner_main"> -->
 
-<div class=" main">
+<div class="main login">
 
 
     <div class="outer_login_box">
     </div>
     <!-- <div class="login_box">
 </div> -->
-    <div class="login_title ">
+    <div class="login_title">
         <div class="cancel_login ">
             <i class="fa fa-times" aria-hidden="true"></i>
         </div>
@@ -129,7 +129,7 @@
         </div>
 
         <div class="google">
-            <a class="oauth-container" href="https://accounts.google.com/" style="text-transform:none;color:black;">
+            <a class="oauth-container" href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin" style="text-transform:none;color:black;">
                 CONTINUE WITH GOOGLE </a>
         </div>
 
@@ -251,7 +251,7 @@
                     <input class=" get  col-10" type="file" name="videos" id="video" style="display:none"
                             placeholder="VIDEOS"  onchange="video_fun(this)"/> <span style="margin-top:10px; margin-left:4px"><i>Edit </i></span>
                     </div>
-                    <input class="send" type="submit" name="send" id="send"> SEND </button>
+                    <input class="send" type="submit" name="send" id="send" value="SEND"> </button>
                 </form>
             </div>
 

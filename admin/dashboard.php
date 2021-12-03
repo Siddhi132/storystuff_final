@@ -1,3 +1,15 @@
+<?php
+// error_reporting(0);
+// require './dbconnect.php';
+
+$conn=mysqli_connect("localhost","root","","storystuff2");
+if(!$conn){
+echo "Database connection not success!!";
+}
+
+session_start();
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -117,7 +129,7 @@
                         <div class="button ">
                             <div class="circle_box">
                                 <div class="circle">
-                                    <p> 7 </p>
+                                    <p id="story_count"> 7 </p>
                                 </div>
                             </div>
                             <button class="but" id="story_but"> STORIES </button>
@@ -125,7 +137,7 @@
                         <div class="button ">
                             <div class="circle_box  enter_circle">
                                 <div class="circle">
-                                    <p> 7 </p>
+                                    <p id="entertainment_count"> 7 </p>
                                 </div>
                             </div>
                             <button class="but" id="entertainment_but">ENTERTAINMENT </button>
@@ -133,7 +145,7 @@
                         <div class="button ">
                             <div class="circle_box ">
                                 <div class="circle">
-                                    <p> 7 </p>
+                                    <p id="meme_count"> 7 </p>
                                 </div>
                             </div>
                             <button class="but" id="memes_but"> MEMES </button>
@@ -141,7 +153,7 @@
                         <div class="button ">
                             <div class="circle_box">
                                 <div class="circle">
-                                    <p> 7 </p>
+                                    <p id="podcast_count"> 7 </p>
                                 </div>
                             </div>
                             <button class="but" id="podcast_but"> PODCAST </button>
@@ -149,7 +161,7 @@
                         <div class="button ">
                             <div class="circle_box">
                                 <div class="circle">
-                                    <p> 7 </p>
+                                    <p id="gallery_count"> 7 </p>
                                 </div>
                             </div>
                             <button class="but" id="gallery_but"> GALLERY </button>
@@ -165,7 +177,39 @@
                     </div>
 
                     <div class="all_story ">
-                        <div class="par_story" >
+                        <?php
+                                $sql6 = "SELECT * FROM `artical` where `category_id`='STORIES' and delete_status=0 ORDER BY `date` DESC";
+                                $result = mysqli_query($conn, $sql6);
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    $image = $row['image'];
+                                    $artical_id = $row['artical_id'];
+                                    $category_id = $row['category_id'];
+                                    $description = $row['description'];
+                                    $user_id = $row['user_id'];
+                                    $date = $row['date'];
+                                    $sql4="select * from `user` where user_id=$user_id";
+                                    $result3 = mysqli_query($conn, $sql4);
+                                    while ($row = mysqli_fetch_assoc($result3)) {
+                                        $user_email=$row['email'];
+                                        echo '<div class="par_story" id='.$artical_id.'>
+                                <div class="s_image_box">
+                                    <img src="../'.$image.'" class="s_image" alt="">
+                                </div>
+                                <div class="content_user">
+                                    <div class="content_title ">
+                                        <p class="mr-md-5" >'.$artical_id.'</p>
+                                        <p class="email"> '.$user_email.' </p>
+                                    </div>
+                                    <div class="content_story ">
+                                        <p >'.$description.'</p>
+                                    </div>
+                                </div>
+                            </div>';
+                                    }
+                                    
+                                }
+                        ?>
+                        <!-- <div class="par_story" >
                             <div class="s_image_box">
                                 <img src="../assets/img/circle.jpg" class="s_image" alt="">
                             </div>
@@ -253,7 +297,7 @@
                                     <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolor assumenda numquam est doloribus molestias dolore nam culpa quas ex modi porro fuga, explicabo deleniti consectetur quam labore laborum alias.</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -265,7 +309,39 @@
                     </div>
 
                     <div class="all_story ">
-                        <div class="par_entertainment" >
+                    <?php
+                                $sql6 = "SELECT * FROM `artical` where `category_id`='ENTERTAINMENT' and delete_status=0 ORDER BY `date` DESC";
+                                $result = mysqli_query($conn, $sql6);
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    $image = $row['image'];
+                                    $artical_id = $row['artical_id'];
+                                    $category_id = $row['category_id'];
+                                    $description = $row['description'];
+                                    $user_id = $row['user_id'];
+                                    $date = $row['date'];
+                                    $sql4="select * from `user` where user_id=$user_id";
+                                    $result3 = mysqli_query($conn, $sql4);
+                                    while ($row = mysqli_fetch_assoc($result3)) {
+                                        $user_email=$row['email'];
+                                        echo '<div class="par_entertainment" id='.$artical_id.'>
+                                <div class="s_image_box">
+                                    <img src="../'.$image.'" class="s_image" alt="">
+                                </div>
+                                <div class="content_user">
+                                    <div class="content_title ">
+                                        <p class="mr-md-5" >'.$artical_id.'</p>
+                                        <p class="email"> '.$user_email.' </p>
+                                    </div>
+                                    <div class="content_story ">
+                                        <p >'.$description.'</p>
+                                    </div>
+                                </div>
+                            </div>';
+                                    }
+                                    
+                                }
+                        ?>
+                        <!-- <div class="par_entertainment" >
                             <div class="s_image_box">
                                 <img src="../assets/img/circle.jpg" class="s_image" alt="">
                             </div>
@@ -278,9 +354,9 @@
                                     <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolor assumenda numquam est doloribus molestias dolore nam culpa quas ex modi porro fuga, explicabo deleniti consectetur quam labore laborum alias.</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
-                        <div class="par_entertainment ">
+                        <!-- <div class="par_entertainment ">
                             <div class="s_image_box">
                                 <img src="../assets/img/circle.jpg" class="s_image" alt="">
                             </div>
@@ -293,7 +369,7 @@
                                     <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolor assumenda numquam est doloribus molestias dolore nam culpa quas ex modi porro fuga, explicabo deleniti consectetur quam labore laborum alias.</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -305,7 +381,39 @@
                     </div>
 
                     <div class="all_story ">
-                        <div class="par_memes" >
+                    <?php
+                                $sql6 = "SELECT * FROM `artical` where `category_id`='MEMES' and delete_status=0 ORDER BY `date` DESC";
+                                $result = mysqli_query($conn, $sql6);
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    $image = $row['image'];
+                                    $artical_id = $row['artical_id'];
+                                    $category_id = $row['category_id'];
+                                    $description = $row['description'];
+                                    $user_id = $row['user_id'];
+                                    $date = $row['date'];
+                                    $sql4="select * from `user` where user_id=$user_id";
+                                    $result3 = mysqli_query($conn, $sql4);
+                                    while ($row = mysqli_fetch_assoc($result3)) {
+                                        $user_email=$row['email'];
+                                        echo '<div class="par_memes" id='.$artical_id.'>
+                                <div class="s_image_box">
+                                    <img src="../'.$image.'" class="s_image" alt="">
+                                </div>
+                                <div class="content_user">
+                                    <div class="content_title ">
+                                        <p class="mr-md-5" >'.$artical_id.'</p>
+                                        <p class="email"> '.$user_email.' </p>
+                                    </div>
+                                    <div class="content_story ">
+                                        <p >'.$description.'</p>
+                                    </div>
+                                </div>
+                            </div>';
+                                    }
+                                    
+                                }
+                        ?>
+                        <!-- <div class="par_memes" >
                             <div class="s_image_box">
                                 <img src="../assets/img/circle.jpg" class="s_image" alt="">
                             </div>
@@ -333,7 +441,7 @@
                                     <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolor assumenda numquam est doloribus molestias dolore nam culpa quas ex modi porro fuga, explicabo deleniti consectetur quam labore laborum alias.</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -345,6 +453,7 @@
                     </div>
 
                     <div class="all_story ">
+                        
                         <div class="par_podcast" >
                             <div class="s_image_box">
                                 <img src="../assets/img/circle.jpg" class="s_image" alt="">
@@ -420,168 +529,17 @@
 
                 <!-- particular story -->
                 <div class="par_story_content">
-                        <div class="first_row">
-                            <div class="username mr-3">
-                                <span class="name mr-3"> <p> USERNAME </p> </span>
-                                <span class=""> LOREM IPSUM DOLOR </span>
-                            </div>
-                            <div class="mail">
-                                <span class="name mr-3"> <p> MAIL </p> </span>
-                                <span class=""> loremipsumdolor@mail.com </span>
-                            </div>
-                        </div>
-
-                        <div class="title">
-                            <span class="name mr-3"><p> STORY TITLE </p></span>
-                            <span class=""> Lorem ipsum dolor sit amet. </span>
-                        </div>
-
-                        <div class="title">
-                            <span class="name mr-3"><p> URL </p></span>
-                            <span class=""> http://localhost/storystuff_final/admin/dashboard.php </span>
-                        </div>
-
-                        <div class="first_row">
-                            <div class="username mr-3">
-                                <span class="name mr-3"> <p> SUMMARY </p> </span>
-                                <span class="">   Asperiores maxime id nemo itaque molestiae obcaecati doloremque magni nihil accusantium corporis. Rem ex ad, alias eveniet nam incidunt nemo natus corporis. </span>
-                            </div>
-                            <div class="mail h-75" >
-                                <span class="name mr-3"> <p> TAGS/KEYWORDS </p> </span>
-                                <span class=""> LOREM </span>
-                            </div>
-                        </div>
-
-                        <div class="title">
-                            <span class="name mr-3"><p> BODY </p></span>
-                            <span class="">  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi ab voluptate rem porro quaerat ullam reprehenderit excepturi assumenda unde. Earum temporibus porro ut delectus minima quam nemo officiis cupiditate consectetur? </span>
-                        </div>
-
-                        <div class="last_row">
-                            <div class="thumbnail">
-                               <span class="thumb_title"> THUMBNAIL </span>
-                               <img src="../assets/img/circle.jpg" class="thumb_image">
-                            </div>
-                        </div>
-
-                        <div class="final_buttons">
-                                <button class="publish" id="decision_story_mapping"> MAPPING </button>
-                                <a href="#pop"> <button class="publish" id="decision_story_publish"> PUBLISH </button> </a>
-                                <button class="publish" id="decision_story_review"> REVIEW </button>
-                                <button class="delete" id="decision_story_delete"> DELETE </button>
-                        </div>
-
                        
                 </div>
 
                  <!-- particular entertainment -->
                  <div class="par_entertainment_content">
-                        <div class="first_row">
-                            <div class="username mr-3">
-                                <span class="name mr-3"> <p> USERNAME </p> </span>
-                                <span class=""> LOREM IPSUM DOLOR </span>
-                            </div>
-                            <div class="mail">
-                                <span class="name mr-3"> <p> MAIL </p> </span>
-                                <span class=""> loremipsumdolor@mail.com </span>
-                            </div>
-                        </div>
-
-                        <div class="title">
-                            <span class="name mr-3"><p> ENTERTAINMENT TITLE </p></span>
-                            <span class=""> Lorem ipsum dolor sit amet. </span>
-                        </div>
-
-                        <div class="title">
-                            <span class="name mr-3"><p> URL </p></span>
-                            <span class=""> http://localhost/storystuff_final/admin/dashboard.php </span>
-                        </div>
-
-                        <div class="first_row">
-                            <div class="username mr-3">
-                                <span class="name mr-3"> <p> SUMMARY </p> </span>
-                                <span class="">   Asperiores maxime id nemo itaque molestiae obcaecati doloremque magni nihil accusantium corporis. Rem ex ad, alias eveniet nam incidunt nemo natus corporis. </span>
-                            </div>
-                            <div class="mail h-75" >
-                                <span class="name mr-3"> <p> TAGS/KEYWORDS </p> </span>
-                                <span class=""> LOREM </span>
-                            </div>
-                        </div>
-
-                        <div class="title">
-                            <span class="name mr-3"><p> BODY </p></span>
-                            <span class="">  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi ab voluptate rem porro quaerat ullam reprehenderit excepturi assumenda unde. Earum temporibus porro ut delectus minima quam nemo officiis cupiditate consectetur? </span>
-                        </div>
-
-                        <div class="last_row">
-                            <div class="thumbnail">
-                               <span class="thumb_title"> THUMBNAIL </span>
-                               <img src="../assets/img/circle.jpg" class="thumb_image">
-                            </div>
-                        </div>
-
-                        <div class="final_buttons">
-                                <button class="publish" id="decision_entertainment_mapping"> MAPPING </button>
-                                <a href="#pop"> <button class="publish" id="decision_entertainment_publish"> PUBLISH </button> </a>
-                                <button class="publish" id="decision_entertainment_review"> REVIEW </button>
-                                <button class="delete" id="decision_entertainment_delete"> DELETE </button>
-                        </div>
+                        
                     </div>
 
                      <!-- particular memes -->
                 <div class="par_memes_content">
-                        <div class="first_row">
-                            <div class="username mr-3">
-                                <span class="name mr-3"> <p> USERNAME </p> </span>
-                                <span class=""> LOREM IPSUM DOLOR </span>
-                            </div>
-                            <div class="mail">
-                                <span class="name mr-3"> <p> MAIL </p> </span>
-                                <span class=""> loremipsumdolor@mail.com </span>
-                            </div>
-                        </div>
-
-                        <div class="title">
-                            <span class="name mr-3"><p> DOCUMENT TITLE </p></span>
-                            <span class=""> Lorem ipsum dolor sit amet. </span>
-                        </div>
-
-                        <div class="title">
-                            <span class="name mr-3"><p> URL </p></span>
-                            <span class=""> http://localhost/storystuff_final/admin/dashboard.php </span>
-                        </div>
-
-                        <div class="first_row">
-                            <div class="username mr-3">
-                                <span class="name mr-3"> <p> MAPPING </p> </span>
-                                <span class="">   Asperiores maxime id nemo itaque molestiae obcaecati doloremque magni nihil accusantium corporis. Rem ex ad, alias eveniet nam incidunt nemo natus corporis. </span>
-                            </div>
-                            <div class="mail h-75" >
-                                <span class="name mr-3"> <p> TAGS/KEYWORDS </p> </span>
-                                <span class=""> LOREM </span>
-                            </div>
-                        </div>
-
-                        <div class="title">
-                            <span class="name mr-3"><p> BODY </p></span>
-                            <span class="">  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi ab voluptate rem porro quaerat ullam reprehenderit excepturi assumenda unde. Earum temporibus porro ut delectus minima quam nemo officiis cupiditate consectetur? </span>
-                        </div>
-
-                        <div class="last_row">
-                            <div class="thumbnail">
-                               <span class="thumb_title"> IMAGE </span>
-                               <img src="../assets/img/circle.jpg" class="thumb_image">
-                            </div>
-                        </div>
-
-                        <div class="final_buttons">
-                                <button class="publish" id="decision_memes_mapping"> MAPPING </button>
-                                <a href="#pop"><button class="publish" id="decision_memes_publish"> PUBLISH </button></a>
-                                <button class="publish" id="decision_memes_review"> REVIEW </button>
-                                <button class="delete" id="decision_memes_delete"> DELETE </button>
-                        </div>
-
-                       
+                        
                 </div>
 
                  <!-- particular podcast -->
@@ -703,14 +661,14 @@
         </div>
 
         <!-- published -->
-        <!-- <div class="pop_div_s">
+        <div class="pop_div_s published">
             <div class="popup" id="pop">
                 <span class="times_div"> <i class="fa fa-times mr-3 mt-3" id="back_main_s" aria-hidden="true"></i>  </span>
                 <div class="tick"> <ion-icon name="checkmark-outline" class=" mr-2"style="font-size:30px"></ion-icon> PUBLISHED!</div>
-                <div class="pop_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum suscipit consequuntur dolorem, tempore magni facilis voluptatem, obcaecati repellendus corporis quae amet voluptas numquam rerum hic, non ipsam nostrum possimus neque?</div>
+                <div class="pop_content">Your Artical is published Successfully !!</div>
             </div>
         </div>
-
+        <!-- 
         <div class="pop_div_e">
             <div class="popup" id="pop">
                 <span class="times_div"> <i class="fa fa-times mr-3 mt-3" id="back_main_e" aria-hidden="true"></i>  </span>
@@ -748,7 +706,7 @@
             <div class="popup" id="pop">
                 <span class="times_div"> <i class="fa fa-times mr-3 mt-3" id="back" aria-hidden="true"></i>  </span>
                 <div class="hour"> <i class="fa fa-hourglass-o  mr-2" style="font-size:30px" aria-hidden="true"></i> PUBLISHING </div>
-                <div class="pop_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum suscipit consequuntur dolorem, tempore magni facilis voluptatem, obcaecati repellendus corporis quae amet voluptas numquam rerum hic, non ipsam nostrum possimus neque?</div>
+                <div class="pop_content">Your artical is uploading please wait !!</div>
             </div>
         </div>
 
@@ -812,11 +770,25 @@
             $(".arrow,.par_story, .par_entertainment, .par_memes, .par_podcast, .par_gallery").click(function(){
                 $('.blind,.story_box,.entertainment_box,.memes_box, .podcast_box, .gallery_box,.main_box').removeClass('active')
             });
-
+            
             //when particular stories will be clicked
             $(".par_story").click(function(){
+                function loadData(id)
+                {
+                    $.ajax({
+                    type: "post",
+                    url: "par_story_content.php",
+                    data: {'artical_id':id},
+                    success: function (data) {
+                        $(".par_story_content").html(data);
+                    }   
+                    });
+                }
+                var id = $(this).attr('id');
+                loadData(id);
+                
                 $('.par_story_content,.main_box').addClass('active')
-
+                
                 $("#story_but").css({
                     "background-color":"#0F83AA",
                     "color":"white"
@@ -846,6 +818,21 @@
 
             //when particular entertainment will be clicked
             $(".par_entertainment").click(function(){
+
+                function loadData(id)
+                {
+                    $.ajax({
+                    type: "post",
+                    url: "par_entertainment_content.php",
+                    data: {'artical_id':id},
+                    success: function (data) {
+                        $(".par_entertainment_content").html(data);
+                    }   
+                    });
+                }
+                var id = $(this).attr('id');
+                loadData(id);
+
                 $('.par_entertainment_content,.main_box').addClass('active');
 
                 $("#entertainment_but").css({
@@ -877,6 +864,20 @@
 
              //when particular memes will be clicked
             $(".par_memes").click(function(){
+
+                function loadData(id)
+                {
+                    $.ajax({
+                    type: "post",
+                    url: "par_memes_content.php",
+                    data: {'artical_id':id},
+                    success: function (data) {
+                        $(".par_memes_content").html(data);
+                    }   
+                    });
+                }
+                var id = $(this).attr('id');
+                loadData(id);
                 $('.par_memes_content,.main_box').addClass('active');
 
                 $("#memes_but").css({
@@ -914,6 +915,8 @@
                     "background-color":"#0F83AA",
                     "color":"white"
                 });
+
+
 
                 $("#podcast_but").click(function(){
                     $('.blind,.podcast_box,.main_box').addClass('active');
@@ -988,28 +991,152 @@
 
             //     $(window).scrollTop(0);
             // });
+            function deletes(id) {  
+                    $.ajax({
+                        type: "POST",
+                        url: "delete_story.php",
+                        data: {'artical_id':id},
+                        success: function (data) {
+                            // alert(data);
+                            $('.par_story_content').removeClass('active');
+                            $(`#${id}`).fadeOut();
+                            $('.blind,.story_box').addClass('active');
+                            $('.entertainment_box, .memes_box, .podcast_box, .gallery_box').removeClass('active');
+                            count_articles();
+                            $(window).scrollTop(300);
+                        }
+                    });
+                }
+            $(document).on("click",".delete",function () { 
+                var id = $(this).attr('id');
+                deletes(id);
+             });
+            
+           
 
-            $("#decision_story_publish").click(function(){
+             function deletes1(id) {  
+                    $.ajax({
+                        type: "POST",
+                        url: "delete_ent.php",
+                        data: {'artical_id':id},
+                        success: function (data) {
+                            // alert(data);
+                            $('.par_entertainment_content').removeClass('active');
+                            $(`#${id}`).fadeOut();
+                            $('.blind,.entertainment_box').addClass('active');
+                            $('.story_box, .memes_box, .podcast_box, .gallery_box').removeClass('active');
+                            count_articles();
+                            $(window).scrollTop(300);
+                        }
+                    });
+                }
+            $(document).on("click",".delete1",function () { 
+                var id = $(this).attr('id');
+                $('.blind,.entertainment_box,.main_box').addClass('active');
+                $('.par_entertainment_content').removeClass('active');
+                $("#entertainment_but").css({
+                    "background-color":"white",
+                    "color":"#0F83AA"
+                });
+                deletes1(id);
+             });
+
+             function deletes2(id) {  
+                    $.ajax({
+                        type: "POST",
+                        url: "delete_meme.php",
+                        data: {'artical_id':id},
+                        success: function (data) {
+                            // alert(data);
+                            $('.par_memes_content').removeClass('active');
+                            $(`#${id}`).fadeOut();
+                            $('.blind,.memes_box').addClass('active');
+                            $('.story_box, .entertainment_box, .podcast_box, .gallery_box').removeClass('active');
+                            count_articles();
+                            $(window).scrollTop(300);
+                        }
+                    });
+                }
+            $(document).on("click",".delete2",function () { 
+                var id = $(this).attr('id');
+                deletes2(id);
+             });
+            
+          function publish(id) { 
+                $.ajax({
+                    type: "POST",
+                    url: "publish_artical.php",
+                    data: {"artical_id":id},
+                    success: function (data) {
+                        // alert(id);
+                        // alert(data);
+                        $(`#${id}`).fadeOut();
+                        count_articles();
+                        setTimeout(() => {
+                            $('.pop_div_s').removeClass('active');
+                            $(`.par_${data}_content`).removeClass('active');
+                        }, 1000);              
+                        setTimeout(() => {
+                            $(`.blind,.${data}_box`).addClass('active');
+                            $('.published').addClass('active');
+                        }, 1000);
+                        // $().removeClass('active');
+                        // alert('"" ,.entertainment_box ,.memes_box ,.podcast_box ,.gallery_box ,.story_box'.replace(`,.${data}_box`,''));
+                        $(window).scrollTop(300);
+                    }
+                });
+            }
+            function count_articles(){ 
+                $.ajax({
+                    type: "POST",
+                    url: "count_articles.php",
+                    data: "",
+                    dataType: "JSON",
+                    success: function (data) {
+                        $('#story_count').html(data.stories);
+                        $('#entertainment_count').html(data.entertainment);
+                        $('#meme_count').html(data.memes);
+                        $('#podcast_count').html(data.podcast);
+                        $('#gallery_count').html(data.gallery);
+                    }
+                });  
+             }
+
+             count_articles();
+
+           $(document).on("click","#decision_story_publish",function(){
                 $('.pop_div_s').addClass('active');
                 $('.main_box').addClass('opa');
+                var id = $(this).attr("name");
+                publish(id);
+                $(window).scrollTop(300);
+                // $(window).scrollTop(500);
+            });
+            $(document).on("click","#decision_entertainment_publish",function(){
+                $('.pop_div_s').addClass('active');
+                $('.main_box').addClass('opa');
+                var id = $(this).attr("name");
+                publish(id);
+                $(window).scrollTop(300);
 
                 // $(window).scrollTop(500);
             });
-            $("#decision_entertainment_publish").click(function(){
-                $('.pop_div_e').addClass('active');
+            $(document).on("click","#decision_meme_publish",function(){
+                $('.pop_div_s').addClass('active');
                 $('.main_box').addClass('opa');
-
-                // $(window).scrollTop(500);
-            });
-            $("#decision_memes_publish").click(function(){
-                $('.pop_div_m').addClass('active');
-                $('.main_box').addClass('opa');
-
+                var id = $(this).attr("name");
+                publish(id);
+                $(window).scrollTop(300);
+                
                 // $(window).scrollTop(500);
             });
             $("#decision_podcast_publish").click(function(){
-                $('.pop_div_p').addClass('active');
+                $('.pop_div_s').addClass('active');
                 $('.main_box').addClass('opa');
+                alert();
+                var id = $(this).attr("name");
+                publish(id);
+                $(window).scrollTop(300);
 
                 // $(window).scrollTop(500);
             });
@@ -1028,7 +1155,7 @@
             $("#back_main_s").click(function(){
                 $('.pop_div_s').removeClass('active');
                 $('.main_box').removeClass('opa');
-                $('.blind,.story_box,.main_box').addClass('active');
+                $('.blind,.main_box').addClass('active');
                 $('.par_story_content').removeClass('active');
                 $("#story_but").css({
                     "background-color":"white",

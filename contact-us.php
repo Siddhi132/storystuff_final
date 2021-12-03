@@ -1,3 +1,6 @@
+
+    
+    
     <div class="container-fluid bg-img  px-0" >
    
         <div class="main_contact_div ">
@@ -8,7 +11,7 @@
                     <h4>Contact Us</h4>
                     <h6>Feel free to contact us anytime</h6>
 
-                   <form action="" class="form-group ">
+                   <form action='contact_con.php' class="form-group " method="post">
                            <!-- <div class="input_box"></div> -->
                         <input type="text" name="name" placeholder="Name" class="text_box mt-5" > 
 
@@ -16,11 +19,11 @@
                         <!-- <div class="input_box"></div> -->
                         <input type="email" name="email" placeholder="Email" class="text_box"> <br>
                      
-                        <textarea placeholder="Message" name="content" rows="5"   type="text" class="text_box1"  ALIGN="centre"required ></textarea>
+                        <textarea placeholder="Message" name="message" rows="5"   type="text" class="text_box1"  ALIGN="centre"required ></textarea>
 
                        
                         <div class="buttons_box">
-                            <button type="submit" class="buttons"> SEND </button>
+                            <button type="submit" class="buttons" name="send"> SEND </button>
                         </div>
                     </form>
 
@@ -37,7 +40,7 @@
                     <div class="mail_inner_box ">
                         <span> <i class="fa fa-envelope" aria-hidden="true"></i> </span>
                         <div class="mail">
-                            mail@contactus.com
+                            <a href="mailto:siddhidoshi2418@gmail.com">siddhidoshi2418@gmail.com</a>
                         </div>
                     </div> <br><br>
                     <div class="mail_inner_box ">
@@ -55,8 +58,8 @@
                 </div>
 
                 <div class="icon_box">
-                    <a href="" style="text-decoration:none; color:var(--white)"><span>  <i class="fa fa-instagram" aria-hidden="true"></i>  </span> </a>
-                    <a href="" style="text-decoration:none; color:var(--white)"><span class="particular_icon">  <i class="fa fa-facebook-official" aria-hidden="true"></i>  </span> </a>
+                    <a href="https://www.instagram.com/siddhi__2418" target="_blank" style="text-decoration:none; color:var(--white)"><span>  <i class="fa fa-instagram" aria-hidden="true"></i>  </span> </a>
+                    <a href="https://www.facebook.com/" target="_blank" style="text-decoration:none; color:var(--white)"><span class="particular_icon">  <i class="fa fa-facebook-official" aria-hidden="true"></i>  </span> </a>
                     <!-- <a href="" style="text-decoration:none; color:var(--white)"><span class="particular_icon">  <i class="fa fa-whatsapp" aria-hidden="true"></i>   </span> --> </a>
                     <a href="" style="text-decoration:none; color:var(--white)"><span class="particular_icon">  <i class="fa fa-twitter" aria-hidden="true"></i>  </span> </a>
                 </div>

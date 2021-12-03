@@ -4,12 +4,11 @@ $(document).ready(function(){
         
     //     indicators:true
     // });
-
+    
     // navbar
     $('.search').click(function(){
-        $('.search_input,.search,.search_box').addClass('active')
+        $('.search_input,.search,.search_box').addClass('active');
     });
-
     $('.search1').click(function(){
         $('.search_input1,search1').addClass('active')
     });
@@ -82,7 +81,7 @@ $(document).ready(function(){
             $('.meme_particular,.memes_grid').addClass('active')
         });
 
-        $('.close').click(function(){
+        $(".close").click(function(){
             $('.meme_particular,.memes_grid').removeClass('active')
         });
         // $('.cancel_login').click(function(){
@@ -179,7 +178,20 @@ $(document).ready(function(){
     // })
 
    
-        
+    // function loadData()
+    //         {
+    //             var id=$(this)
+    //             $.ajax(
+    //                 {
+    //                 type: "POST",
+    //                 url: "stories-internal-logic.php",
+    //                 data: {'artical-id':id},
+    //                 success: function (data) {
+    //                     console.log(data);
+    //                 }
+    //             });
+    //         }
+    
       
     
 });

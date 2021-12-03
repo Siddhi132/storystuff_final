@@ -43,7 +43,7 @@ require 'login_con.php';
                         
                             echo '<div class="text1 text2  text1_mv">
                             <h6>'.$description.'</h6>
-                        </div>';
+                            </div>';
 }
 
 ?>
@@ -52,43 +52,8 @@ require 'login_con.php';
         </section>
 
         <!-- stories -->
-        <section id="stories" class="all px-5 px-sm-0">
-            <div class="latest_story mt-5">
-                <h6 > <b> STORIES <b> </h6>
-            </div>
-            <div class="latest_story mt-1 ">
-                <h2 > HEADLINE </h2>
-            </div>
-            <div class="row3 pb-4">
-                <div class="publish">
-                    <h6 class="publish_text">PUBLISHED BY</h6>
-                    <h6>DATE</h6>
-                </div>
-                <div class="symbol">
-                    <img src="assets/img/logo/label.png" class="black_logo" />
-                    <img src="assets/img/logo/white.png" class="white_logo" />
-                    <i class="fa fa-share-alt fa-lg mt-1" aria-hidden="true"></i>
-                </div>
-            </div>
-            <div class="story mt-5">
-                <div class="story_img">
-                    <img src="assets/img/tree.jpg" class="" />
-                </div>
-                <div class="story_text mt-5">
-                    <h6>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex dicta odio reprehenderit unde praesentium debitis accusamus dolorum dolor consectetur voluptatem, deserunt corrupti repellat magnam temporibus quidem saepe aut perspiciatis tenetur.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex dicta odio reprehenderit unde praesentium debitis accusamus dolorum dolor consectetur voluptatem, deserunt corrupti repellat magnam temporibus quidem saepe aut perspiciatis tenetur.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex dicta odio reprehenderit unde praesentium debitis accusamus dolorum dolor consectetur voluptatem, deserunt corrupti repellat magnam temporibus quidem saepe aut perspiciatis tenetur.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex dicta odio reprehenderit unde praesentium debitis accusamus dolorum dolor consectetur voluptatem, deserunt corrupti repellat magnam temporibus quidem saepe aut perspiciatis tenetur.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex dicta odio reprehenderit unde praesentium debitis accusamus dolorum dolor consectetur voluptatem, deserunt corrupti repellat magnam temporibus quidem saepe aut perspiciatis tenetur.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex dicta odio reprehenderit unde praesentium debitis accusamus dolorum dolor consectetur voluptatem, deserunt corrupti repellat magnam temporibus quidem saepe aut perspiciatis tenetur.
-                    </h6>
-                </div>
-
-                <!-- <div class="story_img">
-                    <img src="assets/img/tree.jpg" class="" />
-                </div> -->
-            </div>
+        <section id="stories" class="all px-5 px-sm-0 my-story">
+            
         </section>
 
         <!-- more stories -->
@@ -108,13 +73,11 @@ require 'login_con.php';
                             $image = $row['image'];
                             $artical_id = $row['artical_id'];
                             $category_id = $row['category_id'];
-                            $description = $row['description'];
+                            $ription = $row['description'];
                             $user_id = $row['user_id'];
                             $date = $row['date'];
-                        
-                            echo '<img src="'.$image.'" class="all_story_img" />';
+                            echo '<button style="background:transparent;border:0px;z-index:1;" class="artical_id" id='.$artical_id.'><img src="'.$image.'" class="all_story_img" id="artical-img"/></button>';
 }
-
 ?>
 
                     <!-- <img src="assets/img/tree.jpg" class="all_story_img" />
@@ -123,12 +86,35 @@ require 'login_con.php';
             </div>
         </section>
     </div>
-
-
+    <script>
+        $(document).ready(function () {
+            function loadData(id)
+            {
+                $.ajax(
+                    {
+                    type: "POST",
+                    url: "stories-internal-logic.php",
+                    data: {'artical-id':id},
+                    success: function (data) {
+                        $('.my-story').html(data);
+                    }
+                });
+            }
+            $(".artical_id").click(function () { 
+                var element = $(this).attr("id");
+                loadData(element);
+            });
+            loadData(8);
+        });
+    </script>
     <script src="assets/js/plugins.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
+<script>
+    function move(){
+        
+    }
+</script>

@@ -8,6 +8,7 @@ require 'dbconnect.php';
        <!-- latest -->
 
        <div class="container-fuild mt-5 px-5">
+
         <section class="latest">
             <div class="latest_box">
                 <div class="latest_input">
@@ -69,8 +70,8 @@ require 'dbconnect.php';
                             $date = $row['date'];
                         
                             echo '<div class="content1">
-                            <h6 class="mt-3 mr-3 mr-lg-0"'.$description.' </h6>
-                            <span class="content1_img"><img src="'.$image.'" class="content1_img" /> </span>
+                            <span class="content1_img mt-2"><img src="'.$image.'" class="content1_img" /> </span>
+                            <h6 class="mt-3 mr-3 mr-lg-0">'.$description.' </h6>
                         </div>';
 }
 

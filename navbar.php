@@ -1,50 +1,8 @@
 <?php
 require 'dbconnect.php';
 require 'login_con.php';
-
-  session_start();
-//  print_r($_SESSION['user_id']);
-// exit;
-  
-
-// if (isset($_SESSION['login'])) {
-//     echo "hello";
-// }
-// exit;
+session_start();
 ?>
-
-
-
-<!-- <script>
-$(document).ready(function() {
-$("#send").click(function() {
-var name = $("#name").val();
-var email = $("#email").val();
-var contact = $("#contact").val();
-var gender = $("input[type=radio]:checked").val();
-var msg = $("#msg").val();
-if (name == '' || email == '' || contact == '' || gender == '' || msg == '') {
-alert("Insertion Failed Some Fields are Blank....!!");
-} else {
-// Returns successful data submission message when the entered information is stored in database.
-$.post("refreshform.php", {
-name1: name,
-email1: email,
-contact1: contact,
-gender1: gender,
-msg1: msg
-}, function(data) {
-alert(data);
-$('#form')[0].reset(); // To reset form fields
-});
-}
-});
-});
-</script> -->
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -171,50 +129,9 @@ $('#form')[0].reset(); // To reset form fields
 
 
     <script>
-    $(document).ready(function(){
-        // $(".list").hover(function() {
-        //         $(this).css("text-decoration","underline 5px");
-        //      }, function() {
-        //         $(this).css("text-decoration","none");
-        //     });
-
-        //     $("#entertainment").hover(function() {
-        //         $(this).css("text-decoration","underline 5px");
-        //      }, function() {
-        //         $(this).css("text-decoration","none");
-        //     });
-
-        //     $("#meme").hover(function() {
-        //         $(this).css("text-decoration","underline 5px");
-        //      }, function() {
-        //         $(this).css("text-decoration","none");
-        //     });
-
-        //     $("#podcast").hover(function() {
-        //         $(this).css("text-decoration","underline 5px");
-        //      }, function() {
-        //         $(this).css("text-decoration","none");
-        //     });
-
-        //     $("#gallery").hover(function() {
-        //         $(this).css("text-decoration","underline 5px");
-        //      }, function() {
-        //         $(this).css("text-decoration","none");
-        //     });
-
-        //     $("#about").hover(function() {
-        //         $(this).css("text-decoration","underline 5px");
-        //      }, function() {
-        //         $(this).css("text-decoration","none");
-        //     });
-
-        //     $("#contact").hover(function() {
-        //         $(this).css("text-decoration","underline 5px");
-        //      }, function() {
-        //         $(this).css("text-decoration","none");
-        //     });
-
-//Calling home page
+    $(document).ready(function()
+    {
+        //Calling home page
         $.ajax(
             {
             url: "home.php",
@@ -226,10 +143,8 @@ $('#form')[0].reset(); // To reset form fields
                 }
         });
 
-        $('#logo').click(function(){
-           
-         
-
+        $('#logo').click(function()
+        {
             $('.list,#entertainment,#meme,#podcast,#gallery,#about,#contact').css({
                 "text-decoration" : "none" ,
                  "color" :"var(--black)" 
@@ -246,11 +161,12 @@ $('#form')[0].reset(); // To reset form fields
                         $('#dynamic').html(data);
                 }
             });
-        })
+        });
       
 
         //Calling stories page
-        $('.list').click(function(){
+        $('.list').click(function()
+        {
             $('.list').css({
                 "text-decoration" : "underline 5px #FF2039" ,
                  "color" :" #FF2039" 
@@ -278,42 +194,64 @@ $('#form')[0].reset(); // To reset form fields
                        
                 }
             });
+        });
+
+        function savePost(articalId) { 
+            
+            $.ajax({
+                type: "POST",
+                url: "save_post.php",
+                data: {'artical_id':articalId},
+                success: function (data) {
+                    if(data==1)
+                    {
+                        alert("Save Success");
+                    }
+                    else
+                    {
+                        alert("Already Saved");
+                    }
+                }
+            });
+
+        }
+
+        $(document).on("click",".save",function () { 
+            <?php
+                if(isset($_SESSION['email']))
+                {
+                    echo 'savePost($(this).attr("id"))';
+                }
+                else
+                {
+                    echo "$('.login').addClass('active'); $(window).scrollTop(0);";
+                }
+            ?>
         })
 
         //Callling entertainment page
-            $('#entertainment').click(function(){
+        $('#entertainment').click(function()
+        {
 
             $('#entertainment').css({
                 "text-decoration" : "underline 5px #FF2039" ,
-                 "color" :" #FF2039" 
+                    "color" :" #FF2039" 
             });
 
             $('.list,#meme,#podcast,#gallery,#about,#contact').css({
                 "text-decoration" : "none" ,
-                 "color" :"var(--black)" 
+                    "color" :"var(--black)" 
             });
-
-            
-           
-            // $('#meme').css("text-decoration","none");
-            // $('#podcast').css("text-decoration","none");
-            // $('#gallery').css("text-decoration","none");
-            // $('#about').css("text-decoration","none");
-            // $('#contact').css("text-decoration","none");
-            
-
-           
-              $.ajax(
+            $.ajax(
             {
-            url: "entertainment-internal.php",
-                type: "POST",
-                
-                success: function (data) {
-                        $('#dynamic').html(data);
-                        
+                url: "entertainment-internal.php",
+                type: "POST", 
+                success: function (data) 
+                {
+                        $('#dynamic').html(data);   
                 }
             });
-        })
+        });
         //Callling memes page
         $('#meme').click(function(){
 
@@ -340,20 +278,20 @@ $('#form')[0].reset(); // To reset form fields
                        
                 }
             });
-        })
+        });
       
 
        //Callling contactus page
        $('#contact').click(function(){
-        $('#contact').css({
-                "text-decoration" : "underline 5px #FF2039" ,
-                 "color" :" #FF2039" 
-            });
-           
-            $('.list,#entertainment,#meme,#podcast,#gallery,#about').css({
-                "text-decoration" : "none" ,
-                 "color" :"var(--black)" 
-            });
+            $('#contact').css({
+                    "text-decoration" : "underline 5px #FF2039" ,
+                    "color" :" #FF2039" 
+                });
+            
+                $('.list,#entertainment,#meme,#podcast,#gallery,#about').css({
+                    "text-decoration" : "none" ,
+                    "color" :"var(--black)" 
+                });
 
        
 
@@ -369,7 +307,7 @@ $('#form')[0].reset(); // To reset form fields
                         
                 }
             });
-        })
+        });
 
 //dark mode
         $('.moon').click(function(){
