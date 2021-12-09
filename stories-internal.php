@@ -77,8 +77,8 @@ require 'login_con.php';
                             $user_id = $row['user_id'];
                             $date = $row['date'];
                             echo '<button style="background:transparent;border:0px;z-index:1;" class="artical_id" id='.$artical_id.'><img src="'.$image.'" class="all_story_img" id="artical-img"/></button>';
-}
-?>
+                        }
+                    ?>
 
                     <!-- <img src="assets/img/tree.jpg" class="all_story_img" />
                     <img src="assets/img/tree.jpg" class="all_story_img" /> -->

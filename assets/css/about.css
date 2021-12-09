@@ -1,0 +1,22 @@
+.about-title{
+    display: flex;
+    font-weight: bold;
+    font-family: 'Britannic';
+    color: var(--black);
+}
+
+.about-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 100px;
+    padding-right: 180px;
+    height: auto;
+    color: var(--black);
+}
+
+@media screen and (max-width:768px) {
+    .about-content{
+        padding-right: 100px;
+    }
+}

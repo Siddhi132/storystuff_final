@@ -56,7 +56,7 @@ require 'login_con.php';
         </div>
 
         <!------------------------------------------------------row 1 ----------------------------------------------->
-        <div class="memes_grid mt-5  px-lg-5 px-md-3 br">
+        <div class="row memes_grid   px-lg-5 px-md-3 br border">
         <?php
                             $sql = "SELECT * FROM `artical` where category_id='MEMES' ORDER BY `date` DESC ";
                             $result = mysqli_query($conn, $sql);
@@ -68,14 +68,15 @@ require 'login_con.php';
                             $user_id = $row['user_id'];
                             $date = $row['date'];
                         
-                            echo '<div class="memes_box ml-lg-5 ml-md-3  mt-4 mt-sm-0 br">
+                            echo '<div class="memes_box ml-lg-5 ml-md-3  mt-5 mb-3 br">
                             <a href="#" class="memes_carousel" id='.$artical_id.'> <img src="'.$image.'" class="memes_img" alt=""> </a>
                          </div>';
 
                         //  echo '<img src="'.$image.'" class="all_story_img" />';
 }
 
-?>
+?> 
+
             <!-- <div class="memes_box ml-lg-5 ml-md-3  mt-4 mt-sm-0 br">
                <a href="#"> <img src="assets/img/memes/meme1.jpg" class="memes_img" alt=""> </a>
             </div> -->
