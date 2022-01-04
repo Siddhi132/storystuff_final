@@ -154,7 +154,7 @@ require 'login_con.php';
 
                 <div class="meme_icon mt-2">
                     <span class="meme_heart"> <i class="fa fa-heart-o" aria-hidden="true"></i> </span>
-                    <span class="meme_bookmark"> <i class="fa fa-bookmark-o" aria-hidden="true"></i> </span>
+                    <span class="meme_bookmark"> <i class="fa fa-bookmark-o save" id="<?php echo $_POST['artical-id']; ?>" aria-hidden="true"></i> </span>
                     <span class="meme_send"> <ion-icon name="send-sharp"></ion-icon> </span>
                 </div>
 

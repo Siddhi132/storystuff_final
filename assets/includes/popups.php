@@ -261,7 +261,7 @@
         <h4 class="saved"> Saved Post </h4>
         <div class="img_grid">
             <div class="row rows">
-                <div class=" grid_box"></div>
+                <div class=" grid_box"> <img src="assest/img/Screenshot (456).png" alt=""></div>
                 <div class=" grid_box"></div>
                 <div class=" grid_box"></div>
                 <!-- </div> -->
