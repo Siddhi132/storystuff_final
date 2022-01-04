@@ -33,6 +33,8 @@ session_start();
      <link rel="stylesheet" href="assets/css/home copy.css">
      <link rel="stylesheet" href="assets/css/memes-internal copy.css">
      <link rel="stylesheet" href="assets/css/stories-internal copy.css">
+     <link rel="stylesheet" href="assets/css/podcast-internal.css">
+     <link rel="stylesheet" href="assets/css/about.css">
      <link rel="stylesheet" href="assets/css/contact-us.css">
     <!-- <link rel="stylesheet" href="assets/css/jquery-hislide.css"> -->
 
@@ -98,7 +100,14 @@ session_start();
         <div class="search_box1 ">
             <input class="search_input1" />
             <i class="fa fa-search search1" aria-hidden="true"></i>
-            
+            <?php
+                        if(isset($_SESSION['login'])){
+                            echo " <img src='assets/img/profile.jpg ' alt='' class='profile_pic d-block d-lg-none'>";
+                        }
+                        // else{
+                        //     echo "<h6 class='login_text'>LOGIN</h6>";
+                        // }
+                    ?>
             <!-- <i class="fa fa-user user_icon_mv d-lg-none" aria-hidden="true"></i> -->
         </div>
 
@@ -280,6 +289,61 @@ session_start();
             });
         });
       
+        //Callling podcast page
+        $('#podcast').click(function(){
+
+            $('#podcast').css({
+                "text-decoration" : "underline 5px #FF2039" ,
+                "color" :" #FF2039" 
+            });
+
+            $('.list,#entertainment,#meme,#gallery,#about,#contact').css({
+                "text-decoration" : "none" ,
+                "color" :"var(--black)" 
+            });
+
+
+
+
+            $.ajax(
+            {
+            url: "podcast-internal.php",
+                type: "POST",
+                
+                success: function (data) {
+                        $('#dynamic').html(data);
+                    
+                }
+            });
+        });
+
+         //Callling about page
+         $('#about').click(function(){
+
+            $('#about').css({
+                "text-decoration" : "underline 5px #FF2039" ,
+                "color" :" #FF2039" 
+            });
+
+            $('.list,#entertainment,#meme,#gallery,#podcast,#contact').css({
+                "text-decoration" : "none" ,
+                "color" :"var(--black)" 
+            });
+
+
+
+
+            $.ajax(
+            {
+            url: "about.php",
+                type: "POST",
+                
+                success: function (data) {
+                        $('#dynamic').html(data);
+                    
+                }
+            });
+        });
 
        //Callling contactus page
        $('#contact').click(function(){

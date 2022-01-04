@@ -595,7 +595,7 @@ session_start();
                                 <button class="delete" id="decision_podcast_delete"> DELETE </button>
                         </div>
 
-                       
+
                 </div>
 
                  <!-- particular gallery -->
@@ -705,7 +705,7 @@ session_start();
         <div class="pop_div_s pop_div_e pop_div_m pop_div_p pop_div_g">
             <div class="popup" id="pop">
                 <span class="times_div"> <i class="fa fa-times mr-3 mt-3" id="back" aria-hidden="true"></i>  </span>
-                <div class="hour"> <i class="fa fa-hourglass-o  mr-2" style="font-size:30px" aria-hidden="true"></i> PUBLISHING </div>
+                <div class="hour"> <i class="fa fa-hourglass-o  mr-2"  aria-hidden="true"></i> PUBLISHING </div>
                 <div class="pop_content">Your artical is uploading please wait !!</div>
             </div>
         </div>
@@ -739,11 +739,11 @@ session_start();
     <script>
         $(document).ready(function(){
 
-            //main page
-            $("#story_but").click (function(){
-                $('.blind,.story_box').addClass('active');
-                $('.entertainment_box, .memes_box, .podcast_box, .gallery_box').removeClass('active')
-            });
+                //main page
+                $("#story_but").click (function(){
+                    $('.blind,.story_box').addClass('active');
+                    $('.entertainment_box, .memes_box, .podcast_box, .gallery_box').removeClass('active')
+                });
 
             $("#entertainment_but").click (function(){
                 $('.blind,.entertainment_box').addClass('active');

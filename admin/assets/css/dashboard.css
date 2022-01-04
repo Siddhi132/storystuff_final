@@ -604,6 +604,21 @@
     padding: 30px;
 }
 
+.fa-hourglass-o{
+    font-size: 25px;
+    margin-top: 3px;
+    animation: round 900ms infinite linear;
+}
+
+@keyframes round {
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
 @media screen and (max-width:700px) {
     .popup{
         margin-top: -900px;

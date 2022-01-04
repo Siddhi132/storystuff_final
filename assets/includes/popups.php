@@ -248,7 +248,7 @@
 
                     <div style="display:flex; ">
                     <div class="holder get col-10" id="holder_video">VIDEOS</div>
-                    <input class=" get  col-10" type="file" name="videos" id="video" style="display:none"
+                    <input class=" get  col-10" type="file" name="video" id="video" style="display:none"
                             placeholder="VIDEOS"  onchange="video_fun(this)"/> <span style="margin-top:10px; margin-left:4px"><i>Edit </i></span>
                     </div>
                     <input class="send" type="submit" name="send" id="send" value="SEND"> </button>
@@ -261,33 +261,33 @@
         <h4 class="saved"> Saved Post </h4>
         <div class="img_grid">
             <div class="row rows">
-                <div class=" grid_box"> <img src="assest/img/Screenshot (456).png" alt=""></div>
-                <div class=" grid_box"></div>
-                <div class=" grid_box"></div>
+                <div class=" grid_box"><img src="assets/img/circle.jpg"  class=" grid_box" alt=""></div>
+                <div class=" grid_box"><img src="assets/img/cactus.jpg"  class=" grid_box" alt=""></div>
+                <div class=" grid_box"><img src="assets/img/contact-us-bg.jpg"  class=" grid_box" alt=""></div>
                 <!-- </div> -->
 
                 <!-- <div class="row rows"> -->
-                <div class=" grid_box"></div>
-                <div class=" grid_box"></div>
-                <div class=" grid_box"></div>
+                <div class=" grid_box"><img src="assets/img/circle.jpg"  class=" grid_box" alt=""></div>
+                <div class=" grid_box"><img src="assets/img/cactus.jpg"  class=" grid_box" alt=""></div>
+                <div class=" grid_box"><img src="assets/img/contact-us-bg.jpg"  class=" grid_box" alt=""></div>
                 <!-- </div> -->
 
                 <!-- <div class="row rows"> -->
-                <div class=" grid_box"></div>
-                <div class=" grid_box"></div>
-                <div class=" grid_box"></div>
+                <div class=" grid_box"><img src="assets/img/circle.jpg"  class=" grid_box" alt=""></div>
+                <div class=" grid_box"><img src="assets/img/cactus.jpg"  class=" grid_box" alt=""></div>
+                <div class=" grid_box"><img src="assets/img/contact-us-bg.jpg"  class=" grid_box" alt=""></div>
                 <!-- </div> -->
 
                 <!-- <div class="row rows"> -->
-                <div class=" grid_box"></div>
-                <div class=" grid_box"></div>
-                <div class=" grid_box"></div>
+                <div class=" grid_box"><img src="assets/img/circle.jpg"  class=" grid_box" alt=""></div>
+                <div class=" grid_box"><img src="assets/img/cactus.jpg"  class=" grid_box" alt=""></div>
+                <div class=" grid_box"><img src="assets/img/contact-us-bg.jpg"  class=" grid_box" alt=""></div>
                 <!-- </div> -->
 
                 <!-- <div class="row rows"> -->
-                <div class=" grid_box"></div>
-                <div class=" grid_box"></div>
-                <div class=" grid_box"></div>
+                <div class=" grid_box"><img src="assets/img/circle.jpg"  class=" grid_box" alt=""></div>
+                <div class=" grid_box"><img src="assets/img/cactus.jpg"  class=" grid_box" alt=""></div>
+                <div class=" grid_box"><img src="assets/img/contact-us-bg.jpg"  class=" grid_box" alt=""></div>
             </div>
         </div>
     </div>

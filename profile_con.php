@@ -10,10 +10,15 @@ if (isset($_POST['send'])) {
     $content = $_POST['content'];
     $content = str_replace("'","\'",$content);
     // $image = $_POST['image'];
-    $video = $_POST['videos'];
+    $video = $_POST['video'];
     if(empty($_FILES) || !isset($_FILES['image'])){
         echo "error";
     }
+    $video=$_FILES['video'];
+    $videoname=$video['name'];
+    $error1=$video['error'];
+    $tempname1=$video['tmp_name'];
+
     $image=$_FILES['image'];
     $imgname=$image['name'];
     $error=$image['error'];
@@ -25,6 +30,16 @@ if (isset($_POST['send'])) {
     if (in_array($end,$fileext)){
         $destfile='assets/img/'.$imgname;
         move_uploaded_file($tempname,$destfile);
+
+
+    }
+
+    $filetod1=explode('.',$videoname);
+    $end=strtolower(end($filetod1));
+    $fileext=array('mp4','mp3','png');
+    if (in_array($end,$fileext)){
+        $destfile1='assets/audio/'.$videoname;
+        move_uploaded_file($tempname1,$destfile1);
 
 
     }
@@ -43,7 +58,7 @@ $t = time();
  $time = date("Y-m-d h:i:s",$t);
  
 
-    $sql2 = "INSERT INTO `artical` ( `category_id`, `image`, `description`, `user_id`, `date`) VALUES ( '$role', '$destfile', '$content', '$user_id','$time');";
+    $sql2 = "INSERT INTO `artical` ( `category_id`, `image`, `description`, `user_id`, `date`,`delete_status`,`video`) VALUES ( '$role', '$destfile', '$content', '$user_id','$time','','$destfile1');";
     $result4=mysqli_query($conn, $sql2);
 
     if($result4){

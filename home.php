@@ -259,7 +259,7 @@ require 'dbconnect.php';
                     </div> 
                     <!-- row1 -->
                     <!-- 1st  -->
-                    <div class="row row1_story border" >
+                    <div class="row row1_story" >
                         <?php
                             $sql = "SELECT * FROM `artical` where `category_id`='STORIES' ORDER BY `date` DESC LIMIT 1";
                             $result = mysqli_query($conn, $sql);
@@ -279,7 +279,7 @@ require 'dbconnect.php';
 
                         ?>
                        <!-- 2nd 3rd 4th -->
-                        <div class="content_box  border">
+                        <div class="content_box ">
                             <?php
                                      $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 1,3";
                                      $result = mysqli_query($conn, $sql);
@@ -307,7 +307,7 @@ require 'dbconnect.php';
 
                     <!-- row2 -->
                      <!-- 1st   -->
-                    <div class="row row1_story mt-5  ml-1 border" >
+                    <div class="row row1_story mt-5  ml-1" >
                         <?php
                             $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 4,1";
                             $result = mysqli_query($conn, $sql);
@@ -319,7 +319,7 @@ require 'dbconnect.php';
                             $user_id = $row['user_id'];
                             $date = $row['date'];
                         
-                            echo '<div class="img_box pr-0 pr-md-5 border">
+                            echo '<div class="img_box pr-0 pr-md-5">
                             <img src="' . $image . '" class="img_story_pic mt-sm-3 mt-4" />
                             <h6 class="mt-3">' . $description . '</h6>
                             </div>';
@@ -327,7 +327,7 @@ require 'dbconnect.php';
                         ?>
 
                         <!-- 2 3 4  -->
-                        <div class="content_box  border">
+                        <div class="content_box ">
                             <?php
                                    $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 5,3";
                                    $result = mysqli_query($conn, $sql);
@@ -763,9 +763,9 @@ require 'dbconnect.php';
                     //                $user_id = $row['user_id'];
                     //                $date = $row['date'];
                       
-                    //       echo '<div class="content1 border">
-                    //       <span class="podcast_img border"><img src="'.$image.'" class="podcast_img" /> </span>
-                    //           <h6 class="mt-3 ml-4 border">'.$description.'</h6>
+                    //       echo '<div class="content1">
+                    //       <span class="podcast_img"><img src="'.$image.'" class="podcast_img" /> </span>
+                    //           <h6 class="mt-3 ml-4">'.$description.'</h6>
                     //       </div>';
                     //   }
                       ?>  
