@@ -1,53 +1,34 @@
+<?php
+require 'dbconnect.php';
+require 'login_con.php';
+
+  session_start();
+//  print_r($_SESSION['user_id']);
+// exit;
+  
+
+// if (isset($_SESSION['login'])) {
+//     echo "hello";
+// }
+// exit;
+?>
+
+
 <div class="container-fluid px-5 ">
+<div class="main-audio-2">
+
+
+
+
+
 
     <!-- upper titles -->
-    <div class="all-titles">
-        <div class="podcast-title">
-            <b> PODCAST </b>
-        </div>
-        <div class="podcast-headline ">
-        <b>  HEADLINE </b>
-        </div>
-        <div class="podcast-published">
-            PUBLISHED BY
-        </div>
-        <div class="podcast-date">
-            DATE
-        </div>
-    </div>
+   
 
     <!-- main audio -->
-    <div class="main-audio ">
+    
+    </div>  
         
-        <div class="audio-image-box">
-            <img src="assets/img/circle.jpg" class="audio-image" alt="">
-            <img src="assets/img/circle.jpg" class="audio-small-image" alt="">
-            <p class="audio-title"> <b>TITLE </b> </p>
-           <div class="content-box"> 
-               <p class="audio-content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit  </p> 
-            </div>
-
-            <audio controls controlsList="nodownload">
-            <source src="assets/audio/test.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-
-        <div class="podcast-content ">
-            <div class="podcast-symbols">
-                <i class="fa fa-align-left" aria-hidden="true"></i>
-                <i class="fa fa-heart" aria-hidden="true"></i>
-                <i class="fa fa-share-alt" aria-hidden="true"></i>
-            </div>
-            <button class="btn-follow"> FOLLOW </button>
-            <span class="about-div"> 
-                <p class="podcast-about"> About </p> 
-                <ion-icon name="close-outline" class="about-cancel"></ion-icon>
-            </span>
-            <div class="podcast-about-content">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis magni officia sed beatae, repellat commodi ullam nostrum suscipit expedita natus id optio velit corporis consequuntur nam autem at quae dolor?
-            </div>
-        </div>
-    </div>
     <!-- <div   class="podcast-content-main border">
         
     </div> -->
@@ -64,17 +45,62 @@
             <h1 > MORE PODCASTS </h1>
         </div>
         <div class="all_stories ">
+
+
+        <?php
+                            $sql = "SELECT * FROM `artical` where `category_id`='PODCASTS' ORDER BY `date` DESC";
+                            $result = mysqli_query($conn, $sql);
+                            while ($row = mysqli_fetch_assoc($result)) {
+                            $image = $row['image'];
+                            $video=$row['video'];
+                            $artical_id = $row['artical_id'];
+                            $category_id = $row['category_id'];
+                            $ription = $row['description'];
+                            $user_id = $row['user_id'];
+                            $date = $row['date'];
+                            echo '<button style="background:transparent;border:0px;z-index:1;" class="artical_id" id='.$artical_id.'><img src="'.$image.'" class="all_story_img" id="artical-img"/></button>';
+                        }
+                    ?>
+
+<!-- 
             <div class="row pl-md-5 ">
                 <img src="assets/img/tree.jpg" class="all_story_img" />
                 <img src="assets/img/design.jpg" class="all_story_img" />
                 <img src="assets/img/dog.jpg" class="all_story_img" />
                 <img src="assets/img/man.jpg" class="all_story_img" />
-                <!-- <img src="assets/img/cactus.jpg" class="all_story_img" /> -->
-            </div>
+            </div> -->
         </div>
     </section>
 </div>
+<script>
+        $(document).ready(function () {
 
+            $(".podcast-about").click (function(){
+            $('.podcast-about-content,.about-cancel').addClass('active');
+        });
+
+        $(".about-cancel").click (function(){
+            $('.podcast-about-content,.about-cancel').removeClass('active');
+        });
+            function loadData(id)
+            {
+                $.ajax(
+                    {
+                    type: "POST",
+                    url: "podcast-internal-logic.php",
+                    data: {'artical-id':id},
+                    success: function (data) {
+                        $('.main-audio-2').html(data);
+                    }
+                });
+            }
+            $(".artical_id").click(function () { 
+                var element = $(this).attr("id");
+                loadData(element);
+            });
+            loadData(28);
+        });
+    </script>
 <script src="assets/js/plugins.js"></script> 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -84,16 +110,3 @@
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
 
-<script>
-     $(document).ready(function(){
-
-        //main page
-        $(".podcast-about").click (function(){
-            $('.podcast-about-content,.about-cancel').addClass('active');
-        });
-
-        $(".about-cancel").click (function(){
-            $('.podcast-about-content,.about-cancel').removeClass('active');
-        });
-     })
-</script>

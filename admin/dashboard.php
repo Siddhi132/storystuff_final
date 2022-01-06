@@ -453,8 +453,40 @@ session_start();
                     </div>
 
                     <div class="all_story ">
-                        
-                        <div class="par_podcast" >
+                    <?php
+                                $sql6 = "SELECT * FROM `artical` where `category_id`='PODCASTS' and delete_status=0 ORDER BY `date` DESC";
+                                $result = mysqli_query($conn, $sql6);
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    $image = $row['image'];
+                                    $artical_id = $row['artical_id'];
+                                    $category_id = $row['category_id'];
+                                    $description = $row['description'];
+                                    $user_id = $row['user_id'];
+                                    $date = $row['date'];
+                                    $video=$row['video'];
+                                    $sql4="select * from `user` where user_id=$user_id";
+                                    $result3 = mysqli_query($conn, $sql4);
+                                    while ($row = mysqli_fetch_assoc($result3)) {
+                                        $user_email=$row['email'];
+                                        echo '<div class="par_podcast" id='.$artical_id.' >
+                                        <div class="s_image_box">
+                                            <img src="../'.$image.'" class="s_image" alt="">
+                                        </div>
+                                        <div class="content_user">
+                                            <div class="content_title ">
+                                                <p class="mr-md-5" >'.$artical_id.'</p>
+                                                <p class="email"> '.$user_email.' </p>
+                                            </div>
+                                            <div class="content_story ">
+                                                <p >'.$description.'</p>
+                                            </div>
+                                        </div>
+                                    </div>';
+                                    }
+                                    
+                                }
+                        ?>
+                        <!-- <div class="par_podcast" >
                             <div class="s_image_box">
                                 <img src="../assets/img/circle.jpg" class="s_image" alt="">
                             </div>
@@ -482,7 +514,7 @@ session_start();
                                     <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolor assumenda numquam est doloribus molestias dolore nam culpa quas ex modi porro fuga, explicabo deleniti consectetur quam labore laborum alias.</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -544,7 +576,7 @@ session_start();
 
                  <!-- particular podcast -->
                  <div class="par_podcast_content">
-                        <div class="first_row">
+                        <!-- <div class="first_row">
                             <div class="username mr-3">
                                 <span class="name mr-3"> <p> USERNAME </p> </span>
                                 <span class=""> LOREM IPSUM DOLOR </span>
@@ -593,7 +625,7 @@ session_start();
                                 <a href="#pop"><button class="publish" id="decision_podcast_publish"> PUBLISH </button></a>
                                 <button class="publish" id="decision_podcast_review"> REVIEW </button>
                                 <button class="delete" id="decision_podcast_delete"> DELETE </button>
-                        </div>
+                        </div> -->
 
 
                 </div>
@@ -909,6 +941,23 @@ session_start();
 
             //when particular podcast will be clicked
             $(".par_podcast").click(function(){
+
+            function loadData3(id)
+                {
+                    $.ajax({
+                    type: "post",
+                    url: "par_podcast_content.php",
+                    data: {'artical_id':id},
+                    success: function (data) {
+                        // alert(id);
+                        $(".par_podcast_content").html(data);
+                    }   
+                    });
+                }
+                var id = $(this).attr('id');
+                loadData3(id);
+
+            
                 $('.par_podcast_content,.main_box').addClass('active');
 
                 $("#podcast_but").css({
@@ -939,6 +988,7 @@ session_start();
                 });
             
             });
+        
 
 
             //when particular gallery will be clicked
@@ -1060,6 +1110,28 @@ session_start();
             $(document).on("click",".delete2",function () { 
                 var id = $(this).attr('id');
                 deletes2(id);
+             });
+
+
+             function deletes3(id) {  
+                    $.ajax({
+                        type: "POST",
+                        url: "delete_meme.php",
+                        data: {'artical_id':id},
+                        success: function (data) {
+                            // alert(data);
+                            $('.par_podcast_content').removeClass('active');
+                            $(`#${id}`).fadeOut();
+                            $('.blind,.podcast_box').addClass('active');
+                            $('.story_box, .entertainment_box, .memes_box, .gallery_box').removeClass('active');
+                            count_articles();
+                            $(window).scrollTop(300);
+                        }
+                    });
+                }
+            $(document).on("click",".delete3",function () { 
+                var id = $(this).attr('id');
+                deletes3(id);
              });
             
           function publish(id) { 
