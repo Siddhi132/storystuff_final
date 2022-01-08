@@ -1,6 +1,6 @@
 <?php
     require 'dbconnect.php';
-    
+    session_start();
     // $output = '<span class="close"> <ion-icon name="close-outline"> </ion-icon></span>
     // <div class="user_info">
     //     <img src="assets/img/tree.jpg" class="user_meme_pic" />
@@ -12,6 +12,7 @@
     $row = mysqli_fetch_assoc($result);
     $userId = $row['user_id'];
     $image = $row['image'];
+    $artical_id = $row['artical_id'];
     $description = $row['description'];
     $sql = "SELECT email FROM user where user_id=".$userId;
     $result = mysqli_query($conn, $sql);
@@ -20,12 +21,37 @@
     while(1)
     {
         $output['userId'] = $userId;
-    $output['image'] = $image;
-    $output['description'] = $description;
-    $output['email'] = $userEmail;
-    break;
+        $output['articalId']=$artical_id;
+        $output['image'] = $image;
+        $output['description'] = $description;
+        $output['email'] = $userEmail;
+        break;
     }
+    $sql = "SELECT COUNT(*) as count FROM liked_post where artical_id=".$_POST['artical_id']." GROUP BY artical_id";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
     
+    $output['likes'] = $row['count'];
+    $email = $_SESSION['email'];
+    $sql = "SELECT * FROM `user` WHERE email = '$email'";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $userId = $row['user_id'];
+    $output['id']= $_POST['artical_id'];
+    $sql = "SELECT COUNT(*) as counts FROM liked_post WHERE artical_id=".$_POST['artical_id']." AND user_id =".$userId;
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $isLike = $row['counts'];
+    if($isLike == 1)
+    {
+        $output['liked'] = true;
+    }
+    else
+    {
+        $output['liked'] = false;
+    }
+    // echo $row;
+    // break;
 
 //     $output .= $userEmail.'</h6>
 //     <h6 class="id_meme"> ';
