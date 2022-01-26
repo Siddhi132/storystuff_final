@@ -54,12 +54,12 @@ $output=' <div class="all-titles">
 <div class="podcast-symbols">
     <i class="fa fa-align-left" aria-hidden="true"></i>
     <i class="fa fa-heart" aria-hidden="true"></i>
-    <i class="fa fa-share-alt" aria-hidden="true"></i>
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <i class="fa fa-share-alt" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#share"></i>
+    <div class="modal fade" id="share" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="shareLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <h5 class="modal-title" id="shareLabel">Modal title</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -72,6 +72,7 @@ $output=' <div class="all-titles">
     </div>
   </div>
 </div>
+
 </div>
 <button class="btn-follow"> FOLLOW </button>
 <span class="about-div"> 
@@ -87,4 +88,3 @@ $output=' <div class="all-titles">
 echo $output;
 
 ?>
-
