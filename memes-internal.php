@@ -154,7 +154,10 @@ require 'login_con.php';
                 </div> 
 
                 <div class="meme_icon mt-2">
-                    <span class="meme_heart"> <i class="fa fa-heart-o" aria-hidden="true"></i> </span>
+                    <span class="meme_heart meme_heart d-flex justift-content-around flex-row align-items-center"> 
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        <p class="mb-0" id="likes_count"></p>
+                    </span>
                     <span class="meme_bookmark"> <i class="fa fa-bookmark-o save" id="<?php echo $_POST['artical-id']; ?>" aria-hidden="true"></i> </span>
                     <span class="meme_send"> <ion-icon name="send-sharp"></ion-icon> </span>
                 </div>
@@ -431,9 +434,19 @@ require 'login_con.php';
             success: function (data) {
                 var temp = JSON.parse(data);
                 $('.memes_slider_img').attr('src',temp.image);
-                $('.name_meme').html(temp.email );   
+                $('.meme_heart').attr('id',temp.articalId);
+                $('.name_meme').html(temp.email );
                 $('.id_meme').html(temp.userId);
                 $('.meme_text').html(temp.description);  
+                $('#likes_count').html(temp.likes);
+                if(temp.liked)
+                {
+                    $('.meme_heart i').attr('class','fa fa-heart');
+                }
+                else
+                {
+                    $('.meme_heart i').attr('class','fa fa-heart-o');
+                }
             }
         });
     }
@@ -441,6 +454,29 @@ require 'login_con.php';
         var id=$(this).attr("id");
         loadData(id);
     });
+
+    function likeMeme(articalId,userEmail) {  
+        $.ajax({
+            type: "POST",
+            url: "like_meme.php",
+            data: {'artical_id':articalId,'email':userEmail},
+            success: function (data) {
+                if($('.meme_heart i').attr('class')!='fa fa-heart')
+                {
+                    $('.meme_heart i').attr('class','fa fa-heart');
+                    var temp = Number.parseInt($('.meme_heart p').html())?Number.parseInt($('.meme_heart p').html()):0;
+                    $('.meme_heart p').html(temp+1);
+                }
+                
+            }
+        });
+    }
+    $(".meme_heart").click(function(){
+        var articalId=$(this).attr("id");
+        var userEmail = "<?php echo $_SESSION['email']?>";
+        likeMeme(articalId,userEmail);
+    });
+
     $(document).keydown(function(event){
             var keycode = (event.keyCode ? event.keyCode : event.which);
             if(keycode == "39"){
