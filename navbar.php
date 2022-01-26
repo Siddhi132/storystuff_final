@@ -38,6 +38,7 @@ session_start();
      <link rel="stylesheet" href="assets/css/contact-us.css">
     <!-- <link rel="stylesheet" href="assets/css/jquery-hislide.css"> -->
 
+    <script src="https://cdn.jsdelivr.net/sharer.js/latest/sharer.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
