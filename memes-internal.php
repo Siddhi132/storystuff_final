@@ -473,7 +473,8 @@ require 'login_con.php';
     }
     $(".meme_heart").click(function(){
         var articalId=$(this).attr("id");
-        var userEmail = "<?php if(isset($_SESSION)) echo $_SESSION['email']?>";
+        var userEmail = "";
+       
         likeMeme(articalId,userEmail);
     });
 

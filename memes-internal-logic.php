@@ -30,9 +30,10 @@
     $sql = "SELECT COUNT(*) as count FROM liked_post where artical_id=".$_POST['artical_id']." GROUP BY artical_id";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
+
+    $output['likes'] = $row==null?0:$row['count'];
     
-    $output['likes'] = $row['count'];
-    if(isset($_SESSION['email']))
+    if(isset($_SESSION['login']))
     {
         $email = $_SESSION['email'];
         $sql = "SELECT * FROM `user` WHERE email = '$email'";
@@ -52,6 +53,10 @@
         {
             $output['liked'] = false;
         }
+    }
+    else
+    {
+        $output['liked'] = false;
     }
     
     // echo $row;
