@@ -472,11 +472,24 @@ require 'login_con.php';
         });
     }
     $(".meme_heart").click(function(){
-        var articalId=$(this).attr("id");
-        var userEmail = "";
+        <?php if(isset($_SESSION['login']))
+        {
+            echo 'var articalId=$(this).attr("id");
+            var userEmail = "";
        
-        likeMeme(articalId,userEmail);
+            likeMeme(articalId,userEmail);';
+        }
+        else
+        {
+            echo "; 
+            $(window).scrollTop(0);
+            $('.login_text').click();    
+            
+            ";
+        }
+        ?>
     });
+
 
     $(document).keydown(function(event){
             var keycode = (event.keyCode ? event.keyCode : event.which);
