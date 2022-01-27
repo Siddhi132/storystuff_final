@@ -31,7 +31,7 @@ require 'login_con.php';
                     <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos assumenda accusantium velit, ullam perferendis provident </h6>
                 </div> -->
                 <?php
-                            $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 1,4";
+                            $sql = "SELECT * FROM `artical` WHERE category_id='STORIES' ORDER BY `date` DESC LIMIT 0,4";
                             $result = mysqli_query($conn, $sql);
                             while ($row = mysqli_fetch_assoc($result)) {
                             $image = $row['image'];

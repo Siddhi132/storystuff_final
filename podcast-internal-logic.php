@@ -3,7 +3,7 @@
 require "dbconnect.php";
 
 $id=$_POST['artical-id'];
-$sql2 = "SELECT * FROM artical where category_id='PODCASTS' AND artical_id=".$_POST['artical-id'];        
+$sql2 = "SELECT * FROM artical where category_id='PODCASTS' AND delete_status=2 AND artical_id=".$_POST['artical-id'];        
 $result2 = mysqli_query($conn, $sql2);
 
 // echo var_dump($result2);

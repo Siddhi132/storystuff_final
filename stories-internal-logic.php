@@ -4,7 +4,7 @@ require "dbconnect.php";
     if(!$_POST['artical-id'])
     {
 
-        $sql = "SELECT * FROM artical where category_id='STORIES' ORDER BY date DESC";
+        $sql = "SELECT * FROM artical where category_id='STORIES' AND  delete_status=2 ORDER BY date DESC ;";
         $result = mysqli_query($conn, $sql);
         $row = mysqli_fetch_assoc($result);
         $image = $row['image'];
@@ -14,7 +14,7 @@ require "dbconnect.php";
     }
     else
     {
-        $sql = "SELECT * FROM artical where category_id='STORIES' AND artical_id=".$_POST['artical-id'];
+        $sql = "SELECT * FROM artical where category_id='STORIES' AND delete_status=2 AND artical_id=".$_POST['artical-id'] ;
         $result = mysqli_query($conn, $sql);
         $row = mysqli_fetch_assoc($result);
         $image = $row['image'];

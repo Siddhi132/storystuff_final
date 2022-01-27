@@ -48,7 +48,7 @@ require 'login_con.php';
 
 
         <?php
-                            $sql = "SELECT * FROM `artical` where `category_id`='PODCASTS' ORDER BY `date` DESC";
+                            $sql = "SELECT * FROM `artical` where `category_id`='PODCASTS' AND delete_status=2 ORDER BY `date` DESC";
                             $result = mysqli_query($conn, $sql);
                             while ($row = mysqli_fetch_assoc($result)) {
                             $image = $row['image'];

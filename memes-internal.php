@@ -58,7 +58,7 @@ require 'login_con.php';
         <!------------------------------------------------------row 1 ----------------------------------------------->
         <div class="row memes_grid   px-lg-5 px-md-3 br border">
         <?php
-                            $sql = "SELECT * FROM `artical` where category_id='MEMES' ORDER BY `date` DESC ";
+                            $sql = "SELECT * FROM `artical` where category_id='MEMES' AND delete_status=2 ORDER BY `date` DESC ";
                             $result = mysqli_query($conn, $sql);
                             while ($row = mysqli_fetch_assoc($result)) {
                             $image = $row['image'];
