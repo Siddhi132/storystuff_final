@@ -234,7 +234,7 @@ session_start();
                 }
                 else
                 {
-                    echo "$('.login').addClass('active'); $(window).scrollTop(0);";
+                    echo "$('.login').addClass('active'); $(window).scrollTop(0);$('.login_text').click();";
                 }
             ?>
         })
