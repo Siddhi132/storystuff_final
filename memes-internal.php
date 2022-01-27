@@ -456,7 +456,7 @@ require 'login_con.php';
             type: "POST",
             url: "memes-internal-logic.php",
             data: {'artical_id':id},
-            dataTypr : "JSON",
+            dataType : "JSON",
             success: function (data) {
                 var temp = JSON.parse(data);
                 $('.memes_slider_img').attr('src',temp.image);
@@ -501,7 +501,7 @@ require 'login_con.php';
         <?php if(isset($_SESSION['login']))
         {
             echo 'var articalId=$(this).attr("id");
-            var userEmail = "";
+            var userEmail = "'.$_SESSION['email'].'";
        
             likeMeme(articalId,userEmail);';
         }
