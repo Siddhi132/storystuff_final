@@ -54,6 +54,31 @@ require 'login_con.php';
         <div class="memes">
             <h2> Memes </h2>
         </div>
+        <div class="modal fade show" id="share">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title w-100">Share This Post</h2>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span class="text-dark">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body mx-auto">
+                                <div class="social">
+                                    <a href="#" id="share-wa" class="sharer button"><i class="fa fa-3x fa-whatsapp text-success"></i></a>
+                                    <a href="#" id="share-fb" class="sharer button"><i class="fa fa-3x fa-facebook-square text-primary"></i></a>
+                                    <a href="#" id="share-tw" class="sharer button"><i class="fa fa-3x fa-twitter-square text-primary"></i></a>
+                                    <a href="#" id="share-li" class="sharer button"><i class="fa fa-3x fa-linkedin-square text-primary"></i></a>
+                                    <a href="#" id="share-gp" class="sharer button"><i class="fa fa-3x fa-google-plus-square text-danger"></i></a>
+                                    <a href="#" id="share-em" class="sharer button"><i class="fa fa-3x fa-envelope-square text-dark"></i></a>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
         <!------------------------------------------------------row 1 ----------------------------------------------->
         <div class="row memes_grid   px-lg-5 px-md-3 br border">
@@ -159,9 +184,10 @@ require 'login_con.php';
                         <p class="mb-0" id="likes_count"></p>
                     </span>
                     <span class="meme_bookmark"> <i class="fa fa-bookmark-o save" id="<?php echo $_POST['artical-id']; ?>" aria-hidden="true"></i> </span>
-                    <span class="meme_send"> <ion-icon name="send-sharp"></ion-icon> </span>
+                    <span class="meme_send" aria-hidden="true" data-toggle="modal" data-target="#share"> <ion-icon name="send-sharp"></ion-icon> </span>
+                    
                 </div>
-
+                
                 <div class="meme_text text_size">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ducimus iste quae repudiandae, fugiat reiciendis labore. Voluptatibus quasi sequi neque et deleniti, laborum, dolorum recusandae libero animi error cupiditate. Corrupti?
                 </div>
