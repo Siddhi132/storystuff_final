@@ -54,25 +54,34 @@ $output=' <div class="all-titles">
 <div class="podcast-symbols">
     <i class="fa fa-align-left" aria-hidden="true"></i>
     <i class="fa fa-heart" aria-hidden="true"></i>
-    <i class="fa fa-share-alt" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#share"></i>
-    <div class="modal fade" id="share" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="shareLabel" aria-hidden="true">
-  <div class="modal-dialog">
+    <i class="fa fa-share-alt" aria-hidden="true" data-toggle="modal" data-target="#share"></i>
+
+<!-- Modal -->
+<div class="modal fade" id="share" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="shareLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h2 class="modal-title w-100" id="exampleModalLabel">Share This Post</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-      <div class="modal-body">
-        ...
+      <div class="modal-body mx-auto">
+        <div class="social">
+            <a href="#" id="share-wa" class="sharer button"><i class="fa fa-3x fa-whatsapp text-success"></i></a>
+            <a href="#" id="share-fb" class="sharer button"><i class="fa fa-3x fa-facebook-square text-primary"></i></a>
+            <a href="#" id="share-tw" class="sharer button"><i class="fa fa-3x fa-twitter-square text-primary"></i></a>
+            <a href="#" id="share-li" class="sharer button"><i class="fa fa-3x fa-linkedin-square text-primary"></i></a>
+            <a href="#" id="share-gp" class="sharer button"><i class="fa fa-3x fa-google-plus-square text-danger"></i></a>
+            <a href="#" id="share-em" class="sharer button"><i class="fa fa-3x fa-envelope-square text-dark"></i></a>
+        </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
 </div>
-
 </div>
 <button class="btn-follow"> FOLLOW </button>
 <span class="about-div"> 
