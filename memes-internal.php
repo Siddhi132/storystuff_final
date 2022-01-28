@@ -54,7 +54,7 @@ require 'login_con.php';
         <div class="memes">
             <h2> Memes </h2>
         </div>
-        <div class="modal fade show" id="share">
+        <div class="modal fade show" area-hidden="false" id="share">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -184,7 +184,7 @@ require 'login_con.php';
                         <p class="mb-0" id="likes_count"></p>
                     </span>
                     <span class="meme_bookmark"> <i class="fa fa-bookmark-o save" id="<?php echo $_POST['artical-id']; ?>" aria-hidden="true"></i> </span>
-                    <span class="meme_send" aria-hidden="true" data-toggle="modal" data-target="#share"> <ion-icon name="send-sharp"></ion-icon> </span>
+                    <span class="meme_send" aria-hidden="false" data-toggle="modal" data-target="#share"> <ion-icon name="send-sharp"></ion-icon> </span>
                     
                 </div>
                 

@@ -27,8 +27,8 @@ require "dbconnect.php";
     $row = mysqli_fetch_assoc($result);
     $userEmail = $row['email'];
     $output .=$userEmail.'</h6>DATE<h6>';
-    $output .=$date.'</h6></div><div class="symbol"><img src="assets/img/logo/label.png" class="black_logo save" id="'.$_POST['artical-id'].'"/><img src="assets/img/logo/white.png" class="white_logo" /><a class="fa fa-share-alt fa-lg mt-1" aria-hidden="true" data-toggle="modal" data-target="#share"></a></div></div>
-    <div class="modal fade" id="share" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    $output .=$date.'</h6></div><div class="symbol"><img src="assets/img/logo/label.png" class="black_logo save" id="'.$_POST['artical-id'].'"/><img src="assets/img/logo/white.png" class="white_logo" /><a class="fa fa-share-alt fa-lg mt-1" aria-hidden="false" data-toggle="modal" data-target="#share"></a></div></div>
+    <div class="modal fade" id="share" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                             <div class="modal-header">
