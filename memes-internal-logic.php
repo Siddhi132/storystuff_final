@@ -7,7 +7,7 @@
     //     <div class="user_meme_name "> 
     //         <h6 class="name_meme">';
     
-    $sql = "SELECT * FROM artical where category_id='MEMES' AND artical_id=".$_POST['artical_id'];
+    $sql = "SELECT * FROM artical where category_id='MEMES' AND delete_status=2 AND artical_id=".$_POST['artical_id'];
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
     $userId = $row['user_id'];
