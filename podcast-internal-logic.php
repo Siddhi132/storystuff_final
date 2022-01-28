@@ -57,10 +57,10 @@ $output=' <div class="all-titles">
                         <i class="fa fa-heart-o" aria-hidden="true"></i>
                         <p class="mb-0" id="likes_count"></p>
                     </span>
-    <i class="fa fa-share-alt" aria-hidden="true" data-toggle="modal" data-target="#share"></i>
+    <i class="fa fa-share-alt" aria-hidden="false" data-toggle="modal" data-target="#share"></i>
 
 <!-- Modal -->
-        <div class="modal fade" id="share" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="share" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
