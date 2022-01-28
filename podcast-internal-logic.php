@@ -53,16 +53,11 @@ $output=' <div class="all-titles">
 <div class="podcast-content ">
 <div class="podcast-symbols align-items-center">
     <i class="fa fa-align-left" aria-hidden="true"></i>
-<<<<<<< HEAD
-    <i class="fa fa-heart" aria-hidden="true"></i>
-    <i class="fa fa-share-alt"  data-toggle="modal" data-target="#share"></i>
-=======
     <span class="podcast_heart podcast_heart d-flex justift-content-around flex-row align-items-center mx-2" id="'.$id.'"> 
                         <i class="fa fa-heart-o" aria-hidden="true"></i>
                         <p class="mb-0" id="likes_count"></p>
                     </span>
     <i class="fa fa-share-alt" aria-hidden="true" data-toggle="modal" data-target="#share"></i>
->>>>>>> 97a508397915067e7b5d2d03445106f7bbcbce3e
 
 <!-- Modal -->
         <div class="modal fade" id="share" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
