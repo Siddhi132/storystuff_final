@@ -151,7 +151,10 @@ audio::-webkit-media-controls-play-button{
 .fa{
     margin-right: 10px;
     cursor: pointer;
-    color: var(--black);
+}
+
+i.fa.fa-envelope{
+    color: white;
 }
 
 .btn-follow{

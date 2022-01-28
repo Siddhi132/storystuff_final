@@ -54,7 +54,7 @@ $output=' <div class="all-titles">
 <div class="podcast-symbols">
     <i class="fa fa-align-left" aria-hidden="true"></i>
     <i class="fa fa-heart" aria-hidden="true"></i>
-    <i class="fa fa-share-alt" aria-hidden="true" data-toggle="modal" data-target="#share"></i>
+    <i class="fa fa-share-alt"  data-toggle="modal" data-target="#share"></i>
 
 <!-- Modal -->
 <div class="modal fade" id="share" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

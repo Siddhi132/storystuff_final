@@ -44,7 +44,7 @@
                         </div>
                     </div> <br><br>
                     <div class="mail_inner_box ">
-                        <span> <ion-icon name="call"></ion-icon> </span>
+                        <span> <i class="fa fa-phone" name="call"></i> </span>
                         <div class="mail">
                             040-879546231
                         </div>

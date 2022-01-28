@@ -1,6 +1,14 @@
 <?php 
-//session_start();
+
+session_start();
 // print_r($_SESSION['user_id']);
+// require 'dbconnect.php';
+error_reporting(E_ERROR | E_PARSE);
+
+$conn=mysqli_connect("localhost","root","","storystuff2");
+if(!$conn){
+echo "Database connection not success!!";
+}
 // exit;
 ?>
 <!-- <!DOCTYPE html>
@@ -261,33 +269,53 @@
         <h4 class="saved"> Saved Post </h4>
         <div class="img_grid">
             <div class="row rows">
-                <div class=" grid_box"><img src="assets/img/circle.jpg"  class=" grid_box" alt=""></div>
+
+                <?php
+                    $email=$_SESSION['email'];
+                    // echo $email;
+                    $sql="SELECT `article_id` FROM `save_post` WHERE `user_email`='".$email."'";
+                    $result=mysqli_query($conn,$sql);
+                    
+                    if($result){
+                        while($row=mysqli_fetch_assoc($result)){
+                            $article_id=$row['article_id'];
+                            $sql2="SELECT `image` FROM `artical` WHERE `artical_id`=".$article_id;
+                            $result2=mysqli_query($conn,$sql2);
+                            $row=mysqli_fetch_assoc($result2);
+                            echo '<div class=" grid_box"><img src="'.$row['image'].'"  class=" grid_box" alt=""></div>';
+
+
+
+                        }
+                    }
+?>
+                <!-- <div class=" grid_box"><img src="assets/img/circle.jpg"  class=" grid_box" alt=""></div>
                 <div class=" grid_box"><img src="assets/img/cactus.jpg"  class=" grid_box" alt=""></div>
-                <div class=" grid_box"><img src="assets/img/contact-us-bg.jpg"  class=" grid_box" alt=""></div>
+                <div class=" grid_box"><img src="assets/img/contact-us-bg.jpg"  class=" grid_box" alt=""></div> -->
                 <!-- </div> -->
 
                 <!-- <div class="row rows"> -->
-                <div class=" grid_box"><img src="assets/img/circle.jpg"  class=" grid_box" alt=""></div>
+                <!-- <div class=" grid_box"><img src="assets/img/circle.jpg"  class=" grid_box" alt=""></div>
                 <div class=" grid_box"><img src="assets/img/cactus.jpg"  class=" grid_box" alt=""></div>
                 <div class=" grid_box"><img src="assets/img/contact-us-bg.jpg"  class=" grid_box" alt=""></div>
+                </div> -->
+
+                <!-- <div class="row rows"> -->
+                <!-- <div class=" grid_box"><img src="assets/img/circle.jpg"  class=" grid_box" alt=""></div>
+                <div class=" grid_box"><img src="assets/img/cactus.jpg"  class=" grid_box" alt=""></div>
+                <div class=" grid_box"><img src="assets/img/contact-us-bg.jpg"  class=" grid_box" alt=""></div> -->
                 <!-- </div> -->
 
                 <!-- <div class="row rows"> -->
-                <div class=" grid_box"><img src="assets/img/circle.jpg"  class=" grid_box" alt=""></div>
+                <!-- <div class=" grid_box"><img src="assets/img/circle.jpg"  class=" grid_box" alt=""></div>
                 <div class=" grid_box"><img src="assets/img/cactus.jpg"  class=" grid_box" alt=""></div>
-                <div class=" grid_box"><img src="assets/img/contact-us-bg.jpg"  class=" grid_box" alt=""></div>
+                <div class=" grid_box"><img src="assets/img/contact-us-bg.jpg"  class=" grid_box" alt=""></div> -->
                 <!-- </div> -->
 
                 <!-- <div class="row rows"> -->
-                <div class=" grid_box"><img src="assets/img/circle.jpg"  class=" grid_box" alt=""></div>
+                <!-- <div class=" grid_box"><img src="assets/img/circle.jpg"  class=" grid_box" alt=""></div>
                 <div class=" grid_box"><img src="assets/img/cactus.jpg"  class=" grid_box" alt=""></div>
-                <div class=" grid_box"><img src="assets/img/contact-us-bg.jpg"  class=" grid_box" alt=""></div>
-                <!-- </div> -->
-
-                <!-- <div class="row rows"> -->
-                <div class=" grid_box"><img src="assets/img/circle.jpg"  class=" grid_box" alt=""></div>
-                <div class=" grid_box"><img src="assets/img/cactus.jpg"  class=" grid_box" alt=""></div>
-                <div class=" grid_box"><img src="assets/img/contact-us-bg.jpg"  class=" grid_box" alt=""></div>
+                <div class=" grid_box"><img src="assets/img/contact-us-bg.jpg"  class=" grid_box" alt=""></div> -->
             </div>
         </div>
     </div>

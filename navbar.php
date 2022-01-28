@@ -2,6 +2,8 @@
 require 'dbconnect.php';
 require 'login_con.php';
 session_start();
+error_reporting(E_ERROR | E_PARSE);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
