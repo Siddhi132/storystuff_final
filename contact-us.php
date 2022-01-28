@@ -38,19 +38,19 @@
             <div class="right_contact_div ">
                 <div class="mail_box ">
                     <div class="mail_inner_box ">
-                        <span> <i class="fa fa-envelope" aria-hidden="true"></i> </span>
+                        <span> <i class="fa fa-envelope" aria-hidden="true" style="color:#fff;"></i> </span>
                         <div class="mail">
                             <a href="mailto:siddhidoshi2418@gmail.com">siddhidoshi2418@gmail.com</a>
                         </div>
                     </div> <br><br>
                     <div class="mail_inner_box ">
-                        <span> <i class="fa fa-phone" name="call"></i> </span>
+                        <span> <i class="fa fa-phone" name="call" style="color:#fff;"></i> </span>
                         <div class="mail">
                             040-879546231
                         </div>
                     </div> <br><br>
                     <div class="mail_inner_box ">
-                        <span> <i class="fa fa-map-marker" aria-hidden="true"></i> </span>
+                        <span> <i class="fa fa-map-marker" aria-hidden="true" style="color:#fff;"></i> </span>
                         <div class="mail">
                           Address
                         </div>
@@ -58,11 +58,11 @@
                 </div>
 
                 <div class="icon_box">
-                    <a href="https://www.instagram.com/siddhi__2418" target="_blank" style="text-decoration:none; color:var(--white)"><span>  <i class="fa fa-instagram" aria-hidden="true"></i>  </span> </a>
-                    <a href="https://www.facebook.com/" target="_blank" style="text-decoration:none; color:var(--white)"><span class="particular_icon">  <i class="fa fa-facebook-official" aria-hidden="true"></i>  </span> </a>
-                    <!-- <a href="" style="text-decoration:none; color:var(--white)"><span class="particular_icon">  <i class="fa fa-whatsapp" aria-hidden="true"></i>   </span> --> </a>
-                    <a href="" style="text-decoration:none; color:var(--white)"><span class="particular_icon">  <i class="fa fa-twitter" aria-hidden="true"></i>  </span> </a>
-                </div>
+                    <a href="https://www.instagram.com/siddhi__2418" target="_blank" style="text-decoration:none; color:var(--white)"><span>  <i class="fa fa-instagram" aria-hidden="true" style="color:#fff;"></i>  </span> </a>
+                    <a href="https://www.facebook.com/" target="_blank" style="text-decoration:none; color:var(--white)"><span class="particular_icon">  <i class="fa fa-facebook-official" aria-hidden="true" style="color:#fff;"></i>  </span> </a>
+                    <!-- <a href="" style="text-decoration:none; color:var(--white)"><span class="particular_icon">  <i class="fa fa-whatsapp" aria-hidden="true"></i>   </span> </a> -->
+                    <a href="" style="text-decoration:none; color:var(--white)"><span class="particular_icon">  <i class="fa fa-twitter" aria-hidden="true" style="color:#fff;"></i>  </span> </a>
+            </div>
             </div>
         </div>
     </div>
