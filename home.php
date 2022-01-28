@@ -27,7 +27,7 @@ require 'dbconnect.php';
                         <h6 class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                     </div> -->
                     <?php
-                            $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 1";
+                            $sql = "SELECT * FROM `artical` WHERE delete_status=2 ORDER BY `date` DESC LIMIT 1";
                             $result = mysqli_query($conn, $sql);
                             while ($row = mysqli_fetch_assoc($result)) {
                             $image = $row['image'];
@@ -59,7 +59,7 @@ require 'dbconnect.php';
                             <span class="content1_img"><img src="assets/img/dog.jpg" class="content1_img" /> </span>
                         </div> -->
                         <?php
-                            $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 2,3";
+                            $sql = "SELECT * FROM `artical` WHERE delete_status=2 ORDER BY `date` DESC LIMIT 2,3";
                             $result = mysqli_query($conn, $sql);
                             while ($row = mysqli_fetch_assoc($result)) {
                             $image = $row['image'];
@@ -95,7 +95,7 @@ require 'dbconnect.php';
                             <h6 class="mt-3  ml-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ea aspernatur excepturi accusantium animi unde. </h6>
                         </div> -->
                         <?php
-                            $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 5,3";
+                            $sql = "SELECT * FROM `artical` WHERE delete_status=2 ORDER BY `date` DESC LIMIT 5,3";
                             $result = mysqli_query($conn, $sql);
                             while ($row = mysqli_fetch_assoc($result)) {
                             $image = $row['image'];
@@ -121,7 +121,7 @@ require 'dbconnect.php';
                     </div> -->
 
                     <?php
-                            $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 10,1";
+                            $sql = "SELECT * FROM `artical` WHERE delete_status=2 ORDER BY `date` DESC LIMIT 10,1";
                             $result = mysqli_query($conn, $sql);
                             while ($row = mysqli_fetch_assoc($result)) {
                             $image = $row['image'];
@@ -261,7 +261,7 @@ require 'dbconnect.php';
                     <!-- 1st  -->
                     <div class="row row1_story" >
                         <?php
-                            $sql = "SELECT * FROM `artical` where `category_id`='STORIES' ORDER BY `date` DESC LIMIT 1";
+                            $sql = "SELECT * FROM `artical` where `category_id`='STORIES' AND delete_status=2 ORDER BY `date` DESC LIMIT 1";
                             $result = mysqli_query($conn, $sql);
                             while ($row = mysqli_fetch_assoc($result)) {
                             $image = $row['image'];
@@ -281,7 +281,7 @@ require 'dbconnect.php';
                        <!-- 2nd 3rd 4th -->
                         <div class="content_box ">
                             <?php
-                                     $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 1,3";
+                                     $sql = "SELECT * FROM `artical` WHERE delete_status=2 ORDER BY `date` DESC LIMIT 1,3";
                                      $result = mysqli_query($conn, $sql);
                                      while ($row = mysqli_fetch_assoc($result)) {
                                      $image = $row['image'];
@@ -309,7 +309,7 @@ require 'dbconnect.php';
                      <!-- 1st   -->
                     <div class="row row1_story mt-5  ml-1" >
                         <?php
-                            $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 4,1";
+                            $sql = "SELECT * FROM `artical` WHERE delete_status=2 ORDER BY `date` DESC LIMIT 4,1";
                             $result = mysqli_query($conn, $sql);
                             while ($row = mysqli_fetch_assoc($result)) {
                             $image = $row['image'];
@@ -329,7 +329,7 @@ require 'dbconnect.php';
                         <!-- 2 3 4  -->
                         <div class="content_box ">
                             <?php
-                                   $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 5,3";
+                                   $sql = "SELECT * FROM `artical` WHERE delete_status=2 ORDER BY `date` DESC LIMIT 5,3";
                                    $result = mysqli_query($conn, $sql);
                                    while ($row = mysqli_fetch_assoc($result)) {
                                    $image = $row['image'];
@@ -365,7 +365,7 @@ require 'dbconnect.php';
                     </div>
                     <div class="mt-5 pl-3">
                     <?php
-                                   $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 8,3";
+                                   $sql = "SELECT * FROM `artical` WHERE delete_status=2 ORDER BY `date` DESC LIMIT 8,3";
                                    $result = mysqli_query($conn, $sql);
                                    while ($row = mysqli_fetch_assoc($result)) {
                                    $image = $row['image'];
@@ -403,7 +403,7 @@ require 'dbconnect.php';
             <div class="enter_content  pl-3 ">
                 <div class="row  main_enter">
                 <?php
-                                   $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 1,2";
+                                   $sql = "SELECT * FROM `artical` WHERE delete_status=2 ORDER BY `date` DESC LIMIT 1,2";
                                    $result = mysqli_query($conn, $sql);
                                    while ($row = mysqli_fetch_assoc($result)) {
                                    $image = $row['image'];
@@ -421,7 +421,7 @@ require 'dbconnect.php';
                       ?>  
                       
                       <?php
-                                   $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 1,1";
+                                   $sql = "SELECT * FROM `artical` WHERE delete_status=2 ORDER BY `date` DESC LIMIT 1,1";
                                    $result = mysqli_query($conn, $sql);
                                    while ($row = mysqli_fetch_assoc($result)) {
                                    $image = $row['image'];
@@ -455,7 +455,7 @@ require 'dbconnect.php';
                    
 
                     <?php
-                                   $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 2,3";
+                                   $sql = "SELECT * FROM `artical` WHERE delete_status=2 ORDER BY `date` DESC LIMIT 2,3";
                                    $result = mysqli_query($conn, $sql);
                                    while ($row = mysqli_fetch_assoc($result)) {
                                    $image = $row['image'];
@@ -491,7 +491,7 @@ require 'dbconnect.php';
                     <div class="enter_content1 enter_content_mv  ">
                    
                     <?php
-                                   $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 2,3";
+                                   $sql = "SELECT * FROM `artical` WHERE delete_status=2 ORDER BY `date` DESC LIMIT 2,3";
                                    $result = mysqli_query($conn, $sql);
                                    while ($row = mysqli_fetch_assoc($result)) {
                                    $image = $row['image'];
@@ -528,7 +528,7 @@ require 'dbconnect.php';
             <div class="memes_content    mt-3">
                 <div class="memes_small">
                 <?php
-                                   $sql = "SELECT * FROM `artical` where `category_id`='MEMES' ORDER BY `date` DESC LIMIT 0,6";
+                                   $sql = "SELECT * FROM `artical` where `category_id`='MEMES' AND delete_status=2 ORDER BY `date` DESC LIMIT 0,6";
                                    $result = mysqli_query($conn, $sql);
                                    while ($row = mysqli_fetch_assoc($result)) {
                                    $image = $row['image'];
@@ -579,7 +579,7 @@ require 'dbconnect.php';
                 </div>
                 <div class="memes_large ">
                 <?php
-                                   $sql = "SELECT * FROM `artical` where `category_id`='MEMES' ORDER BY `date` DESC LIMIT 3,3";
+                                   $sql = "SELECT * FROM `artical` where `category_id`='MEMES' AND delete_status=2 ORDER BY `date` DESC LIMIT 3,3";
                                    $result = mysqli_query($conn, $sql);
                                    while ($row = mysqli_fetch_assoc($result)) {
                                    $image = $row['image'];
@@ -653,7 +653,7 @@ require 'dbconnect.php';
 
             <div class="slider_podcast carousel owl-carousel  px-0 " id="owl-demo">
             <?php
-                                   $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 3,5";
+                                   $sql = "SELECT * FROM `artical` WHERE delete_status=2 ORDER BY `date` DESC LIMIT 3,5";
                                    $result = mysqli_query($conn, $sql);
                                    while ($row = mysqli_fetch_assoc($result)) {
                                    $image = $row['image'];
@@ -871,7 +871,7 @@ require 'dbconnect.php';
                    
 
                     <?php
-                                   $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 2,3";
+                                   $sql = "SELECT * FROM `artical` WHERE category_id='PODCASTS' AND delete_status=2 ORDER BY `date` DESC LIMIT 0,3";
                                    $result = mysqli_query($conn, $sql);
                                    while ($row = mysqli_fetch_assoc($result)) {
                                    $image = $row['image'];
@@ -907,7 +907,7 @@ require 'dbconnect.php';
                     <div class="enter_content1 enter_content_mv  ">
                    
                     <?php
-                                   $sql = "SELECT * FROM `artical` ORDER BY `date` DESC LIMIT 2,3";
+                                   $sql = "SELECT * FROM `artical` WHERE category_id='PODCASTS' AND delete_status=2 ORDER BY `date` DESC LIMIT 3,3";
                                    $result = mysqli_query($conn, $sql);
                                    while ($row = mysqli_fetch_assoc($result)) {
                                    $image = $row['image'];

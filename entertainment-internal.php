@@ -31,7 +31,7 @@ require 'login_con.php';
                     <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos assumenda accusantium velit, ullam perferendis provident </h6>
                 </div> -->
                 <?php
-                            $sql = "SELECT * FROM `artical` WHERE category_id='ENTERTAINMENT' ORDER BY `date` DESC LIMIT 0,4";
+                            $sql = "SELECT * FROM `artical` WHERE category_id='ENTERTAINMENT' AND delete_status=2 ORDER BY `date` DESC LIMIT 0,4";
                             $result = mysqli_query($conn, $sql);
                             while ($row = mysqli_fetch_assoc($result)) {
                             $image = $row['image'];
@@ -111,7 +111,7 @@ require 'login_con.php';
                     <img src="assets/img/tree.jpg" class="all_story_img" />
                     <img src="assets/img/tree.jpg" class="all_story_img" /> -->
                     <?php
-                            $sql = "SELECT * FROM `artical` where `category_id`='ENTERTAINMENT' ORDER BY `date` DESC";
+                            $sql = "SELECT * FROM `artical` where `category_id`='ENTERTAINMENT'  AND delete_status=2 ORDER BY `date` DESC";
                             $result = mysqli_query($conn, $sql);
                             while ($row = mysqli_fetch_assoc($result)) {
                             $image = $row['image'];
