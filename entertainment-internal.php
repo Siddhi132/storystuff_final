@@ -67,31 +67,31 @@ require 'login_con.php';
                 <div class="symbol">
                     <img src="assets/img/logo/label.png" class="black_logo" />
                     <img src="assets/img/logo/white.png" class="white_logo" />
-                    <i class="fa fa-share-alt fa-lg mt-1" class="share" aria-hidden="true" data-toggle="modal" data-target="#share"></i>
+                    <i class="fa fa-share-alt fa-lg mt-1" class="share" aria-hidden="true" ></i>
                     <div class="modal fade" id="share" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                        <div class="modal-header">
-                            <h2 class="modal-title w-100" id="exampleModalLabel">Share This Post</h2>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span>&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body mx-auto">
-                            <div class="social">
-                                <a href="#" id="share-wa" class="sharer button"><i class="fa fa-3x fa-whatsapp text-success"></i></a>
-                                <a href="#" id="share-fb" class="sharer button"><i class="fa fa-3x fa-facebook-square text-primary"></i></a>
-                                <a href="#" id="share-tw" class="sharer button"><i class="fa fa-3x fa-twitter-square text-primary"></i></a>
-                                <a href="#" id="share-li" class="sharer button"><i class="fa fa-3x fa-linkedin-square text-primary"></i></a>
-                                <a href="#" id="share-gp" class="sharer button"><i class="fa fa-3x fa-google-plus-square text-danger"></i></a>
-                                <a href="#" id="share-em" class="sharer button"><i class="fa fa-3x fa-envelope-square text-dark"></i></a>
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title w-100" id="exampleModalLabel">Share This Post</h2>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span>&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body mx-auto">
+                                <div class="social">
+                                    <a href="#" id="share-wa" class="sharer button"><i class="fa fa-3x fa-whatsapp text-success"></i></a>
+                                    <a href="#" id="share-fb" class="sharer button"><i class="fa fa-3x fa-facebook-square text-primary"></i></a>
+                                    <a href="#" id="share-tw" class="sharer button"><i class="fa fa-3x fa-twitter-square text-primary"></i></a>
+                                    <a href="#" id="share-li" class="sharer button"><i class="fa fa-3x fa-linkedin-square text-primary"></i></a>
+                                    <a href="#" id="share-gp" class="sharer button"><i class="fa fa-3x fa-google-plus-square text-danger"></i></a>
+                                    <a href="#" id="share-em" class="sharer button"><i class="fa fa-3x fa-envelope-square text-dark"></i></a>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                        </div>
-                    </div>
                     </div>
                 </div>
             </div>

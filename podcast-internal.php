@@ -81,25 +81,88 @@ require 'login_con.php';
 
         $(".about-cancel").click (function(){
             $('.podcast-about-content,.about-cancel').removeClass('active');
+
         });
-            function loadData(id)
-            {
-                $.ajax(
-                    {
-                    type: "POST",
-                    url: "podcast-internal-logic.php",
-                    data: {'artical-id':id},
-                    success: function (data) {
-                        $('.main-audio-2').html(data);
-                    }
-                });
+
+        function likePodcast(articalId,userEmail) {  
+        $.ajax({
+            type: "POST",
+            url: "like_podcast.php",
+            data: {'artical_id':articalId,'email':userEmail},
+            success: function (data) {
+                if($('.podcast_heart i').attr('class')!='fa fa-heart')
+                {
+                    $('.podcast_heart i').attr('class','fa fa-heart');
+                    var temp = Number.parseInt($('.podcast_heart p').html())?Number.parseInt($('.podcast_heart p').html()):0;
+                    $('.podcast_heart p').html(temp+1);
+                }
+                
             }
-            $(".artical_id").click(function () { 
-                var element = $(this).attr("id");
-                loadData(element);
-            });
-            loadData(28);
         });
+    }
+        $(document).on("click",".podcast_heart",function () 
+        {
+            <?php if(isset($_SESSION['login']))
+            {
+                
+                echo 'var articalId=$(this).attr("id");
+                var userEmail = "'.$_SESSION['email'].'";
+                
+                likePodcast(articalId,userEmail);';
+            }
+            else
+            {
+                echo "; 
+                $(window).scrollTop(0);
+                $('.login_text').click();    
+                
+                ";
+            }
+            ?>
+        });
+
+
+        function countLikes(id) {  
+        $.ajax({
+            type: "POST",
+            url: "like_count.php",
+            data: {'artical_id':id},
+            dataType : "JSON",
+            success: function (data) {
+                var temp = (data);
+                $('#likes_count').html(temp['likes']);
+                if(temp['liked'])
+                {
+                    $('.podcast_heart i').attr('class','fa fa-heart');
+                }
+                else
+                {
+                    $('.podcast_heart i').attr('class','fa fa-heart-o');
+                }
+            }
+        });
+    }
+
+        function loadData(id)
+        {
+            $.ajax(
+                {
+                type: "POST",
+                url: "podcast-internal-logic.php",
+                data: {'artical-id':id},
+                success: function (data) {
+                    $('.main-audio-2').html(data);
+                    countLikes(id);
+                }
+            });
+        }
+        
+        $(".artical_id").click(function () { 
+            var element = $(this).attr("id");
+            loadData(element);
+        });
+        loadData(28);
+    });
     </script>
 <script src="assets/js/plugins.js"></script> 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
