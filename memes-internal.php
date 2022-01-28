@@ -470,11 +470,17 @@ $(document).ready(function() {
         $.ajax({
             type: "POST",
             url: "memes-internal-logic.php",
+<<<<<<< HEAD
             data: {
                 'artical_id': id
             },
             dataTypr: "JSON",
             success: function(data) {
+=======
+            data: {'artical_id':id},
+            dataType : "JSON",
+            success: function (data) {
+>>>>>>> 97a508397915067e7b5d2d03445106f7bbcbce3e
                 var temp = JSON.parse(data);
                 $('.memes_slider_img').attr('src', temp.image);
                 $('.meme_heart').attr('id', temp.articalId);
@@ -518,7 +524,7 @@ $(document).ready(function() {
         <?php if(isset($_SESSION['login']))
         {
             echo 'var articalId=$(this).attr("id");
-            var userEmail = "";
+            var userEmail = "'.$_SESSION['email'].'";
        
             likeMeme(articalId,userEmail);';
         }
